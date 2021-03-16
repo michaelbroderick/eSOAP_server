@@ -56,62 +56,62 @@ const requireLogin = (req, res, next) => {
     next();
 }
 
-let failedLogin = false;
+// let failedLogin = false;
 
 app.get('/', (req, res) => {
-    failedLogin = false;
-    failedLogin = req.query.val;
+    // failedLogin = false;
+    // failedLogin = req.query.val;
 
-    res.render('signin', { failedLogin })
-})
-
-
-app.get('/register', (req, res) => {
-    res.render('register')
-})
-
-app.post('/register', async (req, res) => {
-    const data = req.body;
-    data.password = await bcrypt.hash(data.password, 12)
-    await sql.registerUser(connection, data)
-    res.redirect('/patient_number')
-})
-
-app.post('/auth', async (req, res) => {
-
-    const { username, password } = req.body;
-
-    const result = await sql.checkUser(connection, username);
-    let validatePassword = false;
-    try {
-        validatePassword = await bcrypt.compare(password, result[0].password);
-    }
-    catch { }
-    if (validatePassword) {
-        req.session.loggedin = true;
-        req.session.username = username;
-        req.session.userid = result[0].id;
-        res.redirect('patient_number');
-    } else {
-        failedLogin = true;
-        res.redirect('/?val=true')
-    }
-
-})
-
-
-app.get('/patient_number', requireLogin, (req, res) => {
     res.render('patient_number')
 })
 
-app.get('/landing/:id', requireLogin, async (req, res) => {
+
+// app.get('/register', (req, res) => {
+//     res.render('register')
+// })
+
+// app.post('/register', async (req, res) => {
+//     const data = req.body;
+//     data.password = await bcrypt.hash(data.password, 12)
+//     await sql.registerUser(connection, data)
+//     res.redirect('/patient_number')
+// })
+
+// app.post('/auth', async (req, res) => {
+
+//     const { username, password } = req.body;
+
+//     const result = await sql.checkUser(connection, username);
+//     let validatePassword = false;
+//     try {
+//         validatePassword = await bcrypt.compare(password, result[0].password);
+//     }
+//     catch { }
+//     if (validatePassword) {
+//         req.session.loggedin = true;
+//         req.session.username = username;
+//         req.session.userid = result[0].id;
+//         res.redirect('patient_number');
+//     } else {
+//         failedLogin = true;
+//         res.redirect('/?val=true')
+//     }
+
+// })
+
+
+app.get('/patient_number', (req, res) => {
+    res.render('patient_number')
+})
+
+app.get('/landing/:id', async (req, res) => {
     console.log(req.session)
     result = await sql.selectById(connection, 'demographics', req.params.id)
     let data = result[0]
     res.render('landing', { req, data })
 })
 
-app.post('/landing', requireLogin, async (req, res) => {
+app.post('/landing', async (req, res) => {
 
     const pcn = req.body.user;
     req.session.pcn = pcn;
@@ -145,7 +145,7 @@ app.post('/landing', requireLogin, async (req, res) => {
 
 
 // ***** New Code ****//
-app.get('/modules/:id/show', requireLogin, async (req, res) => {
+app.get('/modules/:id/show', async (req, res) => {
     const { id } = req.params;
     const result = await sql.getjoinedData(connection, id);
     const data = result[0];
@@ -158,7 +158,7 @@ app.get('/modules/:id/show', requireLogin, async (req, res) => {
 })
 
 
-app.get('/modules/:id/edit', requireLogin, async (req, res) => {
+app.get('/modules/:id/edit', async (req, res) => {
 
     // Get all the data that exists for patient [id]
     const { id } = req.params;
@@ -176,7 +176,7 @@ app.get('/modules/:id/edit', requireLogin, async (req, res) => {
     res.render('masterForm', { jsonData, validate, req })
 })
 
-app.post('/modules/:id', requireLogin, async (req, res) => {
+app.post('/modules/:id', async (req, res) => {
     // A bit of preprocessing
     const data = req.body;
     // console.log(data)
@@ -218,7 +218,7 @@ app.post('/modules/:id', requireLogin, async (req, res) => {
 })
 
 
-app.get('/modules/:id/submitToRegistry', requireLogin, async (req, res) => {
+app.get('/modules/:id/submitToRegistry', async (req, res) => {
     if (req.query.validated) {
         const moduleCode = req.query.module.slice(0, 3).toLowerCase();
         submitPatientToRegistry(connection, Registry, req.params.id, moduleCode)
@@ -232,7 +232,7 @@ app.get('/modules/:id/submitToRegistry', requireLogin, async (req, res) => {
 // end new code///
 
 
-app.get('/exportCSV', requireLogin, async (req, res) => {
+app.get('/exportCSV', async (req, res) => {
 
     const data = await sql.getAllData(Registry);
     const jsonData = JSON.parse(JSON.stringify(data));
