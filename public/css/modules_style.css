@@ -1,0 +1,80 @@
+nav{
+    background-color: #cddfd8;
+    font-size: 1.2rem;
+    color:#b4083a;
+}
+
+#signout_btn{
+    background: none;
+	color: inherit;
+	border: none;
+	padding-top: 8px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.card{
+    background-color: #006857 !important;
+    
+}
+
+.card-header{
+    color: white !important;
+}
+
+.btn{
+    font-size: 1em !important;
+}
+
+#page_footer{
+    background-color: #cddfd8;
+    /* color:white !important; */
+}
+
+img{
+    width:100%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+h3{
+    text-align: center;
+    color:#006857;
+    text-decoration: none;
+}
+
+h3.module_headings{
+    color:#b4083a;
+    color:#7e7e7e;
+}
+
+.hse_green{
+    filter: invert(31%) sepia(24%) saturate(1924%) hue-rotate(125deg) brightness(93%) contrast(101%);
+}
+
+.hse_red{
+    filter: invert(11%) sepia(87%) saturate(4630%) hue-rotate(334deg) brightness(95%) contrast(101%);
+}
+
+.hse_grey{
+    filter: invert(59%) sepia(2%) saturate(16%) hue-rotate(350deg) brightness(83%) contrast(81%);
+}
+
+.form_div_enabled{
+    transition: 200ms;
+}
+
+a:hover{
+    text-decoration:none;
+} 
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+.form_div_enabled:hover{
+    transform: scale(1.05);
+}
+

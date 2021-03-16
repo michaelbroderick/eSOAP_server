@@ -1,0 +1,491 @@
+<div class="row">
+    <div class="form-group col-sm-8">
+        <label for="destinationid">Destination</label>
+        <select name="destinationid" id="destinationid" class="form-control">
+            <option value=""></option>
+            <option value="Death">Death</option>
+            <option value="HDU">HDU</option>
+            <option value="ICU">ICU</option>
+            <option value="Ward">Ward</option>
+            <option value="Transferred to another hospital">Transferred to another hospital</option>
+            <option
+                value="Recovery > 2 hours or when intensive observation is required and there is no available bed in ICU.">
+                Recovery > 2 hours or when intensive observation is required and there is no available
+                bed
+                in
+                ICU.</option>
+        </select>
+    </div>
+</div>
+
+
+<div class="form-group" id="checkboxes">
+    <label for="complicationsid">Complications</label>
+    <br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Wound Superficial" id="complicationsCheck1"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck1">Wound Superficial</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Wound Deep" id="complicationsCheck2"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck2">Wound Deep</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Deep Abscess" id="complicationsCheck3"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck3">Deep Abscess</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Organ/Space" id="complicationsCheck4"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck4">Organ/Space</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Wound Dehiscence" id="complicationsCheck5"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck5">Wound Dehiscence</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Wound Haematoma" id="complicationsCheck6"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck6">Wound Haematoma</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Sepsis" id="complicationsCheck7"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck7">Sepsis</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Heart Failure" id="complicationsCheck8"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck8">Heart Failure</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Myocardial Infarction (MI)"
+                    id="complicationsCheck9" name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck9">Myocardial Infarction
+                    (MI)</label>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Cerebral Vascular Accident (CVA)"
+                    id="complicationsCheck10" name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck10">Cerebral Vascular Accident
+                    (CVA)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Deep Vein Thrombosis (DVT)"
+                    id="complicationsCheck11" name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck11">Deep Vein Thrombosis
+                    (DVT)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Pulmonary Embolism (PE)"
+                    id="complicationsCheck12" name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck12">Pulmonary Embolism
+                    (PE)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Pneumonia" id="complicationsCheck13"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck13">Pneumonia</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Renal Failure" id="complicationsCheck14"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck14">Renal Failure</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Urinary tract infection (UTI)"
+                    id="complicationsCheck15" name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck15">Urinary tract infection
+                    (UTI)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Ileus" id="complicationsCheck16"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck16">Ileus</label>
+            </div>
+        </div>
+
+        <div class="col-md-4" id="checkbox_option">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Haemorrhage" id="complicationsCheck17"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck17">Haemorrhage</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Re Operation" id="complicationsCheck18"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck18">Re Operation</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Return to Intensive Care Unit (ICU)"
+                    id="complicationsCheck19" name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck19">Return to Intensive Care Unit
+                    (ICU)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Readmission" id="complicationsCheck20"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck20">Readmission</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Death" id="complicationsCheck21"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck21">Death</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Central line infection" id="complicationsCheck22"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck22">Central line
+                    infection</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Failure to take over care"
+                    id="complicationsCheck23" name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck23">Failure to take over
+                    care</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-8">
+        <label for="complicclassificationid">Complication Classification</label>
+        <select name="complicclassificationid" id="complicclassificationid" class="form-control">
+            <option value=""></option>
+            <option value="Clavien Dindo Grade I">Clavien Dindo Grade I</option>
+            <option value="Clavien Dindo Grade II">Clavien Dindo Grade II</option>
+            <option value="Clavien Dindo Grade III">Clavien Dindo Grade III</option>
+            <option value="Clavien Dindo Grade IIIa">Clavien Dindo Grade IIIa</option>
+            <option value="Clavien Dindo Grade IIIb">Clavien Dindo Grade IIIb</option>
+            <option value="Clavien Dindo Grade IV">Clavien Dindo Grade IV</option>
+            <option value="Clavien Dindo Grade IVa">Clavien Dindo Grade IVa</option>
+            <option value="Clavien Dindo Grade IVb">Clavien Dindo Grade IVb</option>
+            <option value="Clavien Dindo Grade V">Clavien Dindo Grade V</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-8">
+        <label for="finaldiagnosisid">Final Diagnosis</label>
+        <select name="finaldiagnosisid" id="finaldiagnosisid" class="form-control">
+            <option value=""></option>
+            <option value=" Abscess Breast abscess N61">Abscess Breast abscess N61</option>
+            <option value="Abscess Perianal abscess K61.0">Abscess Perianal abscess K61.0</option>
+            <option value="Abscess Skin abscess L02.9">Abscess Skin abscess L02.9</option>
+            <option value="Appendicitis K35">Appendicitis K35</option>
+            <option value="Biliary Colic K80.5">Biliary Colic K80.5</option>
+            <option value="Cellulitis L03">Cellulitis L03</option>
+            <option value="Cholangitis K83.0">Cholangitis K83.0</option>
+            <option value="Cholecystitis K81">Cholecystitis K81</option>
+            <option value="Choledocholithiasis K80.5">Choledocholithiasis K80.5</option>
+            <option value="Cholelithiasis K80">Cholelithiasis K80</option>
+            <option value="Colitis K52">Colitis K52</option>
+            <option value="Crohns K50">Crohns K50</option>
+            <option value="Diverticulitis K57">Diverticulitis K57</option>
+            <option value="Diverticulosis K57.2">Diverticulosis K57.2</option>
+            <option value="Faecal impaction K56.4">Faecal impaction K56.4</option>
+            <option value="GI Bleed K92.2">GI Bleed K92.2</option>
+            <option value="Haematemesis K92.0">Haematemesis K92.0</option>
+            <option value="Melena K92.1">Melena K92.1</option>
+            <option value="Hernia - Diaphragm, Diaphragmatic K44.9">Hernia - Diaphragm, Diaphragmatic
+                K44.9
+            </option>
+            <option value="Hernia - Diaphramatic K44">Hernia - Diaphramatic K44</option>
+            <option value="Hernia - Epigastric K43.9">Hernia - Epigastric K43.9</option>
+            <option value="Hernia - Femoral K41.9">Hernia - Femoral K41.9</option>
+            <option value="Hernia - Incisional K43.2">Hernia - Incisional K43.2</option>
+            <option value="Hernia - Inguinal K40">Hernia - Inguinal K40</option>
+            <!-- <option value="Hernia - Obturator K45.8">Hernia - Obturator K45.8</option> -->
+            <option value="Hernia - Other Abdominal hernia K45">Hernia - Other Abdominal hernia K45
+            </option>
+            <option value="Hernia - Parastomal K43.5">Hernia - Parastomal K43.5</option>
+            <option value="Hernia - Paraumbilical K42.9">Hernia - Paraumbilical K42.9</option>
+            <option value="Hernia - Spigelian K43.9">Hernia - Spigelian K43.9</option>
+            <option value="Hernia - Supraumbilicus K43.9">Hernia - Supraumbilicus K43.9</option>
+            <option value="Hernia - Umbilical K42.9">Hernia - Umbilical K42.9</option>
+            <option value="Hernia - Unspecific Abdominal hernia K46">Hernia - Unspecific Abdominal
+                hernia
+                K46
+            </option>
+            <!-- <option value="Hernia - Ventral K43.9">Hernia - Ventral K43.9</option> -->
+            <option value="Hernia - With gangrene K46.1">Hernia - With gangrene K46.1</option>
+            <option value="Hernia - With obstruction K46.0">Hernia - With obstruction K46.0</option>
+            <option value="Large bowel obstruction K56.6">Large bowel obstruction K56.6</option>
+            <option value="Volvulus K56.2">Volvulus K56.2</option>
+            <option value="Mesenteric ischaemia K55.0">Mesenteric ischaemia K55.0</option>
+            <option value="Mesenteric Adenitis I88.0">Mesenteric Adenitis I88.0</option>
+            <option value="Non-specific abdominal pain R10">Non-specific abdominal pain R10</option>
+            <option value="Obstructive Jaundice K83.1">Obstructive Jaundice K83.1</option>
+            <!-- <option value="Other">Other</option> -->
+            <!-- <option value="Other Abdominal hernia K45">Other Abdominal hernia K45</option> -->
+            <option value="Pancreatitis K85">Pancreatitis K85</option>
+            <option value="Pelvic pathology R10.2">Pelvic pathology R10.2</option>
+            <option value="Peptic ulcer K27">Peptic ulcer K27</option>
+            <option value="Gastric Ulcer K25">Gastric Ulcer K25</option>
+            <option value="Duodenal Ulcer K26">Duodenal Ulcer K26</option>
+            <option value="Peritonitis K65">Peritonitis K65</option>
+            <option value="Septic shock R57.2">Septic shock R57.2</option>
+            <option value="Small bowel obstruction Paralytic ileus K56.0">Small bowel obstruction
+                Paralytic ileus K56.0</option>
+            <option value="Small bowel obstruction Gallstone ileus K56.3">Small bowel obstruction
+                Gallstone ileus K56.3</option>
+            <option value="Small bowel obstruction Peritoneal adhesions K66.0">Small bowel obstruction
+                Peritoneal adhesions K66.0</option>
+            <option value="Small bowel obstruction Intestinal adhesions [bands] with obstruction K56.5">
+                Small bowel obstruction Intestinal adhesions [bands] with obstruction
+                K56.5
+            </option>
+            <option value="Small Bowel Obstruction Other and unspecified intestinal obstruction K56.6">
+                Small Bowel Obstruction
+                Other and unspecified intestinal obstruction K56.6</option>
+            <option value="Trauma T14.9">Trauma T14.9</option>
+            <!-- <option value="Umbilical K42">Umbilical K42</option> -->
+            <!-- <option value="Unspecific Abdominal hernia K46">Unspecific Abdominal hernia K46</option> -->
+            <option value="Upper GI Bleed Gastrointestinal haemorrhage, unspecified K92.2">Upper GI
+                Bleed Gastrointestinal haemorrhage, unspecified K92.2</option>
+            <option value="Upper GI Bleed Haematemesis K92.0">Upper GI Bleed Haematemesis K92.0</option>
+            <option value="Upper GI Bleed Melaena K92.1">Upper GI Bleed Melaena K92.1</option>
+            <option value="Upper GI Bleed Oesophageal varices I85">Upper GI Bleed Oesophageal varices
+                I85</option>
+            <option value="Upper GI Bleed Gastro-oesophageal laceration-haemorrhage syndrome K22.6">
+                Upper GI Bleed Gastro-oesophageal laceration-haemorrhage syndrome K22.6</option>
+            <option value="Upper GI Bleed Mallory-Weiss syndrome">Upper GI Bleed Mallory-Weiss syndrome
+            </option>
+
+            <option value="Urology Haematuria R31">Urology Haematuria R31</option>
+            <option value="Urology other N23">Urology other N23</option>
+            <option value="Urology Retention of urine R33">Urology Retention of urine R33</option>
+
+            <option value="Urology Stones N20">Urology Stones N20</option>
+            <option value="Vascular I71">Vascular I71</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-4">
+        <label for="dischargedate">Discharge Date</label>
+        <input type="date" name="dischargedate" class="form-control" id="dischargedate">
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility rif">
+        <label for="finalaastgradeid">Final AAST grade (histopathology findings)</label>
+        <select name="finalaastgradeid" id="finalaastgradeid" class="form-control">
+            <option value=""></option>
+            <option value="Normal">Normal</option>
+            <option value="Grade_1">Grade 1</option>
+            <option value="Grade_2">Grade 2</option>
+            <option value="Grade_3">Grade 3</option>
+            <option value="Grade_4">Grade 4</option>
+            <option value="Grade_5">Grade 5</option>
+
+        </select>
+    </div>
+
+</div>
+
+
+
+<div class="row">
+
+    <div class="form-group col-sm-6 input_visibility ruq">
+        <label for="postoperativedrainid">Drain</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postoperativedrainid" id="drainRadio1" value="Yes">
+            <label class="form-check-label" for="drainRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postoperativedrainid" id="drainRadio2" value="No">
+            <label class="form-check-label" for="drainRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postoperativedrainid" id="drainRadio3" value="ND">
+            <label class="form-check-label" for="drainRadio3">ND</label>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility ruq">
+        <label for="bileleakid">Bile Leak</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bileleakid" id="bileleakRadio1" value="Low volume">
+            <label class="form-check-label" for="bileleakRadio1">Low volume</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bileleakid" id="bileleakRadio2" value="High volume">
+            <label class="form-check-label" for="bileleakRadio2">High volume</label>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-4 input_visibility ruq">
+        <label for="lengthofpostoperativestay">Total Length of Post-Operative Critical Care Stay
+            (days)</label>
+        <input type="number" name="lengthofpostoperativestay" class="form-control" id="lengthofpostoperativestay">
+    </div>
+
+    <div class="form-group col-sm-8 input_visibility ruq">
+        <label for="unplanmove7daysid">Did the patient have an unplanned move from the ward to a higher
+            level of care within 7 days of surgery</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="unplanmove7daysid" id="moveRadio1" value="Yes">
+            <label class="form-check-label" for="moveRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="unplanmove7daysid" id="moveRadio2" value="No">
+            <label class="form-check-label" for="moveRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="unplanmove7daysid" id="moveRadio3" value="ND">
+            <label class="form-check-label" for="moveRadio3">ND</label>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="postopcritcalcarestaylen">Total length of post-operative critical care stay</label>
+        <input type="input" name="postopcritcalcarestaylen" class="form-control" id="postopcritcalcarestaylen">
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="postopassesbyspecid">Was the patient assessed by a specialist from the elderly
+            medicine
+            in the post-operative period</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postopassesbyspecid" id="postopassesbyspecidRadio1"
+                value="Yes">
+            <label class="form-check-label" for="postopassesbyspecidRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postopassesbyspecid" id="postopassesbyspecidRadio2"
+                value="No">
+            <label class="form-check-label" for="postopassesbyspecidRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postopassesbyspecid" id="postopassesbyspecidRadio3"
+                value="ND">
+            <label class="form-check-label" for="postopassesbyspecidRadio3">ND</label>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="form-group col input_visibility lap">
+        <label for="unplannedorplannedreturnid">Did the patient have an unplanned or planned return to
+            theatre following emergency laparotomy</label>
+        <select name="unplannedorplannedreturnid" id="unplannedorplannedreturnid" class="form-control">
+            <option value=""></option>
+            <option value="Yes; unplanned return">Yes; unplanned return</option>
+            <option value="Yes; planned return">Yes; planned return</option>
+            <option value="Yes; unplanned AND planned">Yes; unplanned AND planned</option>
+            <option value="No">No</option>
+
+        </select>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="indunplannedreturnid">What was the main indication for the unplanned return to
+            theatre</label>
+        <select name="indunplannedreturnid" id="indunplannedreturnid" class="form-control">
+            <option value=""></option>
+            <option value="Anastomotic leak">Anastomotic leak</option>
+            <option value="Abscess">Abscess</option>
+            <option value="Bleeding or Haematoma">Bleeding or Haematoma</option>
+            <option value="Decompression of abdominal compartment syndrome">Decompression of abdominal
+                compartment syndrome</option>
+            <option value="Bowel obstruction">Bowel obstruction</option>
+            <option value="Abdominal wall dehiscence">Abdominal wall dehiscence</option>
+            <option value="Accidental damage to bowel or other organ">Accidental damage to bowel or
+                other
+                organ</option>
+            <option value="Stoma viability or retraction">Stoma viability or retraction</option>
+            <option value="Ischemia/non-viable bowel">Ischemia/non-viable bowel</option>
+            <option value="Sepsis/inadequate source control">Sepsis/inadequate source control</option>
+            <option value="Deteriorating patient">Deteriorating patient</option>
+            <option value="Missed pathology at first laparotomy">Missed pathology at first laparotomy
+            </option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="indplannedreturnid">What was the main indication for the planned return to
+            theatre</label>
+        <select name="indplannedreturnid" id="indplannedreturnid" class="form-control">
+            <option value=""></option>
+            <option value="Removal of packs / ensure haemostasis / washout">Removal of packs / ensure
+                haemostasis / washout</option>
+            <option value="Closure of laparostomy">Closure of laparostomy</option>
+            <option value="Removal of bogota bag / formation of formal laparostomy with mesh / vac dressing insertion">
+                Removal of bogota bag / formation of formal laparostomy with mesh / vac dressing
+                insertion
+            </option>
+            <option
+                value="Definitive procedure following “damage control surgery” +/- stoma formation, +/- restoration of intestinal continuity">
+                Definitive procedure following “damage control surgery” +/- stoma formation, +/-
+                restoration
+                of intestinal continuity</option>
+            <option value="Assess viability of GI tract, +/- stoma formation, +/- restoration of intestinal continuity">
+                Assess viability of GI tract, +/- stoma formation, +/- restoration of intestinal
+                continuity
+            </option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="isunplannedmove">Did the patient have an unplanned move from the ward to a higher
+            level
+            of care within 7 days of surgery</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="isunplannedmove" id="isunplannedmoveRadio1" value="Yes">
+            <label class="form-check-label" for="isunplannedmoveRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="isunplannedmove" id="isunplannedmoveRadio2" value="No">
+            <label class="form-check-label" for="isunplannedmoveRadio2">No</label>
+        </div>
+
+    </div>
+</div>

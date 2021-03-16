@@ -1,0 +1,576 @@
+<div class="row">
+    <div class="form-group col-sm-6" id="dateofsurgeryDiv">
+        <label for="dateofsurgery">Date and Time Surgery Booking</label>
+        <input type="datetime-local" name="dateofsurgery" class="form-control" id="dateofsurgery">
+    </div>
+
+    <div class="form-group col-sm-6" id="surgeryinductiontimeDiv">
+        <label for="surgeryinductiontime">Date and Time of Induction</label>
+        <input type="datetime-local" name="surgeryinductiontime" class="form-control" id="surgeryinductiontime">
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6">
+        <label for="asascoreid">ASA Score</label>
+        <select name="asascoreid" id="asascoreid" class="form-control">
+            <option value=""></option>
+            <option value="1. No systemic disease">1. No systemic disease</option>
+            <option value="2. Mild systemic disease">2. Mild systemic disease</option>
+            <option value="3. Severe systemic disease, not life threatening">3. Severe systemic disease,
+                not
+                life threatening</option>
+            <option value="4. Server, Life Threatening">4. Server, Life Threatening</option>
+            <option value="5. Moribund Patient">5. Moribund Patient</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-sm-6">
+        <label for="dispositionsurgeonid">Surgeon</label>
+        <select name="dispositionsurgeonid" id="dispositionsurgeonid" class="form-control">
+            <option value=""></option>
+            <option value="one">01</option>
+            <option value="two">02</option>
+            <option value="three">03</option>
+            <option value="four">04</option>
+            <option value="five">05</option>
+            <option value="six">06</option>
+            <option value="seven">07</option>
+            <option value="eight">08</option>
+            <option value="nine">09</option>
+            <option value="ten">10</option>
+        </select>
+    </div>
+
+    <!-- <div class="form-group col-sm-6">
+                    <label for="surgerylocum">Locum</label>
+                    <input type="text" name="surgerylocum" class="form-control" id="surgerylocum">
+                </div> -->
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="procedurecategory">Select Procedure Category</label>
+            <select name="procedurecategory" id="procedurecategory" class="form-control">
+                <option value=""></option>
+                <option value="abscesses">Abscesses</option>
+                <option value="appendectomy">Appendectomy</option>
+                <option value="cholecystectomy">Cholecystectomy</option>
+                <option value="hernia">Hernia</option>
+                <option value="pepticulcer">Peptic</option>
+                <option value="colorectalprocedures">Colorectal Procedures</option>
+                <option value="lefthemicolectomy">Left Hemicolectomy</option>
+                <option value="subtotalpartialcolectomy">Subtotal/Partial Colectomy</option>
+                <option value="totalcolectomy">Total Colectomy</option>
+                <option value="sigmoidectomy">Sigmoidectomy</option>
+                <option value="anteriorresection">Anterior Resection/Proctosigmoidectomy/Proctocolectomy
+                </option>
+                <option value="proctocolectomy">Proctocolectomy</option>
+                <option value="openabdomen">Open Abdomen</option>
+                <option value="repairoffistula">Repair of Fistula</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="form-group input_visibility" id="appendectomy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <!-- <option value="Appendectomy 926">Appendectomy 926</option> -->
+        <option value="Laparoscopic 30572-00">Laparoscopic 30572-00</option>
+        <option value="Open 30571-00">Open 30571-00</option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="abscesses">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Drainage of intra-anal abscess 32174-00">Drainage of intra-anal
+            abscess 32174-00</option>
+        <option value="Incision of pilonidal sinus, cyst or abscess 30676-00">Incision
+            of pilonidal sinus, cyst or abscess 30676-00</option>
+        <option value="Drainage of perianal abscess 32174-01">Drainage of perianal
+            abscess 32174-01</option>
+        <option value="Drainage of ischiorectal abscess 32174-02">Drainage of
+            ischiorectal abscess 32174-02</option>
+        <option value="Incision and drainage of pancreatic abscess 30575-00">Incision
+            and drainage of pancreatic abscess 30575-00</option>
+        <option value="Laparoscopic drainage of intra-abdominal abscess, haematoma or cyst 30394-01">
+            Laparoscopic drainage of intra-abdominal abscess, haematoma or cyst 30394-01</option>
+        <option value="Other closed drainage of intra-abdominal abscess, haematoma or cyst 30394-02">
+            Other closed drainage of intra-abdominal abscess, haematoma or cyst 30394-02</option>
+        <option value="Drainage of intra-abdominal abscess, haematoma or cyst 30394-00">Abscesses
+            Drainage of intra-abdominal abscess, haematoma or cyst 30394-00</option>
+        <option value="Drainage of retroperitoneal abscess, haematoma or cyst 30402-00">Abscesses
+            Drainage of retroperitoneal abscess, haematoma or cyst 30402-00</option>
+        <option value="Incision and drainage of abscess of skin and subcutaneous tissue 30223-01">
+            Incision and drainage of abscess of skin and subcutaneous tissue 30223-01</option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="cholecystectomy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <!-- <option value="Cholecystectomy 965">Cholecystectomy 965</option> -->
+
+        <option value="Laparoscopic Cholecystectomy 30445-00">Laparoscopic
+            Cholecystectomy 30445-00</option>
+        <option value="Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Cystic Duct 30448-00">
+            Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Cystic
+            Duct 30448-00</option>
+        <option
+            value="Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Laparoscopic Choledochotomy 30449-00">
+            Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via
+            Laparoscopic Choledochotomy 30449-00</option>
+        <option value="Open Cholecystectomy 30443-00">Open Cholecystectomy
+            30443-00</option>
+        <option value="Cholecystectomy With Choledochotomy 30454-01">Cholecystectomy With Choledochotomy
+            30454-01</option>
+        <option value="Cholecystectomy With Choledochotomy And Biliary Intestinal Anastomosis 30455-00">
+            Cholecystectomy With Choledochotomy And Biliary Intestinal Anastomosis 30455-00</option>
+        <option value="Cholecystostomy 30375-05">Cholecystostomy 30375-05</option>
+        <option value="Intraoperative cholangiography 30439-00">Intraoperative cholangiography 30439-00
+        </option>
+        <option value="Choledochojejunostomy 30460-04">Choledochojejunostomy
+            30460-04</option>
+        <option value="Choledochoduodenostomy 30460-03">Choledochoduodenostomy 30460-03</option>
+        <option value="Surgical repair of post-operative biliary stricture 917">
+            Surgical repair of post-operative biliary stricture 917</option>
+        <option value="Open 30469-00">Open 30469-00</option>
+        <option value="Closed 30494-00">Closed 30494-00</option>
+        <option value="Hepaticojejunostomy 30460-07(969)">Hepaticojejunostomy 30460-07(969)</option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="hernia">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Incisional Repair of incisional hernia 30403-00">Incisional Repair of
+            incisional hernia 30403-00</option>
+        <option value="Incisional Repair of incisional hernia with muscle transposition 30405-00">
+            Incisional Repair of incisional hernia with muscle transposition 30405-00</option>
+        <option value="Incisional Repair of incisional hernia with mesh 30405-01">Incisional
+            Repair of incisional hernia with mesh 30405-01</option>
+        <option value="Incisional Repair of incisional hernia with resection of strangulated intestine 30405-02">
+            Incisional Repair of incisional hernia with resection of strangulated intestine 30405-02
+        </option>
+        <option value="Inguinal Repair of inguinal hernia, unilateral laparoscopic 30609-02">Inguinal
+            Repair
+            of inguinal hernia, unilateral laparoscopic 30609-02</option>
+        <option value="Inguinal Unilateral laparoscopic with mesh 30609-02 [990]">Inguinal
+            Unilateral laparoscopic with mesh 30609-02 [990]</option>
+        <option value="Inguinal Incarcerated (obstructed) (strangulated) 30615-00 [997]">Inguinal
+            Incarcerated (obstructed) (strangulated) 30615-00 [997]</option>
+        <option value="Inguinal Repair of inguinal hernia, unilateral open 30614-02">Inguinal
+            Repair of inguinal hernia, unilateral open 30614-02</option>
+        <option value="Inguinal Unilateral open with mesh 30614-02 [990]">Inguinal Unilateral
+            open with mesh 30614-02 [990]</option>
+        <option value="Inguinal Incarcerated (obstructed) (strangulated) 30615-00 [997]">Inguinal
+            Incarcerated (obstructed) (strangulated) 30615-00 [997]</option>
+        <option value="Inguinal Repair of inguinal hernia, bilateral laparoscopic 30609-03 [990]">
+            Inguinal Repair of inguinal hernia, bilateral laparoscopic 30609-03 [990]</option>
+        <option value="Inguinal Repair of inguinal hernia, bilateral laparoscopic with mesh 30614-03 [990]">
+            Inguinal Repair of inguinal hernia, bilateral laparoscopic with mesh 30614-03 [990]
+        </option>
+        <option value="Inguinal Incarcerated (obstructed) (strangulated) 30615-00 [997]">Inguinal
+            Incarcerated (obstructed) (strangulated) 30615-00 [997]</option>
+        <option value="Inguinal Repair of inguinal hernia, bilateral open 30614-03">Inguinal
+            Repair of inguinal hernia, bilateral open 30614-03</option>
+        <option value="Inguinal Repair of inguinal hernia, bilateral open with mesh 30614- 03 [990]">
+            Inguinal Repair of inguinal hernia, bilateral open with mesh 30614- 03 [990]</option>
+        <option value="Inguinal Incarcerated (obstructed) (strangulated) 30615-00 [997]">Inguinal
+            Incarcerated (obstructed) (strangulated) 30615-00 [997]</option>
+        <option value="Umblicial Repair of umbilical hernia 30617-00 [992]">Umblicial Repair
+            of umbilical hernia 30617-00 [992]</option>
+        <option value="Umblicial Incarcerated (obstructed) (strangulated) hernia 30615-00 [997]">
+            Umblicial Incarcerated (obstructed) (strangulated) hernia 30615-00 [997]</option>
+        <option value="Diaphragmatic Repair of diaphragmatic hernia, abdominal approach 30601-00">
+            Diaphragmatic Repair of diaphragmatic hernia, abdominal approach 30601-00</option>
+        <option value="Diaphragmatic Repair of diaphragmatic hernia, thoracic approach 30601- 01">
+            Diaphragmatic Repair of diaphragmatic hernia, thoracic approach 30601- 01</option>
+        <option
+            value="Diaphragmatic Repair of diaphragmatic hernia with use of body wall flap or insertion of mesh 43837-02">
+            Diaphragmatic Repair of diaphragmatic hernia with use of body wall flap or insertion of
+            mesh 43837-02</option>
+        <option value="Epigastric Repair of epigastric hernia 30617-01">Epigastric Repair of
+            epigastric hernia 30617-01</option>
+        <option value="Femoral Unilateral open with mesh 30614-00 [991]">Femoral Unilateral
+            open with mesh 30614-00 [991]</option>
+        <option value="Femoral Unilateral laparoscopic repair of femoral hernia 30609-00">Femoral
+            Unilateral
+            laparoscopic repair of femoral hernia 30609-00</option>
+        <option value="Femoral Bilateral open repair of femoral hernia 30614-01">Femoral
+            Bilateral open repair of femoral hernia30614-01</option>
+        <option value="Femoral Bilateral open with mesh 30614-01[991]">Femoral Bilateral open
+            with mesh 30614-01[991]</option>
+        <option value="Femoral Bilateral laparoscopic repair of femoral hernia 30609-01">Femoral
+            Bilateral
+            laparoscopic repair of femoral hernia 30609-01</option>
+        <option value="Femoral Incarcerated (obstructed)(strangulated) 30615-00 [997]">Femoral
+            Incarcerated (obstructed)(strangulated) 30615-00 [997]</option>
+        <option value="Femoral Via laparoscopy 30609-01 [991]">Femoral Via laparoscopy
+            30609-01 [991]</option>
+        <option value="Parastomal Repair of parastomal hernia 30563-02">Parastomal Repair of
+            parastomal hernia 30563-02</option>
+        <option value="Parastomal Repair of parastomal hernia with re-siting of stoma 30563-03">
+            Parastomal Repair of parastomal hernia with re-siting of stoma 30563-03</option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="pepticulcer">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option
+            value="Partial Gastrectomy With Gastroduodenal Anastomosis Following Previous Procedure For Peptic Ulcer Disease 30503-00">
+            Partial Gastrectomy With Gastroduodenal Anastomosis Following Previous Procedure
+            For Peptic Ulcer Disease 30503-00</option>
+        <option
+            value="Partial Gastrectomy With Gastrojejunal Anastomosis Following Previous Procedure For Peptic Ulcer Disease 30503-01">
+            Partial Gastrectomy With Gastrojejunal Anastomosis Following Previous Procedure For
+            Peptic Ulcer Disease 30503-01</option>
+        <option
+            value="Partial Gastrectomy With Roux-En-Y Reconstruction Following Previous Procedure For Peptic Ulcer Disease 30503-02">
+            Partial Gastrectomy With Roux-En-Y Reconstruction Following Previous Procedure For
+            Peptic Ulcer Disease 30503-02</option>
+        <option value="Control Of Bleeding Peptic Ulcer By Gastric Resection 30509-00">Control Of
+            Bleeding
+            Peptic Ulcer By Gastric Resection 30509-00</option>
+
+        <option value="Endoscopic Control Of Peptic Ulcer Or Bleeding (Non- Operative) 90296-00">
+            Endoscopic Control Of Peptic Ulcer Or Bleeding (Non- Operative) 90296-00</option>
+        <option value="Suture Of Perforated Ulcer 30375-10">Suture Of Perforated
+            Ulcer 30375-10</option>
+        <option value="Control Of Bleeding Peptic Ulcer 30505-00">Control Of
+            Bleeding Peptic Ulcer 30505-00</option>
+        <option value="Selective vagotomy with partial gastrectomy and gastroduodenal anastomosis 30498-00">
+            Selective vagotomy with partial gastrectomy and gastroduodenal anastomosis 30498-00
+        </option>
+        <option value="Selective vagotomy with partial gastrectomy and gastrojejunal anastomosis 30497-01">
+            Selective vagotomy with partial gastrectomy and gastrojejunal anastomosis 30497-01
+        </option>
+        <option value="Selective vagotomy with partial gastrectomy and Roux- en-Y reconstructive 30497-02">
+            Selective vagotomy with partial gastrectomy and Roux- en-Y reconstructive 30497-02
+        </option>
+        <option value="Gastroenterostomy 30515-00">Gastroenterostomy 30515-00
+        </option>
+        <option value="Total gastrectomy 30521-00">Total gastrectomy 30521-00
+        </option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="colorectalprocedures">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Colostomy 30375-04(915)">Colostomy
+            30375-04(915)</option>
+        <option value="With rectosigmoidectomy (Hartman’s procedure) 32030- 00(934)">
+            With rectosigmoidectomy (Hartman’s procedure) 32030- 00(934)</option>
+        <option value="Via laparoscopy 32030-01(934)">Via
+            laparoscopy 32030-01(934)</option>
+        <option value="Loop 30375-28(915)">Loop 30375-28(915)
+        </option>
+        <option value="Permanent 30375-04(915)">Permanent
+            30375-04(915)</option>
+        <option value="Revision 30563-01((18)">Revision
+            30563-01((18)</option>
+        <option value="Temporary (covering) (defunctioning) 30375-28(915)">Temporary (covering)
+            (defunctioning) 30375-28(915)</option>
+        <option value="Low anterior resection of rectum 32025-00">Low anterior resection of rectum
+            32025-00
+        </option>
+        <option value="Ultra low anterior resection of rectum 32026-00">Ultra low anterior resection of
+            rectum 32026-00</option>
+        <option value="High anterior resection of rectum 32024-00">High anterior resection of rectum
+            32024-00</option>
+        <option value="Incision of rectum or anus 90338-00">
+            Incision of rectum or anus 90338-00</option>
+        <option value="Caecostomy 30375-00">Caecostomy 30375-00
+        </option>
+        <option value="Temporary ileostomy 30375-29">Temporary
+            ileostomy 30375-29
+        </option>
+        <option value="Resection of small intestine with anastomosis 30566-00">
+            Resection of small intestine with anastomosis 30566-00</option>
+        <option value="Resection of small intestines with formation of stoma 30565-00">
+            Resection of small intestines with formation of stoma 30565-00</option>
+        <option value="Strictureplasty of small intestine 30564-00">Strictureplasty of small intestine
+            30564-00</option>
+        <option value="Enterotomy of small intestine 30375-03">
+            Enterotomy of small intestine 30375-03</option>
+        <option value="Endoscopic examination of small intestine via intraoperative enterotomy 30568-00">
+            Endoscopic examination of small intestine via intraoperative enterotomy
+            30568-00</option>
+        <option value="Division of adhesions abdominal (open) 30378-00 [986]">
+            Division of adhesions abdominal (open) 30378-00 [986]</option>
+        <option value="Division of adhesions via laparoscopy 30393-00 [986]">
+            Division of adhesions via laparoscopy 30393-00 [986]</option>
+        <option value="Excision of Meckel’s diverticulum 30375-09">Excision of Meckel’s diverticulum
+            30375-09</option>
+        <option value="Reclosure of postoperative disruption of abdominal wall 30403-03">
+            Reclosure of postoperative disruption of abdominal wall 30403-03</option>
+        <option value="Laparotomy exploratory (with biopsy) 30373-00 [985]">Laparotomy exploratory (with
+            biopsy) 30373-00 [985]</option>
+        <option value="Laparoscopy (diagnostic) (exploratory) 30390-00 [984]">
+            Laparoscopy (diagnostic) (exploratory) 30390-00 [984]</option>
+        <option value="+/- Release of Adhesions">+/- Release of
+            Adhesions</option>
+        <option value="Right Hemicolectomy">Right Hemicolectomy
+        </option>
+        <option value="Open right hemicolectomy with anastomosis 32003-01">
+            Open right hemicolectomy with anastomosis 32003-01</option>
+        <option value="Laparoscopic right hemicolectomy with anastomosis 32003-03">
+            Laparoscopic right hemicolectomy with anastomosis 32003-03</option>
+        <option value="Open right hemicolectomy with formation of stoma 32000-01">
+            Open right hemicolectomy with formation of stoma 32000-01</option>
+        <option value="Laparoscopic right hemicolectomy with formation of stoma 32000-03">
+            Laparoscopic right hemicolectomy with formation of stoma 32000-03</option>
+        <option value="Open extended right hemicolectomy with anastomosis 32005-01">
+            Open extended right hemicolectomy with anastomosis 32005-01</option>
+        <option value="Laparoscopic extended right hemicolectomy with anastomosis 32005-03">
+            Laparoscopic extended right hemicolectomy with anastomosis 32005-03
+        </option>
+        <option value="Open extended right hemicolectomy with formation of stoma 32004-01">
+            Open extended right hemicolectomy with formation of stoma 32004-01
+        </option>
+        <option value="Laparoscopic extended right hemicolectomy with formation of stoma 32004-03">
+            Laparoscopic extended right hemicolectomy with formation of stoma 32004-03
+        </option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="lefthemicolectomy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Open left hemicolectomy with anastomosis 32006-00">Open left hemicolectomy with
+            anastomosis 32006-00</option>
+        <option value="Laparoscopic left hemicolectomy with anastomosis 32006-02">Laparoscopic left
+            hemicolectomy with anastomosis 32006-02</option>
+        <option value="Open left hemicolectomy with formation of stoma 32006-01">Open left hemicolectomy
+            with formation of stoma 32006-01</option>
+        <option value="Laparoscopic left hemicolectomy with formation of stoma 32006-03">
+            Laparoscopic left hemicolectomy with formation of stoma 32006-03</option>
+
+    </select>
+</div>
+<div class="form-group input_visibility" id="subtotalpartialcolectomy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Open subtotal colectomy with anastomosis 32005-00">
+            Open subtotal colectomy with anastomosis 32005-00</option>
+        <option value="Laparoscopic subtotal colectomy with anastomosis 32005-02">
+            Laparoscopic subtotal colectomy with anastomosis 32005-02</option>
+        <option value="Open subtotal colectomy with formation of stoma 32004-00">
+            Open subtotal colectomy with formation of stoma 32004-00</option>
+        <option value="Laparoscopic subtotal colectomy with formation of stoma 32004-02">
+            Laparoscopic subtotal colectomy with formation of stoma 32004-02
+        </option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="totalcolectomy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Open total colectomy with ileorectal anastomosis 32012-00">
+            Open total colectomy with ileorectal anastomosis 32012-00</option>
+        <option value="Laparoscopic total colectomy with ileorectal anastomosis 32012-01">
+            Laparoscopic total colectomy with ileorectal anastomosis 32012-01</option>
+        <option value="Open total colectomy with ileostomy 32009-00">Open
+            total colectomy with ileostomy 32009-00</option>
+        <option value="Laparoscopic total colectomy with ileostomy 32009-01">
+            Laparoscopic total colectomy with ileostomy 32009-01</option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="sigmoidectomy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Open limited excision of large intestine with anastomosis 32003-00">
+            Open limited excision of large intestine with anastomosis 32003-00</option>
+        <option value="Caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy with anastomosis">
+            Caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy with
+            anastomosis</option>
+        <option value="Laparoscopic limited excision of large intestine with anastomosis 32003-02">
+            Laparoscopic limited excision of large intestine with anastomosis 32003-02
+        </option>
+        <option
+            value="Laparoscopic: Caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy with anastomosis">
+            Laparoscopic: Caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy
+            with anastomosis</option>
+        <option value="Open limited excision of large intestine with formation of stoma 32000-00">
+            Open limited excision of large intestine with formation of stoma 32000-00</option>
+        <option value="Caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy with formation of stoma">
+            Caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy with
+            formation of stoma</option>
+        <option value="Laparoscopic limited excision of large intestine with formation of stoma 32000-02">
+            Laparoscopic limited excision of large intestine with formation of stoma 32000-02
+        </option>
+        <option
+            value="Laparoscopic caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy with formation of stoma">
+            Laparoscopic caecectomy, local excision of colon, sigmoidcolectomy, sigmoidectomy
+            with formation of stoma</option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="anteriorresection">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Ultra low anterior resection of rectum 32026-00">
+            Ultra low anterior resection of rectum
+            32026-00</option>
+        <option value="Proctosigmoidectomy with stapled coloanal anastomosis">
+            Proctosigmoidectomy with stapled
+            coloanal anastomosis</option>
+        <option value="Excludes: hand sutured anastomosis (32028-00 [935])">
+            Excludes: hand sutured anastomosis
+            (32028-00 [935])</option>
+        <option value="Ultra low anterior resection of rectum with hand sutured coloanal anastomosis 32028-00">
+            Ultra low anterior resection of rectum
+            with hand sutured coloanal anastomosis 32028-00</option>
+        <option value="Col-endo-anal sutured anastomosis">
+            Col-endo-anal sutured anastomosis
+        </option>
+        <option value="Proctosigmoidectomy with hand sutured coloanal anastomosis">
+            Proctosigmoidectomy with hand sutured
+            coloanal anastomosis</option>
+    </select>
+</div>
+<div class="form-group input_visibility" id="proctocolectomy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+
+        <option value="Total proctocolectomy 936">Total proctocolectomy 936
+        </option>
+        <option value="Total proctocolectomy with ileostomy 32015-00">Total
+            proctocolectomy with ileostomy 32015-00</option>
+        <option value="Total proctocolectomy with ileo-anal anastomosis 32051-00">
+            Total proctocolectomy with ileo-anal anastomosis 32051-00</option>
+        <option value="Restorative proctocolectomy (Includes: formation of ileal reservoir (loop ileostomy))">
+            Restorative proctocolectomy (Includes: formation of ileal reservoir (loop
+            ileostomy))</option>
+        <option value="Total proctocolectomy with ileo-anal anastomosis and formation of temporary ileostomy 32051-01">
+            Total proctocolectomy with ileo-anal anastomosis and formation of temporary
+            ileostomy 32051-01</option>
+        <option value="Restorative proctocolectomy with formation of temporary ileostomy">
+            Restorative proctocolectomy with formation of temporary ileostomy</option>
+    </select>
+</div>
+
+<div class="form-group input_visibility" id="openabdomen">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Open Abdomen (Temporary abdomen closure)">Open Abdomen (Temporary abdomen
+            closure)
+        </option>
+    </select>
+</div>
+
+<div class="form-group input_visibility" id="repairoffistula">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Repair of Fistula">Repair of Fistula</option>
+    </select>
+</div>
+
+
+<div class="form-group" id="finding_area">
+    <label for="findings">Findings</label>
+    <!-- <input type="text" name="findings" class="form-control" id="findings"> -->
+    <textarea name="findings" id="findings" class="form-control" cols="30" rows="5"></textarea>
+</div>
+
+
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility rif">
+        <label for="appendicitisgradingid">AAST appendicitis grading</label>
+        <select name="appendicitisgradingid" id="appendicitisgradingid" class="form-control">
+            <option value=""></option>
+            <option value="Normal">Normal</option>
+            <option value="Grade_1">Grade 1</option>
+            <option value="Grade_2">Grade 2</option>
+            <option value="Grade_3">Grade 3</option>
+            <option value="Grade_4">Grade 4</option>
+            <option value="Grade_5">Grade 5</option>
+
+
+        </select>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility rif">
+        <label for="drainid">Drain</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="drainid" id="drainRadio1" value="Yes">
+            <label class="form-check-label" for="drainRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="drainid" id="drainRadio2" value="No">
+            <label class="form-check-label" for="drainRadio2">No</label>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility ruq">
+        <label for="peritonealcontaminationid">Please describe the peritoneal contamination
+            present</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peritonealcontaminationid" id="pericontamRadio1"
+                value="None">
+            <label class="form-check-label" for="pericontamRadio1">None</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peritonealcontaminationid" id="pericontamRadio2"
+                value="Pus">
+            <label class="form-check-label" for="pericontamRadio2">Pus</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peritonealcontaminationid" id="pericontamRadio3"
+                value="Bile">
+            <label class="form-check-label" for="pericontamRadio3">Bile</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peritonealcontaminationid" id="pericontamRadio4"
+                value="Combination">
+            <label class="form-check-label" for="pericontamRadio4">Combination</label>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility ruq">
+        <label for="cholangiographyid">Cholangiography</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="cholangiographyid" id="cholangioRadio1" value="Yes">
+            <label class="form-check-label" for="cholangioRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="cholangiographyid" id="cholangioRadio2" value="No">
+            <label class="form-check-label" for="cholangioRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="cholangiographyid" id="cholangioRadio3" value="ND">
+            <label class="form-check-label" for="cholangioRadio3">ND</label>
+        </div>
+    </div>
+</div>

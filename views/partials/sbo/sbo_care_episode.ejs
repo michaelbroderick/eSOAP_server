@@ -1,0 +1,145 @@
+<div class="row">
+    <div class="form-group col-sm-4">
+        <label for="statusatdischarge">In hospital death</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="statusatdischarge" id="dischargestatusRadio1"
+                value="Yes">
+            <label class="form-check-label" for="dischargestatusRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="statusatdischarge" id="dischargestatusRadio2" value="No">
+            <label class="form-check-label" for="dischargestatusRadio2">No</label>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6" id="dischageDT">
+        <label for="sbo_dischargedate">Date patient medically fit for discharge</label>
+        <input type="datetime-local" name="sbo_dischargedate" class="form-control" id="sbo_dischargedate">
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-4">
+        <label for="readmittedwithin30daysid">Readmitted within 30 days post discharge</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="readmittedwithin30daysid" id="readmittedRadio1"
+                value="Yes">
+            <label class="form-check-label" for="readmittedRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="readmittedwithin30daysid" id="readmittedRadio2"
+                value="No">
+            <label class="form-check-label" for="readmittedRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="readmittedwithin30daysid" id="readmittedRadio3"
+                value="ND">
+            <label class="form-check-label" for="readmittedRadio3">ND</label>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="form-group col-sm-6">
+        <label for="sbo_destinationid">Discharge Destination</label>
+        <select name="sbo_destinationid" id="sbo_destinationid" class="form-control">
+            <option value=""></option>
+            <option value="Own Home/Sheltered Accomodation">Own Home/Sheltered Accomodation</option>
+            <option value="Rehabilitation Unit Residential Home">Rehabilitation Unit Residential Home
+            </option>
+            <option value="Nursing Home Hospice">Nursing Home Hospice</option>
+            <option value="Still Acute Patient">Still Acute Patient</option>
+            <option value="Deceased">Deceased</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-group" id="checkboxes">
+    <label for="sbo_complicationsid">Did the following complications of management occur whilst hospital
+        inpatient</label>
+    <br>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="UTI" id="complicationCheckR11"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR11">UTI</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Pneumonia" id="complicationCheckR12"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR12">Pneumonia</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Cardiac" id="complicationCheckR13"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR13">Cardiac</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="DVT/PE" id="complicationCheckR14"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR14">DVT/PE</label>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Delirium" id="complicationCheckR21"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR21">Delirium</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Superficial Surgical Site infection (SSI)"
+                    id="complicationCheckR22" name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR22">Superficial Surgical Site
+                    infection (SSI)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Intra-abdominal sepsis" id="complicationCheckR23"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR23">Intra-abdominal
+                    sepsis</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Abdominal Wall dehiscence"
+                    id="complicationCheckR24" name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR24">Abdominal Wall
+                    dehiscence</label>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Anastomotic leak" id="complicationCheckR31"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR31">Anastomotic leak</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Radiological drain" id="complicationCheckR32"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR32">Radiological drain</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Reoperation" id="complicationCheckR33"
+                    name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR33">Reoperation</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Unplanned HDU/ITU admission"
+                    id="complicationCheckR34" name=sbo_complicationsid>
+                <label class="form-check-label" for="complicationCheckR34">Unplanned HDU/ITU
+                    admission</label>
+            </div>
+        </div>
+
+    </div>
+</div>

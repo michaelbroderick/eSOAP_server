@@ -1,0 +1,133 @@
+<h4 class="text-center text-white bg-secondary py-1">Pre-operative</h4>
+
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="timefromsymptomonset">Time from Onset of Symptoms</label>
+        <select name="timefromsymptomonset" id="timefromsymptomonset" class="form-control">
+            <option value=""></option>
+            <option value="Under 1 hour">0-59 minutes</option>
+            <option value="1 hour">1 hour</option>
+            <option value="2 hours">2 hours</option>
+            <option value="3 hours">3 hours</option>
+            <option value="4 hours">4 hours</option>
+            <option value="5 hours">5 hours</option>
+            <option value="6 hours">6 hours</option>
+            <option value="Other">Other</option>
+
+        </select>
+    </div>
+</div>
+
+
+<h4 class="text-center text-white bg-secondary py-1">Pre-op Risk Stratification</h4>
+
+<div class="row">
+    <div class="form-group col-sm-4 input_visibility lap">
+        <label for="usedfrailtyid">Was a frailty score used?</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="usedfrailtyid" id="usedfrailtyRadio1" value="Yes">
+            <label class="form-check-label" for="usedfrailtyRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="usedfrailtyid" id="usedfrailtyRadio2" value="No">
+            <label class="form-check-label" for="usedfrailtyRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="usedfrailtyid" id="usedfrailtyRadio3" value="ND">
+            <label class="form-check-label" for="usedfrailtyRadio3">ND</label>
+        </div>
+    </div>
+
+    <div class="form-group col-sm-4 input_visibility" id="displayFrailty">
+        <label for="frailtyid">Frailty Score Used</label>
+        <input type="input" name="frailtyid" class="form-control" id="frailtyid">
+    </div>
+
+    <div class="form-group col-sm-4 input_visibility" id="displayFrailtyScore">
+        <label for="frailtyscoreid">Score</label>
+        <input type="number" name="frailtyscoreid" class="form-control" id="frailtyscoreid">
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-4 input_visibility lap">
+        <label for="usedpredictionid">Was there a risk prediction score used for morbidity
+            preoperatively?</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="usedpredictionid" id="usedpredictionRadio1" value="Yes">
+            <label class="form-check-label" for="usedpredictionRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="usedpredictionid" id="usedpredictionRadio2" value="No">
+            <label class="form-check-label" for="usedpredictionRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="usedpredictionid" id="usedpredictionRadio3" value="ND">
+            <label class="form-check-label" for="usedpredictionRadio3">ND</label>
+        </div>
+    </div>
+
+    <div class="form-group col-sm-4 input_visibility" id='displayPrediction'>
+        <label for="predictionid">Risk Prediction Score Used</label>
+        <select name="predictionid" id="predictionid" class="form-control">
+            <option value=""></option>
+            <option value="Risk prediction tool">Risk prediction tool</option>
+            <option value="Clinical Judgement">Clinical Judgement</option>
+            <option value="Surgical APGAR">Surgical APGAR</option>
+            <option value="Physiological Criteria">Physiological Criteria</option>
+            <option value="Other e.g. hospital policy">Other e.g. hospital policy</option>
+        </select>
+    </div>
+
+    <div class="form-group col-sm-4 input_visibility" id="displayPredictionScore">
+        <label for="predictionscoreid">Score</label>
+        <input type="number" name="predictionscoreid" class="form-control" id="predictionscoreid">
+    </div>
+
+</div>
+
+<h4 class="text-center text-white bg-secondary py-1">Intra-operative</h4>
+
+
+<div class="row">
+
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="seniorsurgeonid">Senior Surgeon Grade</label>
+        <select name="seniorsurgeonid" id="seniorsurgeonid" class="form-control">
+            <option value=""></option>
+            <option value="Consultant">Consultant</option>
+            <option value="Registrar">Registrar</option>
+            <option value="SHO">SHO</option>
+
+        </select>
+    </div>
+
+
+    <div class="form-group col-sm-6 input_visibility lap">
+        <label for="presentconsultantid">Consultant Present/Supervising</label>
+        <select name="presentconsultantid" id="presentconsultantid" class="form-control">
+            <option value=""></option>
+            <option value="Mr Bassett">Mr Bassett</option>
+            <option value="Mr Bodnar">Mr Bodnar</option>
+            <option value="Mr Elmusharaf">Mr Elmusharaf</option>
+            <option value="Mr Sugrue">Mr Sugrue</option>
+            <option value="Mr Vargalis">Mr Vargalis</option>
+            <option value="Mr Zeeshan">Mr Zeeshan</option>
+            <option value="Mr Butt">Mr Butt</option>
+            <option value="Locum">Locum</option>
+            <option value="No consultant present">Post-op</option>
+
+        </select>
+    </div>
+</div>
+
+<div class="row justify-content-end">
+    <div class="form-group col-sm-6 input_visibility" id="showLocum">
+        <label for="lap_locum_name">Locum Name</label>
+        <input type="input" name="lap_locum_name" class="form-control" id="lap_locum_name">
+    </div>
+</div>

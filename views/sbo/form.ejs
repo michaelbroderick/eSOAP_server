@@ -1,0 +1,96 @@
+<%- include('../partials/sbo/sbo_head') %>
+    <%- include('../partials/nav_bar') %>
+
+        <div class="container border rounded my-3">
+
+
+            <h2 class="display-5 text-center my-3">Small Bowel Obstruction Module</h2>
+
+            <ul class="nav nav-tabs" id="tabs">
+                <li class="nav-item">
+                    <a class="nav-link forms-links active" id="sbo_admission_data_link">Admission Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link forms-links" id="sbo_baseline_phys_link">Baseline Physiology</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link forms-links" id="sbo_diagnostic_tests_link">Diagnostic Tests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link forms-links" id="sbo_aetiology_link">Aetiology & Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link forms-links" id="sbo_care_episode_link">Care episode data</a>
+                </li>
+
+
+
+            </ul>
+
+            <form action="/sbo/<%=req.params.id%>/form" method="POST">
+
+                <span id="hiddenspan" hidden="true">
+                    <%=jsonData%>
+                </span>
+
+                <section id='sbo_admission_data_form'>
+                    <%- include('../partials/sbo/sbo_admission_data') %>
+                </section>
+                <section id='sbo_baseline_phys_form' class='input_visibility'>
+                    <%- include('../partials/sbo/sbo_baseline_phys') %>
+                </section>
+                <section id='sbo_diagnostic_tests_form' class='input_visibility'>
+                    <%- include('../partials/sbo/sbo_diagnostic_tests') %>
+                </section>
+                <section id='sbo_aetiology_form' class='input_visibility'>
+                    <%- include('../partials/sbo/sbo_aetiology') %>
+                </section>
+                <section id='sbo_care_episode_form' class='input_visibility'>
+                    <%- include('../partials/sbo/sbo_care_episode') %>
+                </section>
+
+
+                <button type="button" class="btn btn-primary btn-lg my-3 mx-1 next" id="nxt">Next</button>
+                <button type="button" class="btn btn-primary btn-lg my-3 mx-1 previous input_visibility"
+                    id="prev">Previous</button>
+                <button class="btn btn-primary btn-lg my-3 mx-1 view_modules" id="view_mod">View Modules</button>
+
+                <input type="number" id="percentComplete" name="percentComplete" hidden=true>
+
+
+            </form>
+
+
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
+        <script src="/js/form_functions.js"></script>
+        <script>
+            populateLocalStorage();
+            populate("input, select");
+            setListener("input, select");
+            addDateCheck();
+            setNavListener(['sbo_admission_data', 'sbo_baseline_phys', 'sbo_diagnostic_tests', 'sbo_aetiology', 'sbo_care_episode']);
+            setNextListener(['sbo_admission_data', 'sbo_baseline_phys', 'sbo_diagnostic_tests', 'sbo_aetiology', 'sbo_care_episode']);
+            setPrevListener(['sbo_admission_data', 'sbo_baseline_phys', 'sbo_diagnostic_tests', 'sbo_aetiology', 'sbo_care_episode']);
+
+        </script>
+        <script src="/js/sbo.js"></script>
+        <% if(validate==='pass' ){ %>
+            <script src='/js/validation.js'></script>
+            <% } %>
+
+                </body>
+
+                </html>

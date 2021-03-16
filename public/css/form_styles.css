@@ -1,0 +1,155 @@
+label{
+    font-weight:700;
+    font-size: 1.2rem;
+}
+
+.form-check-label{
+
+    font-weight:400;
+
+}
+
+nav{
+    background-color: #cddfd8;
+    font-size: 1.2rem;
+    color:#b4083a;
+
+}
+
+
+
+#tabs .nav-link{
+    color:#006857;
+    border-width: 3px;
+}
+
+.next{
+    background-color: #006857;
+    border-color: #006857;
+}
+
+.previous{
+    background-color: #006857;
+    border-color: #006857;
+}
+
+.view_modules{
+    background-color: #b4083a;
+    border-color: #b4083a;
+}
+
+form{
+    margin-top:30px
+}
+
+#signout_form{
+    margin-top:0px;
+}
+
+#sepHead{
+    font-size: 1.4rem;
+    /* padding-bottom: 0.5em;
+    margin-bottom: 100px;
+    border-bottom: 1px solid #222; */
+}
+
+#checkboxes .form-check{
+margin: .75em 0em;
+}
+
+.input_visibility{
+    display:none;
+}
+
+.next:hover{
+    background-color: white;
+    color: #006857;
+    border-color: #006857;
+    
+}
+
+#signout_btn{
+    background: none;
+	color: inherit;
+	border: none;
+	padding-top: 8px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+}
+
+
+.previous:hover{
+    background-color: white;
+    color: #006857;
+    border-color: #006857;
+    
+}
+
+.view_modules:hover{
+    background-color: white;
+    color: #b4083a;
+    border-color: #b4083a;
+    box-shadow: none;
+
+}
+
+.btn-sample:active {
+    box-shadow: none;
+  }
+
+
+
+
+
+
+.btn-primary:focus,
+.btn-primary.focus {
+        color: #fff!important;
+        background-color: #006857!important;
+        border-color: #006857!important;
+    }
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+        color: #fff!important;
+        background-color: #006857!important;
+        border-color: #006857!important;
+    }
+
+ 
+
+
+
+    #nxt:active{
+        background-color: #006857 !important;
+        border-color: #006857 !important;
+        
+        box-shadow: none;
+    }
+    
+    #nxt:visited{
+        background-color: #006857 !important;
+        border-color: #006857 !important;
+        
+        box-shadow: none;
+    }
+    
+    
+    #prev:active{
+        background-color: #006857 !important;
+        border-color: #006857 !important;
+    
+        box-shadow: none;
+    }
+    
+    
+    #view_mod:active{
+        background-color: #b4083a !important;
+        border-color: #b4083a !important;
+    
+        box-shadow: none;
+    }
+    

@@ -1,0 +1,160 @@
+html{
+    font-family: 'Open Sans', sans-serif;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family: 'Open Sans', sans-serif;
+background-color: #cddfd8;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.container{
+    /* margin: auto;     */
+    background-color: white;
+    border: 1px solid black;
+    flex-basis: 500px;
+    border-radius: 20px;
+    
+
+    
+}
+
+h1{
+    border-bottom: 5px solid #cddfd8;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+    font-size: 3rem;
+    margin:0.5em 0;
+    margin-top:0;
+
+
+}
+
+header{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    /* justify-content: space-evenly; */
+}
+
+.logo_space div{
+    /* border: 1px solid black; */
+    flex-basis: 150px;
+}
+
+#living_lab{
+    width: 70%;
+}
+
+.logo_space img{
+    width:100%;
+}
+
+/* .col-4 img{
+    width:150px;
+    height:150px;
+} */
+
+
+#login_box{
+    /* background-color: white; */
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    font-size: 1.5rem;
+
+}
+
+input{
+    font-size:1.5rem;
+    margin: .5em 0;
+    background-color: #fff;
+    padding: 0.1em;
+    border-radius: 0.25em;
+    border: 0.1em solid rgb(116, 116, 116);
+
+}
+
+label{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+button{
+    margin-top: 1em;
+    /* margin-left: 12%; */
+    margin-bottom: 2em;
+    margin-right: .5em;
+    font-size: 1.5rem;
+    color:#fff;
+    background-color: #006857;
+    padding: .4em .7em;
+    border-style: unset;
+    border:1px solid #006857;
+    transition: all 200ms ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#register{
+    background-color: #b4083a;
+    border:1px solid #b4083a;
+}
+
+button.sm_btn{
+    font-size: 1.6rem;
+}
+
+button:hover{
+    background-color: white;
+    color:#006857;
+}
+#register:hover{
+
+    background-color: white;
+   color: #b4083a;
+}
+
+
+#failedlogin{
+    font-size:0.75em;
+    color:#b4083a
+}
+
+footer{
+    display: flex;
+}
+
+#greenbox{
+    /* width:30%; */
+    height:3rem;
+    flex: 1 400px;
+    border-right: 1px solid white;
+    background-color: #006857;
+    border-bottom-left-radius: 20px;
+    /* display: inline-block; */
+}
+
+#redbox{
+    /* width:69%; */
+    height:3rem; 
+    flex: 1 800px;
+    background-color: #b4083a;
+    border-bottom-right-radius: 20px;
+    /* display: inline-block; */
+}
+
+@media (min-width:900px){
+    .container{
+        flex-basis:800px;
+    }
+}
