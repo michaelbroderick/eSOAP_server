@@ -8,7 +8,6 @@ const sql = require('./sqlCommands.js')
 const { getPatientData, local2registry, submitPatientToRegistry } = require('./moveReg.js');
 const ExpressError = require('./utils/ExpressError');
 const { isArray } = require('util');
-const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 const stringify = require('csv-stringify');
 const { exists } = require('fs');
