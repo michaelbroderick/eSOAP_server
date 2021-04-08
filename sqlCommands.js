@@ -1,4 +1,4 @@
-findByPCN = (connection, pcn) => {
+module.exports.findByPCN = (connection, pcn) => {
     return new Promise((resolve, reject) => {
         connection.query('SELECT * FROM demographics WHERE pcn=?', [pcn], (error, elements) => {
             if (error) {
@@ -9,7 +9,7 @@ findByPCN = (connection, pcn) => {
     });
 };
 
-selectById = (connection, table, id) => {
+module.exports.selectById = (connection, table, id) => {
     return new Promise((resolve, reject) => {
         connection.query('SELECT * FROM ?? WHERE patientid=?', [table, id], (error, elements) => {
             if (error) {
@@ -21,7 +21,7 @@ selectById = (connection, table, id) => {
 };
 
 
-insertIntoDemographics = (connection, pcn, userid) => {
+module.exports.insertIntoDemographics = (connection, pcn, userid) => {
     return new Promise((resolve, reject) => {
         connection.query('INSERT INTO demographics(pcn, userid) VALUES (?, ?)', [pcn, userid], (error, elements) => {
             if (error) {
@@ -35,21 +35,8 @@ insertIntoDemographics = (connection, pcn, userid) => {
 
 };
 
-insertIntoModules = (connection, table, id) => {
-    return new Promise((resolve, reject) => {
-        connection.query('INSERT INTO ??(patientid) VALUES (?)', [table, id], (error, elements) => {
-            if (error) {
-                return reject(error);
-            }
-            return resolve(elements);
-        });
 
-
-    });
-
-};
-
-init_table = (connection, table, patientid) => {
+module.exports.init_table = (connection, table, patientid) => {
     return new Promise((resolve, reject) => {
         connection.query('INSERT INTO ??(patientid) VALUES (?)', [table, patientid], (error, elements) => {
             if (error) {
@@ -62,7 +49,7 @@ init_table = (connection, table, patientid) => {
 
 };
 
-updateModules = (connection, module, data, id) => {
+module.exports.updateModules = (connection, module, data, id) => {
     return new Promise((resolve, reject) => {
         connection.query('UPDATE ?? SET ? WHERE patientid=?', [module, data, id], (error, elements) => {
             if (error) {
@@ -76,7 +63,7 @@ updateModules = (connection, module, data, id) => {
 
 
 
-getjoinedData = (connection, id) => {
+module.exports.getjoinedData = (connection, id) => {
     return new Promise((resolve, reject) => {
         const q = 'SELECT * FROM demographics\
         LEFT JOIN labs ON demographics.patientid = labs.patientid \
@@ -99,7 +86,7 @@ getjoinedData = (connection, id) => {
 
 };
 
-getAllData = (connection) => {
+module.exports.getAllData = (connection) => {
     return new Promise((resolve, reject) => {
         const q = 'SELECT * FROM demographics LEFT JOIN \
     labs ON demographics.registryid = labs.registryid \
@@ -121,50 +108,9 @@ getAllData = (connection) => {
 
 };
 
-getData = (connection, module, id) => {
-    return new Promise((resolve, reject) => {
-        const q = 'SELECT * FROM ?? WHERE patientid = ?';
 
-        connection.query(q, [module, id], (error, elements) => {
-            if (error) {
-                return reject(error);
-            }
-            return resolve(elements);
-        });
 
-    })
-
-};
-
-getModule = (connection, id) => {
-    return new Promise((resolve, reject) => {
-        connection.query('SELECT moduleid, percentComplete, patientid FROM demographics WHERE patientid=?', [id], (error, elements) => {
-            if (error) {
-                return reject(error);
-            }
-            return resolve(elements);
-        });
-
-    })
-
-};
-
-getModulePercentage = (connection, table, id) => {
-    return new Promise((resolve, reject) => {
-
-        connection.query('SELECT percentComplete FROM ?? WHERE patientid=?', [table, id], (error, elements) => {
-            if (error) {
-
-                return reject(error);
-            }
-            return resolve(elements);
-        });
-
-    })
-
-};
-
-registerUser = (connection, data) => {
+module.exports.registerUser = (connection, data) => {
     return new Promise((resolve, reject) => {
         connection.query('INSERT INTO accounts SET ?', [data], (error, elements) => {
             if (error) {
@@ -177,7 +123,7 @@ registerUser = (connection, data) => {
 
 };
 
-checkUser = (connection, username) => {
+module.exports.checkUser = (connection, username) => {
     return new Promise((resolve, reject) => {
         connection.query('SELECT * FROM accounts WHERE username=?', [username], (error, elements) => {
             if (error) {
@@ -190,19 +136,46 @@ checkUser = (connection, username) => {
 
 };
 
-// getData = (connection,) => {
-//     return new Promise((resolve, reject) => {
-//         connection.query('', [], (error, elements) => {
-//             if (error) {
-//                 return reject(error);
-//             }
-//             return resolve(elements);
-//         });
+module.exports.logHistory = (connection, userid, patientid) => {
+    return new Promise((resolve, reject) => {
+        connection.query('INSERT INTO viewhistory(userid,patientid) VALUES(?,?)', [userid, patientid], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
 
-//     })
+    })
 
-// };
+};
 
+
+module.exports.getHistory = (connection, id) => {
+    return new Promise((resolve, reject) => {
+        connection.query('SELECT max(lastviewed) AS lastviewed, pcn, viewhistory.patientid, admissiondate, percentcomplete \
+         FROM viewhistory \
+          LEFT JOIN demographics ON viewhistory.patientid = demographics.patientid WHERE viewhistory.userid = ? GROUP BY viewhistory.patientid ORDER BY lastviewed DESC LIMIT 5', [id], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+
+    })
+
+};
+
+module.exports.getKOIs = (connection, moduleid) => {
+    return new Promise((resolve, reject) => {
+        connection.query('SELECT koi,koitarget FROM kois WHERE module=?', [moduleid], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+
+    })
+};
 
 // = (connection, ) => {
 // return new Promise((resolve,reject)=>{
@@ -216,18 +189,6 @@ checkUser = (connection, username) => {
 // })
 
 // };
-// = (connection, ) => {
-// return new Promise((resolve,reject)=>{
-// connection.query('', [], (error, elements) => {
-//     if (error) {
-//         return reject(error);
-//     }
-//     return resolve(elements);
-// });
 
-// })
-
-// };
-
-module.exports = { findByPCN, getAllData, checkUser, registerUser, insertIntoDemographics, init_table, getjoinedData, selectById, insertIntoModules, updateModules, getData, getModule, getModulePercentage };
+// module.exports = { findByPCN, getAllData, checkUser, registerUser, insertIntoDemographics, init_table, getjoinedData, selectById, insertIntoModules, updateModules, getData, getModule, getModulePercentage };
 

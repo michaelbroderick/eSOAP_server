@@ -1,10 +1,9 @@
 <%- include('./partials/min_dataset_head') %>
     <%- include('./partials/nav_bar') %>
 
-        <div class="container border rounded my-3">
+        <div id="form-body" class="container border rounded my-3">
 
-
-            <h2 class="display-5 text-center my-3">Patient Information</h2>
+            <h2 class="display-5 text-center my-3">Emergency General Surgery Registry</h2>
 
             <ul class="nav nav-tabs" id="tabs">
                 <li class="nav-item">
@@ -33,7 +32,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link forms-links input_visibility" id='clinical_exam_link'>Clinical Examination</a>
+                    <a class="nav-link forms-links input_visibility" id='clinical_exam_link'>Clinical
+                        Examination</a>
                 </li>
 
                 <li class="nav-item">
@@ -68,7 +68,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link forms-links" id='post_op_link'>Post Operation</a>
+                    <a class="nav-link forms-links" id='post_op_link'>Post Operative</a>
                 </li>
 
             </ul>
@@ -156,7 +156,7 @@
                 <button type="button" class="btn btn-primary btn-lg my-3 mx-1 next" id="nxt">Next</button>
                 <button type="button" class="btn btn-primary btn-lg my-3 mx-1 previous input_visibility"
                     id="prev">Previous</button>
-                <button class="btn btn-primary btn-lg my-3 mx-1 view_modules" id="view_mod">View Modules</button>
+                <button class="btn btn-primary btn-lg my-3 mx-1 view_modules" id="view_mod">Save and Exit</button>
 
                 <input type="number" id="percentComplete" name="percentComplete" hidden=true>
 
@@ -183,13 +183,12 @@
 
 
         <script>
-            populateLocalStorage();
-
-
-            populate("input, select, textarea");
-            setListener("input, select, textarea");
+            // populateLocalStorage();
+            // populate("input, select, textarea");
+            populateFields("input, select, textarea");
+            // setListener("input, select, textarea");
             addDateCheck();
-
+            document.querySelector("#pcn_search_bar").hidden = true;
 
             const moduleNavs = {
 
@@ -205,7 +204,6 @@
             setPrevListener(moduleNavs[document.querySelector('#moduleid').value])
 
             document.querySelector('#moduleid').addEventListener('change', () => {
-                console.log('In here', moduleNavs[document.querySelector('#moduleid').value])
                 setNextListener(moduleNavs[document.querySelector('#moduleid').value])
                 setPrevListener(moduleNavs[document.querySelector('#moduleid').value])
             })

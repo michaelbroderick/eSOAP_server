@@ -35,7 +35,7 @@
         <div id="login_box">
             <h1>Sign in </h1>
 
-            <form action="/auth" method="POST">
+            <form action="/user/login" method="POST">
 
                 <div>
                     <label for="username">Username:</label>
@@ -47,14 +47,17 @@
                 </div>
 
 
-                <% if (failedLogin){ %>
+                <% if (messages){ %>
 
-                    <div id=failedlogin>Invalid username or password. Please try again</div>
+                    <div id=failedlogin>
+                        <%= messages %>
+                    </div>
                     <% } %>
 
 
+
                         <button>Sign in</button>
-                        <a href="/register"><button type="button" id='register'>Register</button></a>
+                        <a href="/user/register"><button type="button" id='register'>Register</button></a>
 
 
             </form>

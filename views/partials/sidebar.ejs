@@ -1,0 +1,50 @@
+<nav id="sidebar">
+    <ul class="list-unstyled components">
+
+        <li class="active">
+            <a href="/landing/<%=req.params.id%>">
+                Home
+            </a>
+        </li>
+        <li>
+
+            <a href="/modules/<%=req.params.id%>/show">
+                Registry
+            </a>
+            <a href="#">
+                Proforma
+            </a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                Reporting
+            </a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="#">View Patient Data</a>
+                </li>
+                <li>
+                    <a href="#">Population Report</a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <ul class="list-unstyled CTAs">
+        <li>
+            <a href="/exportCSV/" class="download">Export Registry Data</a>
+        </li>
+
+    </ul>
+</nav>
+
+<div class=bg-light>
+    <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <!-- <i class="fas fa-align-left"></i> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-text-left"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </button>
+
+</div>

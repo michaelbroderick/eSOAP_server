@@ -153,3 +153,7 @@ margin: .75em 0em;
         box-shadow: none;
     }
     
+
+    #form-body{
+        border-right: 40px solid #e76f51 !important;
+    }

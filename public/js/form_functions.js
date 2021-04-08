@@ -183,6 +183,30 @@ function populate(input_class) {
 
 }
 
+function populateFields(input_class) {
+    const fields = document.querySelectorAll(input_class)
+    const data = JSON.parse(document.querySelector("#hiddenspan").innerText);
+    console.log(data)
+    for (let field of fields) {
+        if (data[field.name]) {
+            if (field.type === 'radio' | field.type === 'checkbox') {
+                let checkArray = data[field.name].split('&');
+                if (checkArray.indexOf(field.value) > -1) {
+                    field.checked = true;
+                }
+            } else if (field.type === 'date') {
+                field.value = data[field.name].slice(0, 10);
+            }
+            else if (field.type === 'datetime-local') {
+                field.value = data[field.name].slice(0, -8);
+            }
+            else {
+                field.value = data[field.name];
+            }
+        }
+    }
+}
+
 
 function setListener(input_class) {
 

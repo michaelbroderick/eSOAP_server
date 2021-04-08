@@ -40,10 +40,19 @@
                         <%= err.message %>
                 </h2>
 
+                <button type="button" onclick="goBack()">Go Back</button>
+
+
             </div>
         </div>
     </div>
 
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 
 </body>
 

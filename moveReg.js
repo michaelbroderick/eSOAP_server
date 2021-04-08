@@ -125,7 +125,7 @@ async function local2registry(connection, registry, table, patientid, fieldList,
 
 async function submitPatientToRegistry(connection, registry, patientid, module) {
 
-    const result = await local2registry(connection, registry, 'demographics', patientid, ['pcn'])
+    const result = await local2registry(connection, registry, 'demographics', patientid, ['pcn', 'lastviewed'])
 
     await local2registry(connection, registry, 'labs', patientid, ['labid', 'patientid'], result.insertId)
     await local2registry(connection, registry, 'imaging', patientid, ['imagingid', 'patientid'], result.insertId)
