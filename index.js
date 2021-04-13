@@ -11,6 +11,7 @@ const { isArray } = require('util');
 const flash = require('connect-flash');
 const stringify = require('csv-stringify');
 const { exists } = require('fs');
+const { runSQL } = require("./runSQL.js")
 
 
 app.use(express.urlencoded({ extended: true }))
