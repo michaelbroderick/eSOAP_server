@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const ExpressError = require('./utils/ExpressError');
 const flash = require('connect-flash');
+const { runSQL } = require("./runSQL.js")
 
 
 const userRoutes = require('./routes/user')
@@ -14,6 +15,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(flash());
+
+
 
 
 app.use(session({

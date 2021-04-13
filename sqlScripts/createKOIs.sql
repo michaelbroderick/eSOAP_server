@@ -1,5 +1,7 @@
 USE `esoap_local`;
 
+DROP TABLE IF EXISTS kois
+
 CREATE TABLE IF NOT EXISTS kois (
   id int(11) NOT NULL AUTO_INCREMENT,
   module varchar(100),

@@ -18,10 +18,9 @@
         <select name="usid" id="usid" class="form-control">
             <option value=""></option>
             <option value="Abdomen">Abdomen</option>
-            <option value="Abdiment and Pelvis-Trans Abdominal/Trans Vaginal">Abdiment and Pelvis-Trans
-                Abdominal/Trans Vaginal</option>
+            <option value="Abdomen and Pelvis">Abdomen and Pelvis</option>
             <option value="Breast">Breast</option>
-            <option value="Pelvic Trans Abdominal/Trans Vaginal">Pelvic Trans Abdominal/Trans Vaginal
+            <option value="Pelvis">Pelvis
             </option>
             <option value="Renal (kidney both)">Renal (kidney both)</option>
             <!-- <option value="Trans Abdominal">Trans Abdominal</option>
@@ -29,7 +28,26 @@
             <option value="Not Requested">Not Requested</option>
         </select>
     </div>
+
+    <div class="form-group col-sm-4 input_visibility" id='transAV'>
+        <label for="transabdominalvaginal">Trans Abdominal/Vaginal</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transabdominalvaginal" id="transAVRadio1"
+                value="Trans Abdominal">
+            <label class="form-check-label" for="transAVRadio1">Trans Abdominal</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transabdominalvaginal" id="transAVRadio2"
+                value="Trans Vaginal">
+            <label class="form-check-label" for="transAVRadio2">Trans Vaginal</label>
+        </div>
+
+    </div>
+
 </div>
+
+
 
 <div class="row input_visibility" id="usRow">
     <div class="form-group col-sm-4  input_visibility" id="usbookedDiv">
@@ -85,6 +103,15 @@
 </div>
 
 <div class="row">
+
+    <div class="form-group col-sm-4">
+        <label for="daterecwatersolubleagent">Date Received Water Soluble Contrast Agent</label>
+        <input type="datetime-local" name="daterecwatersolubleagent" class="form-control" id="daterecwatersolubleagent">
+    </div>
+
+</div>
+
+<div class="row">
     <div class="form-group col-sm-8">
         <label for="mriid">MRI</label>
         <select name="mriid" id="mriid" class="form-control">
@@ -116,7 +143,7 @@
 </div>
 
 <div class="row">
-    <div class="form-group col-sm-8">
+    <div class="form-group col-sm-4">
         <label for="otherimageid">Other Image</label>
         <select name="otherimageid" id="otherimageid" class="form-control">
             <option value="ND">ND</option>
@@ -124,6 +151,14 @@
             <option value="No">No</option>
         </select>
     </div>
+
+    <div class="form-group col-sm-8 input_visibility" id="otherImgText">
+        <label for="otherimagingtype">Other Image</label>
+        <input type="text" name="otherimagingtype" class="form-control" id="otherimagingtype">
+    </div>
+
+
+
 </div>
 
 <div class="row input_visibility" id="otherimageRow">
