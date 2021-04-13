@@ -5,25 +5,26 @@
         <label for="sbo_comorbiditiesid">Co-morbidities</label>
         <select name="sbo_comorbiditiesid" id="sbo_comorbiditiesid" class="form-control">
             <option value=""></option>
-            <option value="IHD">IHD</option>
+            <option value="AIDS">AIDS</option>
             <option value="CCF">CCF</option>
-            <option value="CVA">CVA</option>
-            <option value="Hemiplegia">Hemiplegia</option>
-            <option value="Leukaemia">Leukaemia</option>
-            <option value="Lymphoma">Lymphoma</option>
-            <option value="Mild Liver Disease">Mild Liver Disease</option>
-            <option value="Severe Liver Disease">Severe Liver Disease</option>
-            <option value="Connective Tissue Disease">Connective Tissue Disease</option>
-            <option value="Peptic Ulcer Disease">Peptic Ulcer Disease</option>
-            <option value="PVD">PVD</option>
+            <option value="CKD">CKD</option>
             <option value="COPD">COPD</option>
+            <option value="Connective Tissue Disease">Connective Tissue Disease</option>
+            <option value="CVA">CVA</option>
             <option value="Dementia">Dementia</option>
             <option value="DM (uncomplicated)">DM (uncomplicated)</option>
             <option value="DM (complicated)">DM (complicated)</option>
-            <option value="CKD">CKD</option>
+            <option value="Hemiplegia">Hemiplegia</option>
+            <option value="IHD">IHD</option>
+            <option value="Leukaemia">Leukaemia</option>
+            <option value="Lymphoma">Lymphoma</option>
+            <option value="Metastatic Tumour">Metastatic Tumour</option>
+            <option value="Mild Liver Disease">Mild Liver Disease</option>
+            <option value="Peptic Ulcer Disease">Peptic Ulcer Disease</option>
+            <option value="PVD">PVD</option>
+            <option value="Severe Liver Disease">Severe Liver Disease</option>
             <option value="Solid Tumour">Solid Tumour</option>
-            <option value="Metastatic">Metastatic</option>
-            <option value="AIDS">AIDS</option>
+            <option value="None">None</option>
 
         </select>
     </div>
@@ -49,18 +50,11 @@
     </div>
 </div>
 
-<h4 class="text-center text-white bg-secondary py-1">Baseline Physiology</h4>
 
-<div class="row">
-    <div class="form-group col-sm-6 input_visibility sbo">
-        <label for="albumin">Albumin (g/dL)</label>
-        <input type="number" name="albumin" class="form-control" step=0.01 id="albumin">
-    </div>
-</div>
 
-<h4 class="text-center text-white bg-secondary py-1">Diagnostic Tests</h4>
+<!-- <h4 class="text-center text-white bg-secondary py-1">Diagnostic Tests</h4> -->
 
-<div class="row">
+<!-- <div class="row">
     <div class="form-group col-sm-4 input_visibility sbo">
         <label for="sbo_abdoXray">Abdominal X-ray performed</label>
         <br>
@@ -74,14 +68,14 @@
         </div>
     </div>
 
-    <!-- needs to be visible only when yes is selected -->
+    
     <div class="form-group col-sm-6 input_visibility" id="abdoDT">
         <label for="sbo_abdoXray_date">Date and Time of X-ray</label>
         <input type="datetime-local" name="sbo_abdoXray_date" class="form-control" id="sbo_abdoXray_date">
     </div>
-</div>
+</div> -->
 
-<div class="row">
+<!-- <div class="row">
     <div class="form-group col-sm-4 input_visibility sbo">
         <label for="sbo_ct">CT scan performed</label>
         <br>
@@ -95,10 +89,40 @@
         </div>
     </div>
 
-    <!-- needs to be visible only when yes is selected -->
     <div class="form-group col-sm-4 input_visibility" id="ctDT">
         <label for="sbo_ct_date">Date and Time of CT</label>
         <input type="datetime-local" name="sbo_ct_date" class="form-control" id="sbo_ct_date">
+    </div>
+</div> -->
+
+
+
+<h4 class="text-center text-white bg-secondary py-1">Aetiology and Management</h4>
+
+<div class="row">
+    <div class="form-group col-sm-6 input_visibility sbo">
+        <label for="sbo_Aetiology">Aetiology</label>
+        <select name="sbo_Aetiology" id="sbo_Aetiology" class="form-control">
+            <option value=""></option>
+            <option value="Congenital band adhesion">Congenital band adhesion</option>
+            <option value="Post-operative adhesions">Post-operative adhesions</option>
+            <option value="Right sided colon cancer">Right sided colon cancer</option>
+            <option value="Crohn’s diseas">Crohn’s diseas</option>
+            <option value="Disseminated intra-abdominal malignancy">Disseminated intra-abdominal
+                malignancy
+            </option>
+            <option value="Incarcerated hernia - Groin">Incarcerated hernia - Groin</option>
+            <option value="Incarcerated hernia - Midline">Incarcerated hernia - Midline</option>
+            <option value="Incarcerated hernia – Incisional">Incarcerated hernia – Incisional</option>
+            <option value="Incarcerated hernia - Parastomal">Incarcerated hernia - Parastomal</option>
+            <option value="Small bowel Volvulus">Small bowel Volvulus</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <!-- add text box here for other condition -->
+    <div class="form-group col-sm-6 input_visibility" id="otherAetiologyText">
+        <label for="sbo_otheraetiology">Other Aetiology</label>
+        <input type="text" name="sbo_otheraetiology" class="form-control">
     </div>
 </div>
 
@@ -126,29 +150,26 @@
 
 </div>
 
-<h4 class="text-center text-white bg-secondary py-1">Aetiology and Management</h4>
-
 <div class="row">
+
     <div class="form-group col-sm-6 input_visibility sbo">
-        <label for="sbo_Aetiology">Aetiology</label>
-        <select name="sbo_Aetiology" id="sbo_Aetiology" class="form-control">
-            <option value=""></option>
-            <option value="Congenital band adhesion">Congenital band adhesion</option>
-            <option value="Post-operative adhesions">Post-operative adhesions</option>
-            <option value="Right sided colon cancer">Right sided colon cancer</option>
-            <option value="Crohn’s diseas">Crohn’s diseas</option>
-            <option value="Disseminated intra-abdominal malignancy">Disseminated intra-abdominal
-                malignancy
-            </option>
-            <option value="Incarcerated hernia - Groin">Incarcerated hernia - Groin</option>
-            <option value="Incarcerated hernia - Midline">Incarcerated hernia - Midline</option>
-            <option value="Incarcerated hernia – Incisional">Incarcerated hernia – Incisional</option>
-            <option value="Incarcerated hernia - Parastomal">Incarcerated hernia - Parastomal</option>
-            <option value="Small bowel Volvulus">Small bowel Volvulus</option>
-            <option value="Other">Other</option>
-        </select>
+        <label for="sbo_procedure">Did the patient undergo an operation/procedure for SBO</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sbo_procedure" id="sboprocedureRadio1" value="Yes">
+            <label class="form-check-label" for="sboprocedureRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sbo_procedure" id="sboprocedureRadio2" value="No">
+            <label class="form-check-label" for="sboprocedureRadio2">No</label>
+        </div>
     </div>
-    <!-- add text box here for other condition -->
+
+    <div class="form-group col-sm-4 input_visibility" id="sboprocedureDT">
+        <label for="sbo_procedure_date">Date and Time</label>
+        <input type="datetime-local" name="sbo_procedure_date" class="form-control" id="sbo_procedure_date">
+    </div>
+
 </div>
 
 <div class="row">
@@ -235,6 +256,14 @@
 </div>
 
 <div class="row">
+
+    <div class="form-group col-sm-6 input_visibility" id="otherInterventionText">
+        <label for="sbo_otherintervention">Other Intervention</label>
+        <input type="text" name="sbo_otherintervention" class="form-control">
+    </div>
+</div>
+
+<div class="row">
     <div class="form-group col-sm-6 input_visibility sbo">
         <label for="enteralnutritiondate">Date resumed enteral nutrition</label>
         <input type="datetime-local" name="enteralnutritiondate" class="form-control" id="enteralnutritiondate">
@@ -242,24 +271,9 @@
 </div>
 
 
-<h4 class="text-center text-white bg-secondary py-1">Care Episode Data</h4>
+<!-- <h4 class="text-center text-white bg-secondary py-1">Care Episode Data</h4>
 
-<div class="row">
-    <div class="form-group col-sm-4 input_visibility sbo">
-        <label for="statusatdischarge">In hospital death</label>
-        <br>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="statusatdischarge" id="dischargestatusRadio1"
-                value="Yes">
-            <label class="form-check-label" for="dischargestatusRadio1">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="statusatdischarge" id="dischargestatusRadio2" value="No">
-            <label class="form-check-label" for="dischargestatusRadio2">No</label>
-        </div>
-    </div>
 
-</div>
 
 <div class="row">
     <div class="form-group col-sm-6 input_visibility sbo" id="dischageDT">
@@ -268,28 +282,7 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="form-group col-sm-4 input_visibility sbo">
-        <label for="readmittedwithin30daysid">Readmitted within 30 days post discharge</label>
-        <br>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="readmittedwithin30daysid" id="readmittedRadio1"
-                value="Yes">
-            <label class="form-check-label" for="readmittedRadio1">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="readmittedwithin30daysid" id="readmittedRadio2"
-                value="No">
-            <label class="form-check-label" for="readmittedRadio2">No</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="readmittedwithin30daysid" id="readmittedRadio3"
-                value="ND">
-            <label class="form-check-label" for="readmittedRadio3">ND</label>
-        </div>
-    </div>
 
-</div>
 
 
 <div class="row">
@@ -388,4 +381,4 @@
         </div>
 
     </div>
-</div>
+</div> -->

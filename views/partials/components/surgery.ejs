@@ -38,30 +38,35 @@
             <option value="five">05</option>
             <option value="six">06</option>
             <option value="seven">07</option>
-            <option value="eight">08</option>
+            <option value="eight">08 - Locum</option>
             <option value="nine">09</option>
             <option value="ten">10</option>
         </select>
     </div>
 
-    <!-- <div class="form-group col-sm-6">
-                    <label for="surgerylocum">Locum</label>
-                    <input type="text" name="surgerylocum" class="form-control" id="surgerylocum">
-                </div> -->
+    <div class="form-group col-sm-6 input_visibility" id="surgeryLocumDiv">
+        <label for="surgerylocum">Locum</label>
+        <input type="text" name="surgerylocum" class="form-control" id="surgerylocum">
+    </div>
 
 </div>
 
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
-            <label for="procedurecategory">Select Procedure Category</label>
+            <label for="procedurecategory">Select Procedure Category (Choose option to show Sub-categories)</label>
             <select name="procedurecategory" id="procedurecategory" class="form-control">
                 <option value=""></option>
                 <option value="abscesses">Abscesses</option>
                 <option value="appendectomy">Appendectomy</option>
                 <option value="cholecystectomy">Cholecystectomy</option>
+                <option value="diverticulitis">Diverticulitis </option>
                 <option value="hernia">Hernia</option>
+                <option value="laparoscopy">Laparoscopy</option>
+                <option value="largebowelobstruction">Large Bowel Obstruction</option>
+                <option value="mesentericisachaemia">Mesenteric Isachaemia</option>
                 <option value="pepticulcer">Peptic</option>
+                <option value="smallbowelobstruction">Small Bowel Obstruction</option>
                 <option value="colorectalprocedures">Colorectal Procedures</option>
                 <option value="lefthemicolectomy">Left Hemicolectomy</option>
                 <option value="subtotalpartialcolectomy">Subtotal/Partial Colectomy</option>
@@ -70,6 +75,7 @@
                 <option value="anteriorresection">Anterior Resection/Proctosigmoidectomy/Proctocolectomy
                 </option>
                 <option value="proctocolectomy">Proctocolectomy</option>
+                <option value="uppergibleed">Upper GI Bleed</option>
                 <option value="openabdomen">Open Abdomen</option>
                 <option value="repairoffistula">Repair of Fistula</option>
             </select>
@@ -82,8 +88,8 @@
     <select name="procedureid" id="procedureid" class="form-control">
         <option value=""></option>
         <!-- <option value="Appendectomy 926">Appendectomy 926</option> -->
-        <option value="Laparoscopic 30572-00">Laparoscopic 30572-00</option>
-        <option value="Open 30571-00">Open 30571-00</option>
+        <option value="Appendectomy Laparoscopic 30572-00">Appendectomy Laparoscopic 30572-00</option>
+        <option value="Appendectomy Open 30571-00">Appendectomy Open 30571-00</option>
     </select>
 </div>
 <div class="form-group input_visibility" id="abscesses">
@@ -118,34 +124,47 @@
         <option value=""></option>
         <!-- <option value="Cholecystectomy 965">Cholecystectomy 965</option> -->
 
-        <option value="Laparoscopic Cholecystectomy 30445-00">Laparoscopic
+        <option value="Cholecystectomy Laparoscopic Cholecystectomy 30445-00">Laparoscopic
             Cholecystectomy 30445-00</option>
-        <option value="Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Cystic Duct 30448-00">
+        <option
+            value="Cholecystectomy Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Cystic Duct 30448-00">
             Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Cystic
             Duct 30448-00</option>
         <option
-            value="Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Laparoscopic Choledochotomy 30449-00">
+            value="Cholecystectomy Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via Laparoscopic Choledochotomy 30449-00">
             Laparoscopic Cholecystectomy With Exploration Of Common Bile Duct Via
             Laparoscopic Choledochotomy 30449-00</option>
-        <option value="Open Cholecystectomy 30443-00">Open Cholecystectomy
+        <option value="Cholecystectomy Open Cholecystectomy 30443-00">Open Cholecystectomy
             30443-00</option>
         <option value="Cholecystectomy With Choledochotomy 30454-01">Cholecystectomy With Choledochotomy
             30454-01</option>
         <option value="Cholecystectomy With Choledochotomy And Biliary Intestinal Anastomosis 30455-00">
             Cholecystectomy With Choledochotomy And Biliary Intestinal Anastomosis 30455-00</option>
         <option value="Cholecystostomy 30375-05">Cholecystostomy 30375-05</option>
-        <option value="Intraoperative cholangiography 30439-00">Intraoperative cholangiography 30439-00
+        <option value="Cholecystectomy Intraoperative cholangiography 30439-00">Intraoperative cholangiography 30439-00
         </option>
-        <option value="Choledochojejunostomy 30460-04">Choledochojejunostomy
+        <option value="Cholecystectomy Choledochojejunostomy 30460-04">Choledochojejunostomy
             30460-04</option>
-        <option value="Choledochoduodenostomy 30460-03">Choledochoduodenostomy 30460-03</option>
-        <option value="Surgical repair of post-operative biliary stricture 917">
+        <option value="Cholecystectomy Choledochoduodenostomy 30460-03">Choledochoduodenostomy 30460-03</option>
+        <option value="Cholecystectomy Surgical repair of post-operative biliary stricture 917">
             Surgical repair of post-operative biliary stricture 917</option>
-        <option value="Open 30469-00">Open 30469-00</option>
-        <option value="Closed 30494-00">Closed 30494-00</option>
-        <option value="Hepaticojejunostomy 30460-07(969)">Hepaticojejunostomy 30460-07(969)</option>
+        <option value="Cholecystectomy Open 30469-00">Open 30469-00</option>
+        <option value="Cholecystectomy Closed 30494-00">Closed 30494-00</option>
+        <option value="Cholecystectomy Hepaticojejunostomy 30460-07(969)">Hepaticojejunostomy 30460-07(969)</option>
     </select>
 </div>
+
+<div class="form-group input_visibility" id="diverticulitis">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Diverticulitis Ostomy Only">Ostomy Only</option>
+        <option value="Diverticulitis Resect Primary Anastomosis">Resect Primary Anastomosis</option>
+        <option value="Diverticulitis Resect with Ostomy">Resect with Ostomy</option>
+
+    </select>
+</div>
+
 <div class="form-group input_visibility" id="hernia">
     <label for="procedureid">Procedure</label>
     <select name="procedureid" id="procedureid" class="form-control">
@@ -221,6 +240,67 @@
             Parastomal Repair of parastomal hernia with re-siting of stoma 30563-03</option>
     </select>
 </div>
+
+
+<div class="form-group input_visibility" id="laparoscopy">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Laparoscopy">Laparoscopy</option>
+
+
+    </select>
+</div>
+
+
+<div class="form-group input_visibility" id="largebowelobstruction">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Large Bowel Obstruction Ostomy Only">Ostomy Only</option>
+        <option value="Large Bowel Obstruction Resect Primary Anastomosis">Resect Primary Anastomosis</option>
+        <option value="Large Bowel Obstruction Resect with Ostomy">Resect with Ostomy</option>
+
+
+    </select>
+</div>
+
+<div class="form-group input_visibility" id="mesentericisachaemia">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Mesenteric Isachaemia Resect">Resect</option>
+        <option value="Mesenteric Isachaemia Resect and Anastomosis">Resect and Anastomosis</option>
+        <option value="Mesenteric Isachaemia Resect Open Abdomen">Resect Open Abdomen</option>
+
+
+    </select>
+</div>
+
+<div class="form-group input_visibility" id="smallbowelobstruction">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Small Bowel Obstruction Adhesions">Adhesions</option>
+        <option value="Small Bowel Obstruction Release">Release</option>
+        <option value="Small Bowel Obstruction Release and Hernia Repair">Release and Hernia Repair</option>
+        <option value="Small Bowel Obstruction Release and Resect">Release and Hernia Repair</option>
+
+
+
+    </select>
+</div>
+
+<div class="form-group input_visibility" id="uppergibleed">
+    <label for="procedureid">Procedure</label>
+    <select name="procedureid" id="procedureid" class="form-control">
+        <option value=""></option>
+        <option value="Upper GI Bleed">Upper GI Bleed</option>
+
+
+    </select>
+</div>
+
 <div class="form-group input_visibility" id="pepticulcer">
     <label for="procedureid">Procedure</label>
     <select name="procedureid" id="procedureid" class="form-control">
@@ -481,13 +561,33 @@
 </div>
 
 
+<div class="row">
+    <div class="form-group col-sm-12">
+        <label for="otherprocedure">Other Procedure</label>
+        <input type="text" name="otherprocedure" class="form-control" id="otherprocedure">
+    </div>
+</div>
+
 <div class="form-group" id="finding_area">
     <label for="findings">Findings</label>
     <!-- <input type="text" name="findings" class="form-control" id="findings"> -->
     <textarea name="findings" id="findings" class="form-control" cols="30" rows="5"></textarea>
 </div>
 
-
+<div class="row">
+    <div class="form-group col-sm-6">
+        <label for="surgeryconvlcrscopictoopen">Was the surgery converted from Laparoscopic to open?</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="surgeryconvlcrscopictoopen" id="convRadio1" value="Yes">
+            <label class="form-check-label" for="convRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="surgeryconvlcrscopictoopen" id="convRadio2" value="No">
+            <label class="form-check-label" for="convRadio2">No</label>
+        </div>
+    </div>
+</div>
 
 <div class="row">
     <div class="form-group col-sm-6 input_visibility rif">
@@ -525,7 +625,7 @@
 
 
 
-<div class="row">
+<!-- <div class="row">
     <div class="form-group col-sm-6 input_visibility ruq">
         <label for="peritonealcontaminationid">Please describe the peritoneal contamination
             present</label>
@@ -554,7 +654,7 @@
             <label class="form-check-label" for="pericontamRadio4">Combination</label>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="row">
     <div class="form-group col-sm-6 input_visibility ruq">

@@ -63,11 +63,14 @@
             <option value="Abdominal abscess">Abdominal abscess</option>
             <option value="Abdominal compartment syndrome">Abdominal compartment syndrome</option>
             <option value="Abdominal wound dehiscence">Abdominal wound dehiscence</option>
+            <option value="Acidosis">Acidosis</option>
             <option value="Anastomotic leak">Anastomotic leak</option>
-            <option value="Colitis/ Crohns">Colitis/ Crohns</option>
+            <option value="Colitis">Colitis</option>
             <option value="Foreign body">Foreign body</option>
             <option value="Haemorrhage">Haemorrhage</option>
-            <option value="Hernia">Hernia</option>
+            <option value="Iatrogenic Injury">Iatrogenic Injury</option>
+            <option value="Incarcerated Hernia">Incarcerated Hernia</option>
+            <option value="Internal Hernia">Internal Hernia</option>
             <option value="Intestinal fistula">Intestinal fistula</option>
             <option value="Intussusception">Intussusception</option>
             <option value="Ischaemia">Ischaemia</option>
@@ -75,7 +78,9 @@
             <option value="Obstructing incisional hernia">Obstructing incisional hernia</option>
             <option value="Perforation">Perforation</option>
             <option value="Peritonitis">Peritonitis</option>
+            <option value="Phlegmon">Phlegmon</option>
             <option value="Planned relook">Planned relook</option>
+            <option value="Pneumoperitoneum">Pneumoperitoneum</option>
             <option value="Pseudo-obstruction">Pseudo-obstruction</option>
             <option value="Sepsis">Sepsis</option>
             <option value="Small bowel obstruction">Small bowel obstruction</option>
@@ -84,6 +89,12 @@
 
         </select>
     </div>
+
+    <div class="form-group col-sm-6 input_visibility" id="otherindforsurgeryText">
+        <label for="otherindforsurgery">Other Indictation for Surgery</label>
+        <input type="text" name="otherindforsurgery" class="form-control" id="otherindforsurgery">
+    </div>
+
 </div>
 
 <div class="row">
@@ -92,15 +103,11 @@
         <label for="proceduremainprocedureid">Main procedure</label>
         <select name="proceduremainprocedureid" id="proceduremainprocedureid" class="form-control">
             <option value=""></option>
-            <option value="Peptic ulcer – suture or repair of perforation">Peptic ulcer – suture or
-                repair
-                of perforation</option>
-            <option value="Peptic ulcer – over sew of bleed">Peptic ulcer – over sew of bleed</option>
-            <option value="Gastrectomy: partial or total">Gastrectomy: partial or total</option>
-            <option value="Gastric surgery - other">Gastric surgery - other</option>
-            <option value="Small bowel resection">Small bowel resection</option>
-            <option value="Resection of Meckel’s diverticulum">Resection of Meckel’s diverticulum
+            <option value="Abdominal Hernia Repair">Abdominal Hernia Repair</option>
+            <option value="Abdominal Wall Closure Following Dehiscience">Abdominal Wall Closure Following Dehiscience
             </option>
+            <option value="Abdominal Wall Reconstruction">Abdominal Wall Reconstruction</option>
+            <option value="Adhesiolysis">Adhesiolysis</option>
             <option value="Colectomy: left (including sigmoid colectomy and anterior resection)">
                 Colectomy:
                 left (including sigmoid colectomy and anterior resection)</option>
@@ -108,45 +115,59 @@
                 ileocecal resection)</option>
             <option value="Colectomy: subtotal or panproctocolectomy">Colectomy: subtotal or
                 panproctocolectomy</option>
-            <option value="Hartmann’s procedure">Hartmann’s procedure</option>
             <option value="Colorectal resection - other">Colorectal resection - other</option>
-            <option value="Abdominal wall closure following dehiscence">Abdominal wall closure following
-                dehiscence</option>
-            <option value="Abdominal wall reconstruction">Abdominal wall reconstruction</option>
-            <option value="Adhesiolysis">Adhesiolysis</option>
-            <option value="Reduction of volvulus">Reduction of volvulus</option>
-            <option value="Enterotomy">Enterotomy</option>
-            <option value="Stricturoplasty">Stricturoplasty</option>
-            <option value="Drainage of abscess/collection">Drainage of abscess/collection</option>
-            <option value="Evacuation of haematoma">Evacuation of haematoma</option>
             <option value="Debridement">Debridement</option>
+            <option value="Defunctioning stoma via midline laparotomy">Defunctioning stoma via midline
+                laparotomy</option>
+            <option value="Drainage of abscess/collection">Drainage of abscess/collection</option>
+            <option value="Enterotomy">Enterotomy</option>
+            <option value="Evacuation of haematoma">Evacuation of haematoma</option>
             <option value="Exploratory/relook laparotomy only">Exploratory/relook laparotomy only
             </option>
+            <option value="Gastrectomy: partial or total">Gastrectomy: partial or total</option>
+            <option value="Gastric surgery - other">Gastric surgery - other</option>
+            <option value="Hartmann’s procedure">Hartmann’s procedure</option>
             <option value="Haemostasis">Haemostasis</option>
             <option value="Intestinal bypass">Intestinal bypass</option>
             <option value="Laparostomy formation">Laparostomy formation</option>
-            <option value="Repair of intestinal perforation">Repair of intestinal perforation</option>
-            <option value="Repair or revision of anastomosis">Repair or revision of anastomosis</option>
-            <option value="Repair of intestinal fistula">Repair of intestinal fistula</option>
-            <option value="Resection of other intra-abdominal tumour(s)">Resection of other
-                intra-abdominal
-                tumour(s)</option>
-            <option value="Defunctioning stoma via midline laparotomy">Defunctioning stoma via midline
-                laparotomy</option>
-            <option value="Revision of stoma via midline laparotomy ">Revision of stoma via midline
-                laparotomy </option>
             <option value="Large incisional hernia repair with bowel resection">Large incisional hernia
                 repair with bowel resection</option>
             <option value="Large incisional hernia repair with division of adhesions">Large incisional
                 hernia repair with division of adhesions</option>
-            <option value="Washout only">Washout only</option>
+            <option value="Peptic ulcer – suture or repair of perforation">Peptic ulcer – suture or
+                repair
+                of perforation</option>
+            <option value="Peptic ulcer – over sew of bleed">Peptic ulcer – oversew of bleed</option>
+            <option value="Splenectomy">Splenectomy</option>
+            <option value="Small bowel resection">Small bowel resection</option>
+            <option value="Stricturoplasty">Stricturoplasty</option>
+
+            <option value="Reduction of volvulus">Reduction of volvulus</option>
+            <option value="Repair of intestinal perforation">Repair of intestinal perforation</option>
+            <option value="Repair or revision of anastomosis">Repair or revision of anastomosis</option>
+            <option value="Repair of intestinal fistula">Repair of intestinal fistula</option>
+            <option value="Repair or Revision of Anastomosis">Repair or Revision of Anastomosis</option>
             <option value="Removal of foreign body">Removal of foreign body</option>
+            <option value="Resection of other intra-abdominal tumour(s)">Resection of other
+                intra-abdominal
+                tumour(s)</option>
+            <option value="Resection of Meckel’s diverticulum">Resection of Meckel’s diverticulum
+            </option>
+            <option value="Revision of stoma via midline laparotomy ">Revision of stoma via midline
+                laparotomy </option>
+            <option value="Washout only">Washout only</option>
             <option value="Not amenable to surgery ">Not amenable to surgery </option>
             <option value="Other">Other</option>
 
 
         </select>
     </div>
+
+    <div class="form-group col-sm-6 input_visibility" id="othermainText">
+        <label for="othermainprocedure">Other Main Procedure</label>
+        <input type="text" name="othermainprocedure" class="form-control" id="othermainprocedure">
+    </div>
+
 </div>
 <div class="row">
 
@@ -154,15 +175,11 @@
         <label for="proceduresecondprocedureid">Second procedure</label>
         <select name="proceduresecondprocedureid" id="proceduresecondprocedureid" class="form-control">
             <option value=""></option>
-            <option value="Peptic ulcer – suture or repair of perforation">Peptic ulcer – suture or
-                repair
-                of perforation</option>
-            <option value="Peptic ulcer – over sew of bleed">Peptic ulcer – over sew of bleed</option>
-            <option value="Gastrectomy: partial or total">Gastrectomy: partial or total</option>
-            <option value="Gastric surgery - other">Gastric surgery - other</option>
-            <option value="Small bowel resection">Small bowel resection</option>
-            <option value="Resection of Meckel’s diverticulum">Resection of Meckel’s diverticulum
+            <option value="Abdominal Hernia Repair">Abdominal Hernia Repair</option>
+            <option value="Abdominal Wall Closure Following Dehiscience">Abdominal Wall Closure Following Dehiscience
             </option>
+            <option value="Abdominal Wall Reconstruction">Abdominal Wall Reconstruction</option>
+            <option value="Adhesiolysis">Adhesiolysis</option>
             <option value="Colectomy: left (including sigmoid colectomy and anterior resection)">
                 Colectomy:
                 left (including sigmoid colectomy and anterior resection)</option>
@@ -170,45 +187,59 @@
                 ileocecal resection)</option>
             <option value="Colectomy: subtotal or panproctocolectomy">Colectomy: subtotal or
                 panproctocolectomy</option>
-            <option value="Hartmann’s procedure">Hartmann’s procedure</option>
             <option value="Colorectal resection - other">Colorectal resection - other</option>
-            <option value="Abdominal wall closure following dehiscence">Abdominal wall closure following
-                dehiscence</option>
-            <option value="Abdominal wall reconstruction">Abdominal wall reconstruction</option>
-            <option value="Adhesiolysis">Adhesiolysis</option>
-            <option value="Reduction of volvulus">Reduction of volvulus</option>
-            <option value="Enterotomy">Enterotomy</option>
-            <option value="Stricturoplasty">Stricturoplasty</option>
-            <option value="Drainage of abscess/collection">Drainage of abscess/collection</option>
-            <option value="Evacuation of haematoma">Evacuation of haematoma</option>
             <option value="Debridement">Debridement</option>
+            <option value="Defunctioning stoma via midline laparotomy">Defunctioning stoma via midline
+                laparotomy</option>
+            <option value="Drainage of abscess/collection">Drainage of abscess/collection</option>
+            <option value="Enterotomy">Enterotomy</option>
+            <option value="Evacuation of haematoma">Evacuation of haematoma</option>
             <option value="Exploratory/relook laparotomy only">Exploratory/relook laparotomy only
             </option>
+            <option value="Gastrectomy: partial or total">Gastrectomy: partial or total</option>
+            <option value="Gastric surgery - other">Gastric surgery - other</option>
+            <option value="Hartmann’s procedure">Hartmann’s procedure</option>
             <option value="Haemostasis">Haemostasis</option>
             <option value="Intestinal bypass">Intestinal bypass</option>
             <option value="Laparostomy formation">Laparostomy formation</option>
-            <option value="Repair of intestinal perforation">Repair of intestinal perforation</option>
-            <option value="Repair or revision of anastomosis">Repair or revision of anastomosis</option>
-            <option value="Repair of intestinal fistula">Repair of intestinal fistula</option>
-            <option value="Resection of other intra-abdominal tumour(s)">Resection of other
-                intra-abdominal
-                tumour(s)</option>
-            <option value="Defunctioning stoma via midline laparotomy">Defunctioning stoma via midline
-                laparotomy</option>
-            <option value="Revision of stoma via midline laparotomy ">Revision of stoma via midline
-                laparotomy </option>
             <option value="Large incisional hernia repair with bowel resection">Large incisional hernia
                 repair with bowel resection</option>
             <option value="Large incisional hernia repair with division of adhesions">Large incisional
                 hernia repair with division of adhesions</option>
-            <option value="Washout only">Washout only</option>
+            <option value="Peptic ulcer – suture or repair of perforation">Peptic ulcer – suture or
+                repair
+                of perforation</option>
+            <option value="Peptic ulcer – over sew of bleed">Peptic ulcer – oversew of bleed</option>
+            <option value="Splenectomy">Splenectomy</option>
+            <option value="Small bowel resection">Small bowel resection</option>
+            <option value="Stricturoplasty">Stricturoplasty</option>
+
+            <option value="Reduction of volvulus">Reduction of volvulus</option>
+            <option value="Repair of intestinal perforation">Repair of intestinal perforation</option>
+            <option value="Repair or revision of anastomosis">Repair or revision of anastomosis</option>
+            <option value="Repair of intestinal fistula">Repair of intestinal fistula</option>
+            <option value="Repair or Revision of Anastomosis">Repair or Revision of Anastomosis</option>
             <option value="Removal of foreign body">Removal of foreign body</option>
+            <option value="Resection of other intra-abdominal tumour(s)">Resection of other
+                intra-abdominal
+                tumour(s)</option>
+            <option value="Resection of Meckel’s diverticulum">Resection of Meckel’s diverticulum
+            </option>
+            <option value="Revision of stoma via midline laparotomy ">Revision of stoma via midline
+                laparotomy </option>
+            <option value="Washout only">Washout only</option>
             <option value="Not amenable to surgery ">Not amenable to surgery </option>
             <option value="Other">Other</option>
 
 
         </select>
     </div>
+
+    <div class="form-group col-sm-6 input_visibility" id="othersecondText">
+        <label for="othersecondprocedure">Other Second Procedure</label>
+        <input type="text" name="othersecondprocedure" class="form-control" id="othersecondprocedure">
+    </div>
+
 </div>
 <div class="row">
 
@@ -216,15 +247,11 @@
         <label for="procedurethirdprocedureid">Third procedure</label>
         <select name="procedurethirdprocedureid" id="procedurethirdprocedureid" class="form-control">
             <option value=""></option>
-            <option value="Peptic ulcer – suture or repair of perforation">Peptic ulcer – suture or
-                repair
-                of perforation</option>
-            <option value="Peptic ulcer – over sew of bleed">Peptic ulcer – over sew of bleed</option>
-            <option value="Gastrectomy: partial or total">Gastrectomy: partial or total</option>
-            <option value="Gastric surgery - other">Gastric surgery - other</option>
-            <option value="Small bowel resection">Small bowel resection</option>
-            <option value="Resection of Meckel’s diverticulum">Resection of Meckel’s diverticulum
+            <option value="Abdominal Hernia Repair">Abdominal Hernia Repair</option>
+            <option value="Abdominal Wall Closure Following Dehiscience">Abdominal Wall Closure Following Dehiscience
             </option>
+            <option value="Abdominal Wall Reconstruction">Abdominal Wall Reconstruction</option>
+            <option value="Adhesiolysis">Adhesiolysis</option>
             <option value="Colectomy: left (including sigmoid colectomy and anterior resection)">
                 Colectomy:
                 left (including sigmoid colectomy and anterior resection)</option>
@@ -232,45 +259,59 @@
                 ileocecal resection)</option>
             <option value="Colectomy: subtotal or panproctocolectomy">Colectomy: subtotal or
                 panproctocolectomy</option>
-            <option value="Hartmann’s procedure">Hartmann’s procedure</option>
             <option value="Colorectal resection - other">Colorectal resection - other</option>
-            <option value="Abdominal wall closure following dehiscence">Abdominal wall closure following
-                dehiscence</option>
-            <option value="Abdominal wall reconstruction">Abdominal wall reconstruction</option>
-            <option value="Adhesiolysis">Adhesiolysis</option>
-            <option value="Reduction of volvulus">Reduction of volvulus</option>
-            <option value="Enterotomy">Enterotomy</option>
-            <option value="Stricturoplasty">Stricturoplasty</option>
-            <option value="Drainage of abscess/collection">Drainage of abscess/collection</option>
-            <option value="Evacuation of haematoma">Evacuation of haematoma</option>
             <option value="Debridement">Debridement</option>
+            <option value="Defunctioning stoma via midline laparotomy">Defunctioning stoma via midline
+                laparotomy</option>
+            <option value="Drainage of abscess/collection">Drainage of abscess/collection</option>
+            <option value="Enterotomy">Enterotomy</option>
+            <option value="Evacuation of haematoma">Evacuation of haematoma</option>
             <option value="Exploratory/relook laparotomy only">Exploratory/relook laparotomy only
             </option>
+            <option value="Gastrectomy: partial or total">Gastrectomy: partial or total</option>
+            <option value="Gastric surgery - other">Gastric surgery - other</option>
+            <option value="Hartmann’s procedure">Hartmann’s procedure</option>
             <option value="Haemostasis">Haemostasis</option>
             <option value="Intestinal bypass">Intestinal bypass</option>
             <option value="Laparostomy formation">Laparostomy formation</option>
-            <option value="Repair of intestinal perforation">Repair of intestinal perforation</option>
-            <option value="Repair or revision of anastomosis">Repair or revision of anastomosis</option>
-            <option value="Repair of intestinal fistula">Repair of intestinal fistula</option>
-            <option value="Resection of other intra-abdominal tumour(s)">Resection of other
-                intra-abdominal
-                tumour(s)</option>
-            <option value="Defunctioning stoma via midline laparotomy">Defunctioning stoma via midline
-                laparotomy</option>
-            <option value="Revision of stoma via midline laparotomy ">Revision of stoma via midline
-                laparotomy </option>
             <option value="Large incisional hernia repair with bowel resection">Large incisional hernia
                 repair with bowel resection</option>
             <option value="Large incisional hernia repair with division of adhesions">Large incisional
                 hernia repair with division of adhesions</option>
-            <option value="Washout only">Washout only</option>
+            <option value="Peptic ulcer – suture or repair of perforation">Peptic ulcer – suture or
+                repair
+                of perforation</option>
+            <option value="Peptic ulcer – over sew of bleed">Peptic ulcer – oversew of bleed</option>
+            <option value="Splenectomy">Splenectomy</option>
+            <option value="Small bowel resection">Small bowel resection</option>
+            <option value="Stricturoplasty">Stricturoplasty</option>
+
+            <option value="Reduction of volvulus">Reduction of volvulus</option>
+            <option value="Repair of intestinal perforation">Repair of intestinal perforation</option>
+            <option value="Repair or revision of anastomosis">Repair or revision of anastomosis</option>
+            <option value="Repair of intestinal fistula">Repair of intestinal fistula</option>
+            <option value="Repair or Revision of Anastomosis">Repair or Revision of Anastomosis</option>
             <option value="Removal of foreign body">Removal of foreign body</option>
+            <option value="Resection of other intra-abdominal tumour(s)">Resection of other
+                intra-abdominal
+                tumour(s)</option>
+            <option value="Resection of Meckel’s diverticulum">Resection of Meckel’s diverticulum
+            </option>
+            <option value="Revision of stoma via midline laparotomy ">Revision of stoma via midline
+                laparotomy </option>
+            <option value="Washout only">Washout only</option>
             <option value="Not amenable to surgery ">Not amenable to surgery </option>
             <option value="Other">Other</option>
 
 
         </select>
     </div>
+
+    <div class="form-group col-sm-6 input_visibility" id="otherthirdText">
+        <label for="otherthirdprocedure">Other Third Procedure</label>
+        <input type="text" name="otherthirdprocedure" class="form-control" id="otherthirdprocedure">
+    </div>
+
 </div>
 <div class="row">
 
@@ -294,20 +335,20 @@
         <label for="procedureoperfindingsid">Operative Findings</label>
         <select name="procedureoperfindingsid" id="procedureoperfindingsid" class="form-control">
             <option value=""></option>
-            <option value="Abscess">Abscess</option>
             <option value="Abdominal compartment syndrome">Abdominal compartment syndrome</option>
-            <option value="Adhesions">Adhesions</option>
             <option value="Abdominal wound dehiscence">Abdominal wound dehiscence</option>
+            <option value="Abscess">Abscess</option>
+            <option value="Adhesions">Adhesions</option>
             <option value="Anastomotic leak">Anastomotic leak</option>
             <option value="Crohns Disease">Crohns Disease</option>
             <option value="Colorectal Cancer">Colorectal Cancer</option>
             <option value="Diverticulitis">Diverticulitis</option>
             <option value="Foreign body">Foreign body</option>
+            <option value="Gallstone Ileus">Gallstone Ileus</option>
+            <option value="Gastric cancer">Gastric cancer</option>
             <option value="Haemorrhage - peptic ulcer">Haemorrhage - peptic ulcer</option>
             <option value="Haemorrhage - intestinal">Haemorrhage - intestinal</option>
             <option value="Haemorrhage - postoperative">Haemorrhage - postoperative</option>
-            <option value="Gallstone Ileus">Gallstone Ileus</option>
-            <option value="Gastric cancer">Gastric cancer</option>
             <option value="Incarcerated Hernia">Incarcerated Hernia</option>
             <option value="Intestinal fistula">Intestinal fistula</option>
             <option value="Internal Hernia">Internal Hernia</option>
@@ -331,6 +372,12 @@
 
         </select>
     </div>
+
+    <div class="form-group col-sm-6 input_visibility" id="otherfindingsText">
+        <label for="otheroperativefindings">Other Operative Findings</label>
+        <input type="text" name="otheroperativefindings" class="form-control" id="otheroperativefindings">
+    </div>
+
 </div>
 <div class="row">
 
