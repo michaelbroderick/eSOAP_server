@@ -1,18 +1,56 @@
 <div class="row">
-    <div class="form-group col-sm-6" id="cxrDiv">
-        <label for="cxrdatetime">CXR Date and Time</label>
-        <input type="datetime-local" name="cxrdatetime" class="form-control" id="cxrdatetime">
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for="cxrrequested">CXR Requested</label>
+            <select name="cxrrequested" id="cxrrequested" class="form-control">
+
+                <option value=""></option>
+                <option value="Yes">Yes</option>
+                <option value="Not Requested">Not Requested</option>
+                <option value="ND">ND</option>
+            </select>
+        </div>
+        <div class="input_visibility" id="cxrFullDiv">
+            <div class="form-group input_visibility" id="cxrDiv">
+                <label for="cxrdatetime">CXR Date and Time</label>
+                <input type="datetime-local" name="cxrdatetime" class="form-control" id="cxrdatetime">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="cxrdatetimend">CXR Date Not Documented</label>
+                <input type="checkbox" value="ND" id="cxrdatetimend" name=cxrdatetimend>
+            </div>
+        </div>
     </div>
 
-    <div class="form-group col-sm-6" id="pfaDiv">
-        <label for="pfadatetime">PFA Date and Time</label>
-        <input type="datetime-local" name="pfadatetime" class="form-control" id="pfadatetime">
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for="pfarequested">PFA Requested</label>
+            <select name="pfarequested" id="pfarequested" class="form-control">
+
+                <option value=""></option>
+                <option value="Yes">Yes</option>
+                <option value="Not Requested">Not Requested</option>
+                <option value="ND">ND</option>
+            </select>
+        </div>
+        <div class="input_visibility" id="pfaFullDiv">
+            <div class="form-group input_visibility" id="pfaDiv">
+                <label for="pfadatetime">PFA Date and Time</label>
+                <input type="datetime-local" name="pfadatetime" class="form-control" id="pfadatetime">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="pfadatetimend">PFA Date Not Documented</label>
+                <input type="checkbox" value="ND" id="pfadatetimend" name=pfadatetimend>
+            </div>
+        </div>
     </div>
-
-
 
 </div>
-<div class="row">
+
+<h4 class="text-center text-white bg-secondary py-1 mt-3">Ultrasound</h4>
+<div class="row mt-1">
     <div class="form-group col-sm-8">
         <label for="usid">US</label>
         <select name="usid" id="usid" class="form-control">
@@ -29,7 +67,7 @@
         </select>
     </div>
 
-    <div class="form-group col-sm-4 input_visibility" id='transAV'>
+    <div class="form-group col-sm-6 input_visibility" id='transAV'>
         <label for="transabdominalvaginal">Trans Abdominal/Vaginal</label>
         <br>
         <div class="form-check form-check-inline">
@@ -43,6 +81,11 @@
             <label class="form-check-label" for="transAVRadio2">Trans Vaginal</label>
         </div>
 
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transabdominalvaginal" id="transAVRadio3" value="ND">
+            <label class="form-check-label" for="transAVRadio3">ND</label>
+        </div>
+
     </div>
 
 </div>
@@ -50,24 +93,49 @@
 
 
 <div class="row input_visibility" id="usRow">
-    <div class="form-group col-sm-4  input_visibility" id="usbookedDiv">
-        <label for="usbookeddatetime">US Booked</label>
-        <input type="datetime-local" name="usbookeddatetime" class="form-control" id="usbookeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="usbookedDiv">
+            <label for="usbookeddatetime">US Booked</label>
+            <input type="datetime-local" name="usbookeddatetime" class="form-control" id="usbookeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="usbookedh5">US Booked</p>
+        <div class="form-check">
+            <label class="form-check-label" for="usbookeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="usbookeddatetimend" name=usbookeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4  input_visibility" id=usperformedDiv>
-        <label for="usperformeddatetime">US Performed</label>
-        <input type="datetime-local" name="usperformeddatetime" class="form-control" id="usperformeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="usperformedDiv">
+            <label for="usperformeddatetime">US Performed</label>
+            <input type="datetime-local" name="usperformeddatetime" class="form-control" id="usperformeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="usperformedh5">US Performed</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="usperformeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="usperformeddatetimend" name=usperformeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4  input_visibility" id="usreportedDiv">
-        <label for="usreporteddatetime">US Reported</label>
-        <input type="datetime-local" name="usreporteddatetime" class="form-control" id="usreporteddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="usreportedDiv">
+            <label for="usreporteddatetime">US Reported</label>
+            <input type="datetime-local" name="usreporteddatetime" class="form-control" id="usreporteddatetime">
+        </div>
+        <p class="h5 input_visibility" id="usreportedh5">US Reported</p>
+        <div class="form-check">
+            <label class="form-check-label" for="usreporteddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="usreporteddatetimend" name=usreporteddatetimend>
+        </div>
     </div>
+
 
 </div>
 
-<div class="row">
+<h4 class="text-center text-white bg-secondary py-1 mt-3">CT</h4>
+
+<div class="row mt-1">
     <div class="form-group col-sm-8">
         <label for="ctid">CT</label>
         <select name="ctid" id="ctid" class="form-control">
@@ -84,34 +152,69 @@
     </div>
 </div>
 
+
 <div class="row input_visibility" id="ctRow">
-    <div class="form-group col-sm-4  input_visibility" id="ctbookedDiv">
-        <label for="ctbookeddatetime">CT Booked</label>
-        <input type="datetime-local" name="ctbookeddatetime" class="form-control" id="ctbookeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="ctbookedDiv">
+            <label for="ctbookeddatetime">CT Booked</label>
+            <input type="datetime-local" name="ctbookeddatetime" class="form-control" id="ctbookeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="ctbookedh5">CT Booked</p>
+        <div class="form-check">
+            <label class="form-check-label" for="ctbookeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="ctbookeddatetimend" name=ctbookeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4  input_visibility" id="ctperformedDiv">
-        <label for="ctperformeddatetime">CT Performed</label>
-        <input type="datetime-local" name="ctperformeddatetime" class="form-control" id="ctperformeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="ctperformedDiv">
+            <label for="ctperformeddatetime">CT Performed</label>
+            <input type="datetime-local" name="ctperformeddatetime" class="form-control" id="ctperformeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="ctperformedh5">CT Performed</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="ctperformeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="ctperformeddatetimend" name=ctperformeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4  input_visibility" id="ctreportedDiv">
-        <label for="ctreporteddatetime">CT Reported</label>
-        <input type="datetime-local" name="ctreporteddatetime" class="form-control" id="ctreporteddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="ctreportedDiv">
+            <label for="ctreporteddatetime">CT Reported</label>
+            <input type="datetime-local" name="ctreporteddatetime" class="form-control" id="ctreporteddatetime">
+        </div>
+        <p class="h5 input_visibility" id="ctreportedh5">CT Reported</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="ctreporteddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="ctreporteddatetimend" name=ctreporteddatetimend>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <div class="form-group" id="contrastAgentDiv">
+            <label for="daterecwatersolubleagent">Date Received Water Soluble Contrast Agent</label>
+            <input type="datetime-local" name="daterecwatersolubleagent" class="form-control"
+                id="daterecwatersolubleagent">
+        </div>
+        <p class="h5 input_visibility" id="contrastAgenth5">Date Received Water Soluble Contrast Agent</p>
+        <div class="form-check">
+            <label class="form-check-label" for="daterecwatersolubleagentnd">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="daterecwatersolubleagentnd" name=daterecwatersolubleagentnd>
+        </div>
     </div>
 
 </div>
 
-<div class="row">
+<h4 class="text-center text-white bg-secondary py-1 mt-3">MRI</h4>
 
-    <div class="form-group col-sm-4">
-        <label for="daterecwatersolubleagent">Date Received Water Soluble Contrast Agent</label>
-        <input type="datetime-local" name="daterecwatersolubleagent" class="form-control" id="daterecwatersolubleagent">
-    </div>
-
-</div>
-
-<div class="row">
+<div class="row mt-1">
     <div class="form-group col-sm-8">
         <label for="mriid">MRI</label>
         <select name="mriid" id="mriid" class="form-control">
@@ -125,24 +228,51 @@
 </div>
 
 <div class="row input_visibility" id="mriRow">
-    <div class="form-group col-sm-4  input_visibility" id="mribookedDiv">
-        <label for="mribookeddatetime">MRI Booked</label>
-        <input type="datetime-local" name="mribookeddatetime" class="form-control" id="mribookeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="mribookedDiv">
+            <label for="mribookeddatetime">MRI Booked</label>
+            <input type="datetime-local" name="mribookeddatetime" class="form-control" id="mribookeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="mribookedh5">MRI Booked</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="mribookeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="mribookeddatetimend" name=mribookeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4  input_visibility" id="mriperformedDiv">
-        <label for="mriperformeddatetime">MRI Performed</label>
-        <input type="datetime-local" name="mriperformeddatetime" class="form-control" id="mriperformeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="mriperformedDiv">
+            <label for="mriperformeddatetime">MRI Performed</label>
+            <input type="datetime-local" name="mriperformeddatetime" class="form-control" id="mriperformeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="mriperformedh5">MRI Performed</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="mriperformeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="mriperformeddatetimend" name=mriperformeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4  input_visibility" id="mrireportedDiv">
-        <label for="mrireporteddatetime">MRI Reported</label>
-        <input type="datetime-local" name="mrireporteddatetime" class="form-control" id="mrireporteddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="mrireportedDiv">
+            <label for="mrireporteddatetime">MRI Reported</label>
+            <input type="datetime-local" name="mrireporteddatetime" class="form-control" id="mrireporteddatetime">
+        </div>
+        <p class="h5 input_visibility" id="mrireportedh5">MRI Reported</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="mrireporteddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="mrireporteddatetimend" name=mrireporteddatetimend>
+        </div>
     </div>
+
 
 </div>
 
-<div class="row">
+<h4 class="text-center text-white bg-secondary py-1 mt-3">Other Imaging</h4>
+
+<div class="row mt-1">
     <div class="form-group col-sm-4">
         <label for="otherimageid">Other Image</label>
         <select name="otherimageid" id="otherimageid" class="form-control">
@@ -162,24 +292,52 @@
 </div>
 
 <div class="row input_visibility" id="otherimageRow">
-    <div class="form-group col-sm-6  input_visibility" id="otherimagebookedDiv">
-        <label for="otherimagebookeddatetime">Other Image Booked</label>
-        <input type="datetime-local" name="otherimagebookeddatetime" class="form-control" id="otherimagebookeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="otherimagebookedDiv">
+            <label for="otherimagebookeddatetime">Other Image Booked</label>
+            <input type="datetime-local" name="otherimagebookeddatetime" class="form-control"
+                id="otherimagebookeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="otherimagebookedh5">Other Image Booked</p>
+        <div class="form-check">
+            <label class="form-check-label" for="otherimagebookeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="otherimagebookeddatetimend" name=otherimagebookeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-6  input_visibility" id="otherimageperformedDiv">
-        <label for="otherimageperformeddatetime">Other Image Performed</label>
-        <input type="datetime-local" name="otherimageperformeddatetime" class="form-control"
-            id="otherimageperformeddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="otherimageperformedDiv">
+            <label for="otherimageperformeddatetime">Other Image Performed</label>
+            <input type="datetime-local" name="otherimageperformeddatetime" class="form-control"
+                id="otherimageperformeddatetime">
+        </div>
+        <p class="h5 input_visibility" id="otherimageperformedh5">Other Image Performed</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="otherimageperformeddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="otherimageperformeddatetimend" name=otherimageperformeddatetimend>
+        </div>
     </div>
 
-    <div class="form-group col-sm-6  input_visibility" id="otherimagereportedDiv">
-        <label for="otherimagereporteddatetime">Other Image Reported</label>
-        <input type="datetime-local" name="otherimagereporteddatetime" class="form-control"
-            id="otherimagereporteddatetime">
+    <div class="col-sm-4">
+        <div class="form-group input_visibility" id="otherimagereportedDiv">
+            <label for="otherimagereporteddatetime">Other Image Reported</label>
+            <input type="datetime-local" name="otherimagereporteddatetime" class="form-control"
+                id="otherimagereporteddatetime">
+        </div>
+        <p class="h5 input_visibility" id="otherimagereportedh5">Other Image Reported</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="otherimagereporteddatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="otherimagereporteddatetimend" name=otherimagereporteddatetimend>
+        </div>
     </div>
+
 
 </div>
+
+
+
 
 
 

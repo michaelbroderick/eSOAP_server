@@ -11,18 +11,26 @@
             <option value="Overflow Area">Overflow Area</option>
             <option value="Theatre">Theatre</option>
             <option value="Ward">Ward</option>
+            <option value="ND">ND</option>
         </select>
     </div>
 
-    <div class="form-group col-sm-4" id="moveTimeDiv">
-        <label for="dispositiondatetime">Move Time</label>
-        <input type="datetime-local" name="dispositiondatetime" class="form-control" id="dispositiondatetime">
+    <div class="col-sm-4">
+        <div class="form-group" id="moveTimeDiv">
+            <label for="dispositiondatetime">Move Time</label>
+            <input type="datetime-local" name="dispositiondatetime" class="form-control" id="dispositiondatetime">
+        </div>
+        <p class="h5 input_visibility" id="moveTimeh5">Move Time</p>
+        <div class="form-check">
+            <label class="form-check-label" for="dispositiondatetimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="dispositiondatetimend" name=dispositiondatetimend>
+        </div>
     </div>
 
 </div>
 
 
-<div class="row">
+<div class="row mt-3">
 
     <div class="form-group col-sm-8">
         <label for="antibioticsrecordedid">Antibiotics</label>
@@ -36,11 +44,22 @@
             <input class="form-check-input" type="radio" name="antibioticsrecordedid" id="antibioticsRadio2" value="No">
             <label class="form-check-label" for="antibioticsRadio2">No</label>
         </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="antibioticsrecordedid" id="antibioticsRadio3" value="ND">
+            <label class="form-check-label" for="antibioticsRadio3">ND</label>
+        </div>
     </div>
-
-    <div class="form-group col-sm-4 input_visibility" id="antibioTimeDiv">
-        <label for="antibioticsrecordedtime">Antibiotics Time</label>
-        <input type="datetime-local" name="antibioticsrecordedtime" class="form-control" id="antibioticsrecordedtime">
+    <div class="col-sm-4" id="antibioFullDiv">
+        <div class="form-group input_visibility" id="antibioTimeDiv">
+            <label for="antibioticsrecordedtime">Antibiotics Time</label>
+            <input type="datetime-local" name="antibioticsrecordedtime" class="form-control"
+                id="antibioticsrecordedtime">
+        </div>
+        <p class="h5 input_visibility" id="antibioTimeh5">Antibiotics Time</p>
+        <div class="form-check">
+            <label class="form-check-label" for="antibioticsrecordedtimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="antibioticsrecordedtimend" name=antibioticsrecordedtimend>
+        </div>
     </div>
 </div>
 
@@ -56,6 +75,10 @@
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="dispositionsurgrecordedid" id="surgeryRadio2" value="No">
             <label class="form-check-label" for="surgeryRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="dispositionsurgrecordedid" id="surgeryRadio3" value="ND">
+            <label class="form-check-label" for="surgeryRadio3">ND</label>
         </div>
 
     </div>

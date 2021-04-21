@@ -25,6 +25,7 @@
             <option value="Severe Liver Disease">Severe Liver Disease</option>
             <option value="Solid Tumour">Solid Tumour</option>
             <option value="None">None</option>
+            <option value="ND">ND</option>
 
         </select>
     </div>
@@ -32,13 +33,20 @@
 
 
 <div class="row">
-    <div class="form-group col-sm-6 input_visibility sbo">
-        <label for="sbo_onsetvomitting">Onset of Vomiting</label>
-        <input type="datetime-local" name="sbo_onsetvomitting" class="form-control" id="sbo_onsetvomitting">
+    <div class="col-sm-6 input_visibility sbo">
+        <div class="form-group input_visibility sbo" id="sbo_onsetvomittingDiv">
+            <label for="sbo_onsetvomitting">Onset of Vomiting</label>
+            <input type="datetime-local" name="sbo_onsetvomitting" class="form-control" id="sbo_onsetvomitting">
+        </div>
+        <p class="h5 input_visibility" id="sbo_onsetvomittingh5">Onset of Vomiting</p>
+        <div class="form-check">
+            <label class="form-check-label" for="sbo_onsetvomittingnd">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="sbo_onsetvomittingnd" name=sbo_onsetvomittingnd>
+        </div>
     </div>
 </div>
 
-<div class="row">
+<div class="row mt-3">
     <div class="form-group col-sm-6 input_visibility sbo">
         <label for="sbo_initialmgmtstrategyid">Initial Management Strategy</label>
         <select name="sbo_initialmgmtstrategyid" id="sbo_initialmgmtstrategyid" class="form-control">
@@ -46,6 +54,7 @@
             <option value="Conservative">Conservative</option>
             <option value="Operative">Operative</option>
             <option value="Palliative">Palliative</option>
+            <option value="ND">ND</option>
         </select>
     </div>
 </div>
@@ -117,6 +126,7 @@
             <option value="Incarcerated hernia - Parastomal">Incarcerated hernia - Parastomal</option>
             <option value="Small bowel Volvulus">Small bowel Volvulus</option>
             <option value="Other">Other</option>
+            <option value="ND">ND</option>
         </select>
     </div>
     <!-- add text box here for other condition -->
@@ -141,12 +151,16 @@
             <input class="form-check-input" type="radio" name="sbo_contrast_agent" id="contrastRadio2" value="No">
             <label class="form-check-label" for="contrastRadio2">No</label>
         </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sbo_contrast_agent" id="contrastRadio3" value="ND">
+            <label class="form-check-label" for="contrastRadio3">ND</label>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4 input_visibility" id="contrastDT">
+    <!-- <div class="form-group col-sm-4 input_visibility" id="contrastDT">
         <label for="sbo_contrast_date">Date and Time</label>
         <input type="datetime-local" name="sbo_contrast_date" class="form-control" id="sbo_contrast_date">
-    </div>
+    </div> -->
 
 </div>
 
@@ -163,11 +177,22 @@
             <input class="form-check-input" type="radio" name="sbo_procedure" id="sboprocedureRadio2" value="No">
             <label class="form-check-label" for="sboprocedureRadio2">No</label>
         </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sbo_procedure" id="sboprocedureRadio3" value="ND">
+            <label class="form-check-label" for="sboprocedureRadio3">ND</label>
+        </div>
     </div>
 
-    <div class="form-group col-sm-4 input_visibility" id="sboprocedureDT">
-        <label for="sbo_procedure_date">Date and Time</label>
-        <input type="datetime-local" name="sbo_procedure_date" class="form-control" id="sbo_procedure_date">
+    <div class="col-sm-4 input_visibility" id="sboprocedureDTFullDiv">
+        <div class="form-group input_visibility" id="sboprocedureDT">
+            <label for="sbo_procedure_date">Date and Time</label>
+            <input type="datetime-local" name="sbo_procedure_date" class="form-control" id="sbo_procedure_date">
+        </div>
+        <p class="h5 input_visibility" id="sboprocedureDTh5">Date and Time</p>
+        <div class="form-check">
+            <label class="form-check-label" for="sbo_procedure_datend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="sbo_procedure_datend" name=sbo_procedure_datend>
+        </div>
     </div>
 
 </div>
@@ -185,10 +210,10 @@
             <label class="form-check-label" for="sbo_surgeryRadio2">No</label>
         </div>
     </div>
-    <div class="form-group col-sm-6 input_visibility" id="sbosurgeryDT">
+    <!-- <div class="form-group col-sm-6 input_visibility" id="sbosurgeryDT">
         <label for="sbo_surgery_date">Date and Time of Surgery</label>
         <input type="datetime-local" name="sbo_surgery_date" class="form-control" id="sbo_surgery_date">
-    </div>
+    </div> -->
 </div>
 
 <div class="form-group input_visibility sbo" id="checkboxes">
@@ -250,6 +275,12 @@
                     name=sbointerventionid>
                 <label class="form-check-label" for="interventionCheckR33">Other</label>
             </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="ND" id="interventionCheckR333"
+                    name=sbointerventionid>
+                <label class="form-check-label" for="interventionCheckR333">ND</label>
+            </div>
         </div>
 
     </div>
@@ -264,9 +295,16 @@
 </div>
 
 <div class="row">
-    <div class="form-group col-sm-6 input_visibility sbo">
-        <label for="enteralnutritiondate">Date resumed enteral nutrition</label>
-        <input type="datetime-local" name="enteralnutritiondate" class="form-control" id="enteralnutritiondate">
+    <div class="col-sm-6">
+        <div class="form-group input_visibility sbo" id="enteralDiv">
+            <label for="enteralnutritiondate">Date resumed enteral nutrition</label>
+            <input type="datetime-local" name="enteralnutritiondate" class="form-control" id="enteralnutritiondate">
+        </div>
+        <p class="h5 input_visibility" id="enteralh5">Date resumed enteral nutrition</p>
+        <div class="form-check">
+            <label class="form-check-label" for="enteralnutritiondatend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="enteralnutritiondatend" name=enteralnutritiondatend>
+        </div>
     </div>
 </div>
 

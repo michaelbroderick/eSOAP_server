@@ -1,13 +1,18 @@
 <div class="row">
-
-    <div class="form-group col-sm-5" id="bloodcollected">
-        <label for="bloodcollected">Bloods Collected</label>
-        <input type="datetime-local" name="bloodcollected" class="form-control" id="bloodcollected">
+    <div class="col-sm-5">
+        <div class="form-group" id="bloodcollectedDiv">
+            <label for="bloodcollected">Bloods Collected</label>
+            <input type="datetime-local" name="bloodcollected" class="form-control" id="bloodcollected">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label" for="bloodcollectednd">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="bloodcollectednd" name=bloodcollectednd>
+        </div>
     </div>
 
 </div>
 
-<div class="row">
+<div class="row mt-4">
     <div class="form-group col-sm-6">
         <label for="wcc">White Cell Count (WCC) (10<sup>9</sup>/l)</label>
         <input type="number" name="wcc" step=0.01 class="form-control" id="wcc">
