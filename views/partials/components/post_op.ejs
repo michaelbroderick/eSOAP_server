@@ -13,6 +13,8 @@
                 bed
                 in
                 ICU.</option>
+            <option value="ND">ND</option>
+
         </select>
     </div>
 </div>
@@ -223,6 +225,11 @@
                     name=complicationsid>
                 <label class="form-check-label" for="complicationsCheck6">Wound Haematoma</label>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="ND" id="complicationsCheck600"
+                    name=complicationsid>
+                <label class="form-check-label" for="complicationsCheck600">ND</label>
+            </div>
 
         </div>
     </div>
@@ -249,6 +256,8 @@
             <option value="Clavien Dindo Grade IVa">Clavien Dindo Grade IVa</option>
             <option value="Clavien Dindo Grade IVb">Clavien Dindo Grade IVb</option>
             <option value="Clavien Dindo Grade V">Clavien Dindo Grade V</option>
+            <option value="ND">ND</option>
+
         </select>
     </div>
 </div>
@@ -359,6 +368,8 @@
             <option value="Vascular I71">Vascular I71</option>
             <option value="Volvulus K56.2">Volvulus K56.2</option>
             <option value="Other">Other</option>
+            <option value="ND">ND</option>
+
         </select>
     </div>
 
@@ -412,19 +423,30 @@
                 value="Still in Hospital at 60 days">
             <label class="form-check-label" for="dischargestatusRadio3">Still in Hospital at 60 days</label>
         </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="statusatdischarge" id="dischargestatusRadio4" value="ND">
+            <label class="form-check-label" for="dischargestatusRadio4">ND</label>
+        </div>
     </div>
 
 </div>
 
 
 <div class="row">
-    <div class="form-group col-sm-4">
-        <label for="dischargedate">Discharge Date</label>
-        <input type="date" name="dischargedate" class="form-control" id="dischargedate">
+    <div class="col-sm-4">
+        <div class="form-group" id="dischargedateDiv">
+            <label for="dischargedate">Discharge Date</label>
+            <input type="date" name="dischargedate" class="form-control" id="dischargedate">
+        </div>
+        <p class="h5 input_visibility" id="dischargedateh5">Discharge Date</p>
+        <div class="form-check">
+            <label class="form-check-label" for="dischargedatend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="dischargedatend" name=dischargedatend>
+        </div>
     </div>
 </div>
 
-<div class="row">
+<div class="row mt-3">
     <div class="form-group col-sm-6">
         <label for="lengthoftotalstay">Length of stay</label>
         <input type="number" name="lengthoftotalstay" class="form-control" id="lengthoftotalstay">
@@ -456,12 +478,24 @@
         <label for="postoperativedrainid">Drain</label>
         <br>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="postoperativedrainid" id="ruq_drainRadio1" value="Yes">
-            <label class="form-check-label" for="ruq_drainRadio1">Yes</label>
+            <input class="form-check-input" type="radio" name="postoperativedrainid" id="ruq_drainRadio1"
+                value="Drainage">
+            <label class="form-check-label" for="ruq_drainRadio1">Drainage</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="postoperativedrainid" id="ruq_drainRadio2" value="No">
-            <label class="form-check-label" for="ruq_drainRadio2">No</label>
+            <input class="form-check-input" type="radio" name="postoperativedrainid" id="ruq_drainRadio11"
+                value="Other">
+            <label class="form-check-label" for="ruq_drainRadio11">Other</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postoperativedrainid" id="ruq_drainRadio2"
+                value="No Drain">
+            <label class="form-check-label" for="ruq_drainRadio2">No Drain</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="postoperativedrainid" id="ruq_drainRadio21"
+                value="Washout">
+            <label class="form-check-label" for="ruq_drainRadio21">Washout</label>
         </div>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="postoperativedrainid" id="ruq_drainRadio3" value="ND">
@@ -481,6 +515,10 @@
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="bileleakid" id="bileleakRadio2" value="High volume">
             <label class="form-check-label" for="bileleakRadio2">High volume</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="bileleakid" id="bileleakRadio3" value="ND">
+            <label class="form-check-label" for="bileleakRadio3">ND</label>
         </div>
     </div>
 </div>
@@ -557,6 +595,8 @@
             <option value="Yes; planned return">Yes; planned return</option>
             <option value="Yes; unplanned AND planned">Yes; unplanned AND planned</option>
             <option value="No">No</option>
+            <option value="ND">ND</option>
+
 
         </select>
     </div>
@@ -586,6 +626,8 @@
             <option value="Missed pathology at first laparotomy">Missed pathology at first laparotomy
             </option>
             <option value="Other">Other</option>
+            <option value="ND">ND</option>
+
         </select>
     </div>
 </div>
@@ -614,6 +656,8 @@
                 continuity
             </option>
             <option value="Other">Other</option>
+            <option value="ND">ND</option>
+
         </select>
     </div>
 </div>
@@ -631,6 +675,10 @@
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="isunplannedmove" id="isunplannedmoveRadio2" value="No">
             <label class="form-check-label" for="isunplannedmoveRadio2">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="isunplannedmove" id="isunplannedmoveRadio3" value="ND">
+            <label class="form-check-label" for="isunplannedmoveRadio3">ND</label>
         </div>
 
     </div>

@@ -1,17 +1,30 @@
 <div class="row">
-    <div class="form-group col-sm-6" id="dateofsurgeryDiv">
-        <label for="dateofsurgery">Date and Time Surgery Booking</label>
-        <input type="datetime-local" name="dateofsurgery" class="form-control" id="dateofsurgery">
+    <div class="col-sm-6">
+        <div class="form-group" id="dateofsurgeryDiv">
+            <label for="dateofsurgery">Date and Time Surgery Booking</label>
+            <input type="datetime-local" name="dateofsurgery" class="form-control" id="dateofsurgery">
+        </div>
+        <p class="h5 input_visibility" id="dateofsurgeryh5">Date and Time Surgery Booking</p>
+        <div class="form-check">
+            <label class="form-check-label" for="dateofsurgerynd">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="dateofsurgerynd" name=dateofsurgerynd>
+        </div>
     </div>
-
-    <div class="form-group col-sm-6" id="surgeryinductiontimeDiv">
-        <label for="surgeryinductiontime">Date and Time of Induction</label>
-        <input type="datetime-local" name="surgeryinductiontime" class="form-control" id="surgeryinductiontime">
+    <div class="col-sm-6">
+        <div class="form-group" id="surgeryinductiontimeDiv">
+            <label for="surgeryinductiontime">Date and Time of Induction</label>
+            <input type="datetime-local" name="surgeryinductiontime" class="form-control" id="surgeryinductiontime">
+        </div>
+        <p class="h5 input_visibility" id="surgeryinductiontimeh5">Date and Time Surgery Booking</p>
+        <div class="form-check">
+            <label class="form-check-label" for="surgeryinductiontimend">Date Not Documented</label>
+            <input type="checkbox" value="ND" id="surgeryinductiontimend" name=surgeryinductiontimend>
+        </div>
     </div>
 
 </div>
 
-<div class="row">
+<div class="row mt-3">
     <div class="form-group col-sm-6">
         <label for="asascoreid">ASA Score</label>
         <select name="asascoreid" id="asascoreid" class="form-control">
@@ -23,6 +36,7 @@
                 life threatening</option>
             <option value="4. Server, Life Threatening">4. Server, Life Threatening</option>
             <option value="5. Moribund Patient">5. Moribund Patient</option>
+            <option value="ND">ND</option>
         </select>
     </div>
 </div>
@@ -41,6 +55,7 @@
             <option value="eight">08 - Locum</option>
             <option value="nine">09</option>
             <option value="ten">10</option>
+            <option value="ND">ND</option>
         </select>
     </div>
 
@@ -600,6 +615,7 @@
             <option value="Grade_3">Grade 3</option>
             <option value="Grade_4">Grade 4</option>
             <option value="Grade_5">Grade 5</option>
+            <option value="ND">ND</option>
 
 
         </select>

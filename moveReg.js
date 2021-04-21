@@ -4,21 +4,24 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'esoap_local'
+    database: 'esoap_local',
+    timezone: 'gmt'
 })
 
 const ghost = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'ghostDB'
+    database: 'ghostDB',
+    timezone: 'gmt'
 })
 
 const registry = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'esoap_global'
+    database: 'esoap_global',
+    timezone: 'gmt'
 })
 
 const getData = (db, table) => {

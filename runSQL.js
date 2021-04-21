@@ -7,7 +7,8 @@ const connection = mysql.createConnection({
     user: 'root',
     password: '',
     database: 'esoap_local',
-    multipleStatements: true
+    multipleStatements: true,
+    timezone: 'gmt'
 
 })
 

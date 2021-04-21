@@ -11,7 +11,8 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'esoap_local'
+    database: 'esoap_local',
+    timezone: 'gmt'
 })
 
 
@@ -19,7 +20,8 @@ const Registry = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'esoap_global'
+    database: 'esoap_global',
+    timezone: 'gmt'
 })
 
 router.get('/:id/show', requireLogin, async (req, res) => {
@@ -43,7 +45,6 @@ router.get('/:id/edit', requireLogin, async (req, res) => {
     let validate = req.query.val;
     const result = await sql.getjoinedData(connection, id);
     const data = result[0]
-    // console.log(data)
     for (let dt in data) {
         if (!data[dt]) {
             //console.log('hello')
@@ -57,10 +58,24 @@ router.get('/:id/edit', requireLogin, async (req, res) => {
 router.post('/:id', requireLogin, validateForms, async (req, res) => {
     // A bit of preprocessing
     const data = req.body;
-    // console.log(data)
+    console.log(data)
     const { id } = req.params;
     if (Array.isArray(data.procedureid)) {
         data.procedureid = data.procedureid.join("");
+    }
+
+    // Add fields for blank checkboxes that would be otherwise unchecked
+    let allFields = [];
+    for (let table in tableNames.tables) {
+        allFields = allFields.concat(tableNames.tables[table])
+    }
+    for (let table in tableNames.modules) {
+        allFields = allFields.concat(tableNames.modules[table])
+    }
+    const difference = allFields.filter(value => !Object.keys(data).includes(value));
+
+    for (let dt of difference) {
+        data[dt] = '';
     }
 
     for (let dt in data) {

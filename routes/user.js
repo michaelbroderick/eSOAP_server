@@ -9,7 +9,8 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'esoap_local'
+    database: 'esoap_local',
+    timezone: 'gmt'
 })
 
 router.get('/register', (req, res) => {
