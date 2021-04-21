@@ -22,6 +22,8 @@
 function checkRadio(condition, Div) {
     if (condition) {
         Div.classList.remove("input_visibility")
+    } else {
+        Div.classList.add("input_visibility")
     }
 }
 
@@ -113,6 +115,29 @@ function toggleChecked(selectID, hiddenEl, vals) {
         else {
             for (item of el) {
                 item.classList.add("input_visibility")
+            }
+        }
+    })
+
+}
+
+function toggleCheckedOff(selectID, hiddenEl, vals) {
+    const selectMenu = document.querySelector(selectID);
+    const el = document.querySelectorAll(hiddenEl)
+    for (item of el) {
+        checkRadio(!selectMenu.checked, item)
+    }
+
+    selectMenu.addEventListener('change', () => {
+
+        if (selectMenu.checked) {
+            for (item of el) {
+                item.classList.add("input_visibility")
+            }
+        }
+        else {
+            for (item of el) {
+                item.classList.remove("input_visibility")
             }
         }
     })
@@ -215,6 +240,7 @@ function populateFields(input_class) {
         if (data[field.name]) {
             if (field.type === 'radio' | field.type === 'checkbox') {
                 let checkArray = data[field.name].split('&');
+
                 if (checkArray.indexOf(field.value) > -1) {
                     field.checked = true;
                 }

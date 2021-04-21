@@ -33,7 +33,8 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'esoap_local'
+    database: 'esoap_local',
+    timezone: 'gmt'
 })
 
 const Registry = mysql.createConnection({
@@ -184,6 +185,21 @@ app.post('/modules/:id', async (req, res) => {
     if (Array.isArray(data.procedureid)) {
         data.procedureid = data.procedureid.join("");
     }
+
+    // Add fields for blank checkboxes that would be otherwise unchecked
+    let allFields = [];
+    for (let table in tableNames.tables) {
+        allFields = allFields.concat(tableNames.tables[table])
+    }
+    for (let table in tableNames.modules) {
+        allFields = allFields.concat(tableNames.modules[table])
+    }
+    const difference = allFields.filter(value => !Object.keys(data).includes(value));
+
+    for (let dt of difference) {
+        data[dt] = '';
+    }
+
 
     for (let dt in data) {
         if (Array.isArray(data[dt])) {

@@ -1,23 +1,24 @@
 const demodp = ['admissiondate', 'age', 'uniqueid',
     'genderid', 'consultantdemographicsid', 'demographicslocum', 'residencepreadmissionid',
     'presententingcompaintid', 'provisionaldiagnosisid', 'moduleid', 'includeinstudyid',
-    'FirstAdmitSpecialityId', 'referredbyid', 'transportid', 'registeredtime', 'triagetime', 'timereferred',
-    'timeseen', 'movedtoid', 'dispositiondatetime', 'antibioticsrecordedid',
-    'antibioticsrecordedtime', 'dispositionsurgrecordedid', 'percentComplete'];
+    'FirstAdmitSpecialityId', 'referredbyid', 'transportid', 'registeredtime', 'registeredtimend', 'triagetime', 'triagetimend', 'timereferred', 'timereferrednd',
+    'timeseen', 'timeseennd', 'movedtoid', 'dispositiondatetime', 'dispositiondatetimend', 'antibioticsrecordedid',
+    'antibioticsrecordedtime', 'antibioticsrecordedtimend', 'dispositionsurgrecordedid', 'percentComplete'];
 
 
-const labsdp = ['labid', 'patientid', 'bp_sys', 'bp_dias', 'haemolysedid', 'bloodcollected', 'temperature', 'pulse', 'Rr', 'spo2', 'comorbiditiesanticoagsid', 'wcc', 'hb', 'crp', 'amylase', 'ggt', 'creat', 'inr', 'baseexcess', 'basedeficit', 'lactate'];
+const labsdp = ['bp_sys', 'bp_dias', 'haemolysedid', 'bloodcollected', 'bloodcollectednd', 'temperature', 'pulse', 'Rr', 'spo2', 'comorbiditiesanticoagsid', 'wcc', 'hb', 'crp', 'amylase', 'ggt', 'creat', 'inr', 'baseexcess', 'basedeficit', 'lactate'];
 
-const imagingdp = ['imagingid', 'patientid', 'cxrdatetime', 'pfadatetime', 'usid', 'usbookeddatetime', 'usperformeddatetime',
-    'usreporteddatetime', 'ctid', 'ctbookeddatetime', 'ctperformeddatetime', 'ctreporteddatetime',
-    'mriid', 'mribookeddatetime', 'transabdominalvaginal', 'mriperformeddatetime', 'mrireporteddatetime', 'otherimageid', 'otherimagingtype',
-    'otherimagebookeddatetime', 'otherimageperformeddatetime', 'otherimagereporteddatetime', 'daterecwatersolubleagent'];
+const imagingdp = ['cxrdatetime', 'cxrdatetimend', 'cxrrequested', 'pfadatetime', 'pfadatetimend', 'pfarequested',
+    'usid', 'usbookeddatetime', 'usperformeddatetime', 'usreporteddatetime', 'usbookeddatetimend', 'usperformeddatetimend',
+    'usreporteddatetimend', 'ctid', 'ctbookeddatetime', 'ctperformeddatetime', 'ctreporteddatetime', 'ctbookeddatetimend', 'ctperformeddatetimend', 'ctreporteddatetimend',
+    'mriid', 'mribookeddatetime', 'transabdominalvaginal', 'mriperformeddatetime', 'mrireporteddatetime', 'mribookeddatetimend', 'mriperformeddatetimend', 'mrireporteddatetimend', 'otherimageid', 'otherimagingtype',
+    'otherimagebookeddatetime', 'otherimageperformeddatetime', 'otherimagereporteddatetime', 'otherimagebookeddatetimend', 'otherimageperformeddatetimend', 'otherimagereporteddatetimend', 'daterecwatersolubleagent'];
 
 
-const surgerydp = ['surgeryid', 'surgerylocum', 'otherprocedure', 'surgeryconvlcrscopictoopen', 'othercomplication', 'otherfinaldiagnosis', 'readmittedwithin30daysid',
-    'statusatdischarge', 'lengthoftotalstay', 'patientid', 'dateofsurgery', 'surgeryinductiontime',
+const surgerydp = ['surgerylocum', 'otherprocedure', 'surgeryconvlcrscopictoopen', 'othercomplication', 'otherfinaldiagnosis', 'readmittedwithin30daysid',
+    'statusatdischarge', 'lengthoftotalstay', 'patientid', 'dateofsurgery', 'dateofsurgerynd', 'surgeryinductiontime', 'surgeryinductiontimend',
     'asascoreid', 'dispositionsurgeonid', 'procedurecategory', 'procedureid', 'findings',
-    'destinationid', 'complicationsid', 'complicclassificationid', 'finaldiagnosisid', 'dischargedate'];
+    'destinationid', 'complicationsid', 'complicclassificationid', 'finaldiagnosisid', 'dischargedate', 'dischargedatend'];
 
 
 const rifdp = ['histabdominalsurgeryid', 'prevadmiswithrifpainid', 'hrsdayssincepainonsetid', 'neutrophilcount', 'rifpainid',
@@ -25,9 +26,9 @@ const rifdp = ['histabdominalsurgeryid', 'prevadmiswithrifpainid', 'hrsdayssince
     'riskscore', 'imagingfindingsid', 'interventionalradiology', 'rifsurgeryid', 'appendicitisgradingid', 'drainid',
 ];
 
-const sbodp = ['sbo_comorbiditiesid', 'sbo_otheraetiology', 'sbo_procedure', 'sbo_procedure_date', 'sbo_otherintervention', 'sbo_onsetvomitting', 'sbo_initialmgmtstrategyid', 'albumin',
-    'sbo_contrast_agent', 'sbo_contrast_date', 'sbo_Aetiology',
-    'sbo_surgery', 'sbo_surgery_date', 'sbointerventionid', 'enteralnutritiondate'
+const sbodp = ['sbo_comorbiditiesid', 'sbo_otheraetiology', 'sbo_procedure', 'sbo_procedure_date', 'sbo_procedure_datend',
+    'sbo_otherintervention', 'sbo_onsetvomitting', 'sbo_onsetvomittingnd', 'sbo_initialmgmtstrategyid', 'albumin',
+    'sbo_contrast_agent', 'sbo_Aetiology', 'sbo_surgery', 'sbointerventionid', 'enteralnutritiondate', 'enteralnutritiondatend'
 ];
 
 const ruqdp = ['dayssincepainonsetid', 'firstepisodeid', 'prevadmiswithcholid', 'alt', 'ast', 'alkalinephosphatase', 'totalbilirubin', 'rmurphyssignpositiveid',
