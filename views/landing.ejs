@@ -27,7 +27,7 @@
 
                     <%- include('partials/flash') %>
                         <div class="row mx-0 mt-4 mb-2">
-                            <div class="content col-3 text-center p-2 m-1">
+                            <div class="content col-lg-4 p-2 m-1">
                                 <h5>
                                     Patient Information
                                 </h5>
@@ -60,7 +60,6 @@
                                             <%= data.moduleid%>
                                         </td>
                                     </tr>
-
                                     <tr>
                                         <td>Provisional Diagnosis:</td>
                                         <td>
@@ -81,11 +80,9 @@
                                             <%= data.lengthoftotalstay%>
                                         </td>
                                     </tr>
-
                                 </table>
                             </div>
-                        
-                        <div class="content col-8 text-center p-2 m-1">
+                            <div class="content col-lg-7 text-center p-2 m-1">
                                 <h5>Patient Related Key Outcome Indicators</h5>
                                 <div class="table-responsive">
                                     <table class="table table-sm">
@@ -118,12 +115,11 @@
                                     </table>
 
                                 </div>
+                            </div>
                         </div>
-                    </div>
+
                         <div class="row mx-0 mb-2">
-
-
-                            <div class="content col-3 col-sm-3 m-1">
+                            <div class="content col-3 col-sm-5 m-1">
                                 <section class="pt_links">
                                     <div><a href="/modules/<%=req.params.id%>/show">Add registry data</a></div>
                                     <div><a href="#">View Patient Proforma</a></div>
@@ -131,7 +127,7 @@
                                     <!-- <div><a href="">Patient population report</a></div> -->
                                 </section>
                             </div>
-                            <div class="content col-4 col-sm-5 text-center p-2 m-1">
+                            <div class="content col-4 col-sm-6 text-center p-2 m-1">
                                 <h5>Your viewing history</h5>
 
                                 <table class="table table-striped table-hover">
