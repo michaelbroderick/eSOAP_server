@@ -3,6 +3,7 @@ const router = express.Router();
 const sql = require('../sqlCommands.js')
 const mysql = require("mysql");
 const { requireLogin, validateForms } = require('../middleware')
+const { isAcuteChol } = require('../decisionTools')
 const { getPatientData, local2registry, submitPatientToRegistry } = require('../moveReg.js');
 const tableNames = require('../tableNames.js');
 
@@ -28,7 +29,7 @@ router.get('/:id/show', requireLogin, async (req, res) => {
     const { id } = req.params;
     const result = await sql.getjoinedData(connection, id);
     const data = result[0];
-
+    
     let moduleCode = ''
     try { moduleCode = data.moduleid.slice(0, 3).toLowerCase() }
     catch { };
@@ -45,6 +46,7 @@ router.get('/:id/edit', requireLogin, async (req, res) => {
     let validate = req.query.val;
     const result = await sql.getjoinedData(connection, id);
     const data = result[0]
+    // console.log(data)
     for (let dt in data) {
         if (!data[dt]) {
             //console.log('hello')
@@ -58,7 +60,7 @@ router.get('/:id/edit', requireLogin, async (req, res) => {
 router.post('/:id', requireLogin, validateForms, async (req, res) => {
     // A bit of preprocessing
     const data = req.body;
-    console.log(data)
+    // console.log(data)
     const { id } = req.params;
     if (Array.isArray(data.procedureid)) {
         data.procedureid = data.procedureid.join("");

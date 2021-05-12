@@ -60,6 +60,26 @@
                                             <%= data.moduleid%>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>Provisional Diagnosis:</td>
+                                        <td>
+                                            <%= data.provisionaldiagnosisid%>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Final Diagnosis:</td>
+                                        <td>
+                                            <%= data.finaldiagnosisid%>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Length of Stay:</td>
+                                        <td>
+                                            <%= data.lengthoftotalstay%>
+                                        </td>
+                                    </tr>
                                 </table>
                             </div>
                             <div class="content col-lg-7 text-center p-2 m-1">
@@ -70,7 +90,7 @@
                                             <tr>
                                                 <th scope="col"></th>
                                                 <th class="text-left" scope="col">KOI</th>
-
+                                                <th scope="col">Patient</th>
                                                 <th scope="col">Target</th>
                                             </tr>
                                         </thead>
@@ -83,7 +103,9 @@
                                                     <td class="text-left">
                                                         <%= kois[i].koi %>
                                                     </td>
-
+                                                    <td>
+                                                        <%- KOItargets[String(i+1)] %>
+                                                    </td>
                                                     <td>
                                                         <%= kois[i].koitarget %>%
                                                     </td>
@@ -135,7 +157,7 @@
                                                 <td>
                                                     <% if (history[i].admissiondate){ %>
                                                         <%= history[i].admissiondate.getDate() + '/' +
-                                                            history[i].admissiondate.getMonth() + '/' +
+                                                            String(parseInt(history[i].admissiondate.getMonth())+1) + '/' +
                                                             history[i].admissiondate.getFullYear() %>
                                                             <% } %>
                                                 </td>

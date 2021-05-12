@@ -106,3 +106,7 @@ ALTER TABLE surgery ADD COLUMN otherfinaldiagnosis VARCHAR(255) AFTER finaldiagn
 ALTER TABLE surgery ADD COLUMN readmittedwithin30daysid VARCHAR(50) AFTER otherfinaldiagnosis;
 ALTER TABLE surgery ADD COLUMN statusatdischarge VARCHAR(100) AFTER readmittedwithin30daysid;
 ALTER TABLE surgery ADD COLUMN lengthoftotalstay INT AFTER dischargedate;
+
+
+-- TRUNCATE TABLE labs;TRUNCATE TABLE imaging;TRUNCATE TABLE surgery;TRUNCATE TABLE rif;TRUNCATE TABLE sbo;TRUNCATE TABLE ruq;TRUNCATE TABLE lap;TRUNCATE TABLE demographics;
+-- DROP TABLE labs;DROP TABLE imaging;DROP TABLE surgery;DROP TABLE rif;DROP TABLE sbo;DROP TABLE ruq;DROP TABLE lap;DROP TABLE demographics;

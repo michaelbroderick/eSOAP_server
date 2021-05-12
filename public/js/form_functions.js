@@ -199,7 +199,6 @@ function populateLocalStorage() {
 
     const hidden = document.querySelector("#hiddenspan");
     let data = JSON.parse(hidden.innerText);
-    console.log(data);
     for (let dt in data) {
         //This is very janky and I don't like....
         let d = new Date(data[dt]);
@@ -220,8 +219,8 @@ function populate(input_class) {
     for (let el of all) {
         if (localStorage.getItem(el.name)) {
             if (el.type === 'radio' | el.type === 'checkbox') {
-                let checkArray = localStorage.getItem(el.name).split('&')
-                if (checkArray.indexOf(el.value) > -1) {
+                let checkArray = localStorage.getItem(el.name).toLowerCase().split('&')
+                if (checkArray.indexOf(el.value.toLowerCase()) > -1) {
                     el.checked = true;
                 }
             } else {
@@ -235,13 +234,16 @@ function populate(input_class) {
 function populateFields(input_class) {
     const fields = document.querySelectorAll(input_class)
     const data = JSON.parse(document.querySelector("#hiddenspan").innerText);
-    console.log(data)
+
     for (let field of fields) {
         if (data[field.name]) {
             if (field.type === 'radio' | field.type === 'checkbox') {
-                let checkArray = data[field.name].split('&');
+                
+                let checkArray = data[field.name].toLowerCase().split('&');
+                // console.log(checkArray)
 
-                if (checkArray.indexOf(field.value) > -1) {
+                // console.log(field.value.toLowerCase())
+                if (checkArray.indexOf(field.value.toLowerCase()) > -1) {
                     field.checked = true;
                 }
             } else if (field.type === 'date') {

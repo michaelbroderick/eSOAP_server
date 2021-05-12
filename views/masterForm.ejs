@@ -193,9 +193,9 @@
             const moduleNavs = {
 
                 '': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'bloods', 'imaging', 'disposition', 'surgery', 'post_op'],
-                'RIF_Appendicitis': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'risk_strat', 'bloods', 'clinical_exam', 'imaging', 'disposition', 'procedure', 'surgery', 'post_op'],
-                'RUQ_Cholecystitis': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'risk_strat', 'bloods', 'clinical_exam', 'imaging', 'disposition', 'surgery', 'post_op_risk', 'post_op'],
-                'SBO': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'bloods', 'imaging', 'sbo_module', 'disposition', 'surgery', 'post_op'],
+                'RIF Pain & Appendicitis': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'risk_strat', 'bloods', 'clinical_exam', 'imaging', 'disposition', 'procedure', 'surgery', 'post_op'],
+                'RUQ & Cholecystitis': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'risk_strat', 'bloods', 'clinical_exam', 'imaging', 'disposition', 'surgery', 'post_op_risk', 'post_op'],
+                'Small Bowel Obstruction': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'bloods', 'imaging', 'sbo_module', 'disposition', 'surgery', 'post_op'],
                 'Laparotomy': ['demographics', 'emergency_dep', 'ed_observations', 'comorbidities', 'bloods', 'imaging', 'sbo_module', 'disposition', 'lap_module', 'procedure', 'surgery', 'post_op']
             };
 
@@ -210,16 +210,16 @@
 
             // toggleYesNoND("#ercpRadio1", "#ercpRadio2", "#ercpRadio3", "#finding_area")
 
-            toggleSelect('#moduleid', '.rif', ['RIF_Appendicitis'])
-            toggleSelect('#moduleid', '.ruq', ['RUQ_Cholecystitis'])
-            toggleSelect('#moduleid', '.sbo', ['SBO'])
+            toggleSelect('#moduleid', '.rif', ['RIF Pain & Appendicitis'])
+            toggleSelect('#moduleid', '.ruq', ['RUQ & Cholecystitis'])
+            toggleSelect('#moduleid', '.sbo', ['Small Bowel Obstruction'])
             toggleSelect('#moduleid', '.lap', ['Laparotomy'])
-            toggleSelect('#moduleid', '#risk_strat_link', ['RIF_Appendicitis', 'RUQ_Cholecystitis'])
-            toggleSelect('#moduleid', '#clinical_exam_link', ['RIF_Appendicitis', 'RUQ_Cholecystitis'])
-            toggleSelect('#moduleid', '#sbo_module_link', ['SBO'])
+            toggleSelect('#moduleid', '#risk_strat_link', ['RIF Pain & Appendicitis', 'RUQ & Cholecystitis'])
+            toggleSelect('#moduleid', '#clinical_exam_link', ['RIF Pain & Appendicitis', 'RUQ & Cholecystitis'])
+            toggleSelect('#moduleid', '#sbo_module_link', ['Small Bowel Obstruction'])
             toggleSelect('#moduleid', '#lap_module_link', ['Laparotomy'])
-            toggleSelect('#moduleid', '#procedure_link', ['RIF_Appendicitis', 'Laparotomy'])
-            toggleSelect('#moduleid', '#post_op_risk_link', ['RUQ_Cholecystitis'])
+            toggleSelect('#moduleid', '#procedure_link', ['RIF Pain & Appendicitis', 'Laparotomy'])
+            toggleSelect('#moduleid', '#post_op_risk_link', ['RUQ & Cholecystitis'])
 
         </script>
         <script src='/js/min_dataset.js'></script>

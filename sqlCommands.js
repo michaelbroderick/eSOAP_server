@@ -167,7 +167,9 @@ module.exports.getHistory = (connection, id) => {
 
 module.exports.getKOIs = (connection, moduleid) => {
     return new Promise((resolve, reject) => {
-        connection.query('SELECT koi,koitarget FROM kois WHERE module=?', [moduleid], (error, elements) => {
+        let q='SELECT koi,koitarget FROM kois WHERE module=?';
+        connection.query(q, [moduleid], (error, elements) => {
+
             if (error) {
                 return reject(error);
             }
