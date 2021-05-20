@@ -1,35 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const sql = require('../sqlCommands.js')
-const mysql = require("mysql");
-const { requireLogin, validateForms } = require('../middleware')
-const { isAcuteChol } = require('../decisionTools')
-const { getPatientData, local2registry, submitPatientToRegistry } = require('../moveReg.js');
-const tableNames = require('../tableNames.js');
+const sql = require('../models/sqlCommands.js')
+const { connection, Registry } = require('../config/db_config')
+const { requireLogin, validateForms } = require('../helpers/middleware')
+const { isAcuteChol } = require('../helpers/decisionTools')
+const { getPatientData, local2registry, submitPatientToRegistry } = require('../helpers/moveReg.js');
+const tableNames = require('../models/tableNames.js');
 
-
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'esoap_local',
-    timezone: 'gmt'
-})
-
-
-const Registry = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'esoap_global',
-    timezone: 'gmt'
-})
 
 router.get('/:id/show', requireLogin, async (req, res) => {
     const { id } = req.params;
     const result = await sql.getjoinedData(connection, id);
     const data = result[0];
-    
+
     let moduleCode = ''
     try { moduleCode = data.moduleid.slice(0, 3).toLowerCase() }
     catch { };

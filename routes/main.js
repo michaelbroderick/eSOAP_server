@@ -1,35 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const sql = require('../sqlCommands.js')
-const mysql = require("mysql");
-const { requireLogin } = require('../middleware')
-const tableNames = require('../tableNames.js');
-const {returnKOIs} = require('../decisionTools')
+const sql = require('../models/sqlCommands.js')
+const { connection, Registry } = require('../config/db_config')
+const { requireLogin, validateForms } = require('../helpers/middleware')
+const tableNames = require('../models/tableNames.js');
+const { returnKOIs } = require('../helpers/decisionTools')
 const stringify = require('csv-stringify');
 
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'esoap_local',
-    timezone: 'gmt'
-})
-
-
-const Registry = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'esoap_global',
-    timezone: 'gmt'
-})
-
 router.get('/', (req, res) => {
-
     res.render('signin', { messages: req.flash('error') })
 })
-
 
 router.get('/patient_number', requireLogin, (req, res) => {
     res.render('patient_number')
@@ -44,19 +25,18 @@ router.get('/landing/:id', requireLogin, async (req, res) => {
 
     const history = await sql.getHistory(connection, req.session.userid)
     console.log(data.moduleid)
-    const KOItargets=await returnKOIs(data); 
+    const KOItargets = await returnKOIs(data);
     // console.log(KOItargets)
-
     if (data.moduleid) kois = await sql.getKOIs(connection, data.moduleid)
     // console.log(data.readmittedwithin30daysid)
-    
+
     const lastViewed = { lastviewed: new Date() }
     // await sql.updateModules(connection, 'demographics', lastViewed, req.params.id)
     await sql.logHistory(connection, req.session.userid, req.params.id)
     res.render('landing', { req, data, history, kois, KOItargets, messages: req.flash('success') })
 })
 
-router.post('/landing', requireLogin, async (req, res) => {
+router.post('/landing', requireLogin, validateForms, async (req, res) => {
 
     const pcn = req.body.user;
     req.session.pcn = pcn;

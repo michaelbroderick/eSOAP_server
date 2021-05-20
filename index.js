@@ -4,8 +4,6 @@ const app = express();
 const path = require('path');
 const ExpressError = require('./utils/ExpressError');
 const flash = require('connect-flash');
-const { runSQL } = require("./runSQL.js")
-
 
 const userRoutes = require('./routes/user')
 const moduleRoutes = require('./routes/modules')
@@ -20,16 +18,18 @@ app.use(flash());
 
 
 app.use(session({
-    secret: 'secret',
+    name: 'esoap_session',
+    secret: 'emergencysurgery',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        httpOnly: true,
+        // secure: true,
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        maxAge: 1000 * 60 * 60 * 24 * 7
+    }
 }));
 
-// app.use((req, res, next) => {
-//     res.locals.messages = req.flash('error');
-//     res.locals.messages = req.flash('success');
-//     next();
-// })
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
@@ -38,8 +38,6 @@ app.set('views', path.join(__dirname, '/views'));
 app.use('/user', userRoutes);
 app.use('/modules', moduleRoutes);
 app.use('/', mainRoutes);
-
-
 
 
 app.all('*', (req, res, next) => {

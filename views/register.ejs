@@ -42,10 +42,6 @@
                         <td><input type="text" name="username" id="username" required></td>
                     </tr>
 
-                    <tr>
-                        <td> <label for="email">Email:</label></td>
-                        <td> <input type="text" name="email" id="email" required></td>
-                    </tr>
 
                     <tr>
                         <td> <label for="fname">First Name:</label></td>
@@ -59,12 +55,25 @@
 
                     <tr>
                         <td> <label for="password">Password:</label></td>
-                        <td><input type="text" name="password" id="password" required></td>
+                        <td><input type="password" name="password" id="password" required></td>
+                    </tr>
+
+                    <tr>
+                        <td> <label for="confirmPassword">Confirm Password:</label></td>
+                        <td><input type="password" name="confirmPassword" id="confirmPassword" required></td>
                     </tr>
 
 
                 </table>
-                <button>Register</button>
+
+                <% if (messages){ %>
+
+                    <div id=failedlogin>
+                        <%= messages %>
+                    </div>
+                    <% } %>
+
+                        <button>Register</button>
 
             </form>
 
