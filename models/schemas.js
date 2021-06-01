@@ -35,6 +35,7 @@ const extension = (joi) => ({
 
 const Joi = BaseJoi.extend(extension)
 
+
 module.exports.Schema = Joi.object({
 
     uniqueid: Joi.number().min(0).allow(''),
@@ -73,6 +74,9 @@ module.exports.Schema = Joi.object({
     sbo_otherintervention: Joi.string().allow('').escapeHTML(),
     surgerylocum: Joi.string().allow('').escapeHTML(),
     otherprocedure: Joi.string().allow('').escapeHTML(),
+    timeseen: Joi.date().max(new Date().toLocaleString("en-US", { timeZone: "Eire" })).allow(''),
+    timereferred: Joi.date().max(new Date().toLocaleString("en-US", { timeZone: "Eire" })).allow(''),
+
 
 
 })

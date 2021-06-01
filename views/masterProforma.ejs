@@ -1,0 +1,20 @@
+<%- include('./partials/min_dataset_head') %>
+
+    <head>
+        <link rel="stylesheet" href="/css/proformaStyles.css">
+
+    </head>
+
+    <%- include('./partials/nav_bar') %>
+        <div id="form-body" class="container border rounded my-3">
+            <h2 class="display-5 text-center my-3">Emergency General Surgery (EGS) Admitting Proforma</h2>
+            <form action="/testing" method="POST">
+
+                <%- include('./partials/proforma/sho_review') %>
+                    <button>Post</button>
+
+            </form>
+        </div>
+        </body>
+
+        </html>

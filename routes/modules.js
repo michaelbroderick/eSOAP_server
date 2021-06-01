@@ -8,6 +8,8 @@ const { getPatientData, local2registry, submitPatientToRegistry } = require('../
 const tableNames = require('../models/tableNames.js');
 
 
+
+
 router.get('/:id/show', requireLogin, async (req, res) => {
     const { id } = req.params;
     const result = await sql.getjoinedData(connection, id);

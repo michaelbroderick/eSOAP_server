@@ -1,0 +1,325 @@
+<h4 class="text-center text-white bg-secondary py-1">SHO Review</h4>
+
+<div class="form-group">
+    <label for="sho_name">Name</label>
+    <input type="text" name="sho[name]" class="form-control" id="sho_name">
+</div>
+
+<div class="row">
+    <div class="col-lg-1">
+        <label for="sho[hr]">HR</label>
+        <input type="number" name="sho[hr]" step=0.01 class="form-control" id="sho[hr]">
+    </div>
+    <div class="col-lg-2">
+        <label for="sho[bp_sys]">BP Systolic</label>
+        <input type="number" name="sho[bp_sys]" step=0.01 class="form-control" id="sho[bp_sys]">
+    </div>
+    <div class="col-lg-2">
+        <label for="sho[bp_dias]">BP Diastolic</label>
+        <input type="number" name="sho[bp_dias]" step=0.01 class="form-control" id="sho[bp_dias]">
+    </div>
+    <div class="col-lg-1">
+        <label for="sho[Rr]">RR</label>
+        <input type="number" name="sho[Rr]" step=0.01 class="form-control" id="sho[Rr]">
+    </div>
+    <div class="col-lg-1">
+        <label for="sho[temperature]">Temp</label>
+        <input type="number" name="sho[temperature]" step=0.01 class="form-control" id="sho[temperature]">
+    </div>
+    <div class="col-lg-1">
+        <label for="sho[spo2]">SaO2</label>
+        <input type="number" name="sho[spo2]" step=0.01 class="form-control" id="sho[spo2]">
+    </div>
+    <div class="col-lg-1">
+        <label for="sho[ews]">EWS</label>
+        <input type="number" name="sho[ews]" step=0.01 class="form-control" id="sho[ews]">
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-4 col-md-6 col-sm-12 ">
+        <div class="row">
+            <div class="col-6  pt-1">Murphy's Sign</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[rmurphyssignpositiveid]"
+                            id="murphysRadio1" value="Yes">
+                        <label class="form-check-label h4 pb-1" for="murphysRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[rmurphyssignpositiveid]"
+                            id="murphysRadio2" value="No">
+                        <label class="form-check-label h4 pb-1" for="murphysRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[rmurphyssignpositiveid]"
+                            id="murphysRadio3" value="ND" hidden=true checked=true>
+                        <label class="form-check-label" for="murphysRadio3"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 pt-1">
+                Renal Punch
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6  pt-1 pl-4">Left</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[renalpunchleft]" id="renalLRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="renalLRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[renalpunchleft]" id="renalLRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="renalLRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[renalpunchleft]" id="renalLRadio3"
+                            value="ND" hidden=true checked=true>
+                        <label class="form-check-label" for="renalLRadio3"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6  pt-1 pl-4">Right</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[renalpunchright]" id="renalRRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="renalRRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[renalpunchright]" id="renalRRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="renalRRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[renalpunchright]" id="renalRRadio3"
+                            value="ND" hidden=true checked=true>
+                        <label class="form-check-label" for="renalRRadio3"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 pt-1">
+                Hernia orifices
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6  pt-1 pl-4">Left</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[hernialeft]" id="herniaLRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="herniaLRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[hernialeft]" id="herniaLRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="herniaLRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[hernialeft]" id="herniaLRadio3"
+                            value="ND" hidden=true checked=true>
+                        <label class="form-check-label" for="herniaLRadio3"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6  pt-1 pl-4">Right</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[herniaright]" id="herniaRRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="herniaRRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[herniaright]" id="herniaRRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="herniaRRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[herniaright]" id="herniaRRadio3"
+                            value="ND" hidden=true checked=true>
+                        <label class="form-check-label" for="herniaRRadio3"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-3 col-md-5 col-sm-12 ">
+
+        <div class="container" id='diagram'>
+            <h5 class='mb-4'>Mark Relevant area</h5>
+
+            <div class="topbowrow">
+                <input type="checkbox" class="box" id='topLeftDiv' name=sho[releventarea] value='RUQ'></input>
+                <input type="checkbox" class="box" id='topDiv' name=sho[releventarea] value='Epigastic'></input>
+                <input type="checkbox" class="box" id='topRightDiv' name=sho[releventarea] value='LUQ'></input>
+            </div>
+
+            <div class="centreboxrow">
+                <input type="checkbox" class="box" id='centreLeftDiv' name=sho[releventarea]
+                    value='Right Para-umblicial'></input>
+                <input type="checkbox" class="box" id='centreDiv' name=sho[releventarea] value='Para-umblicial'></input>
+                <input type="checkbox" class="box" id='centreRightDiv' name=sho[releventarea]
+                    value='Left Para-umblicial'></input>
+            </div>
+
+            <div class="bottomboxrow">
+                <input type="checkbox" class="box" id='bottomLeftDiv' name=sho[releventarea] value='RIF'></input>
+                <input type="checkbox" class="box" id='bottomDiv' name=sho[releventarea] value='Suprapubic'></input>
+                <input type="checkbox" class="box" id='bottomRightDiv' name=sho[releventarea] value='LIF'></input>
+            </div>
+
+            <div class="cover-row">
+                <span class='cover' id="cover1"></span>
+                <span class='cover' id="cover2"></span>
+            </div>
+
+            <div class="cover-row">
+                <span class='cover' id="cover3"></span>
+                <span class='cover' id="cover4"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 ">
+        <div class="row">
+            <div class="col-6  pt-1">Tenderness</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[tenderid]" id="tenderRadio1" value="Yes">
+                        <label class="form-check-label h4 pb-1" for="tenderRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[tenderid]" id="tenderRadio2" value="No">
+                        <label class="form-check-label h4 pb-1" for="tenderRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[tenderid]" id="tenderRadio3" value="ND"
+                            hidden=true checked=true>
+                        <label class="form-check-label" for="tenderRadio3"></label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-6  pt-1">Guarding</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[guardingid]" id="guardingRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="guardingRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[guardingid]" id="guardingRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="guardingRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[guardingid]" id="guardingRadio3"
+                            value="ND" hidden=true checked=true>
+                        <label class="form-check-label" for="guardingRadio3"></label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-6  pt-1">Rebound</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[reboundtendernessid]" id="reboundRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="reboundRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[reboundtendernessid]" id="reboundRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="reboundRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[reboundtendernessid]" id="reboundRadio3"
+                            value="ND" hidden=true checked=true>
+                        <label class="form-check-label" for="reboundRadio3"></label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-6  pt-1">Bowel Sounds</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[bowelsounds]" id="bowelRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="bowelRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[bowelsounds]" id="bowelRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="bowelRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[bowelsounds]" id="bowelRadio3" value="ND"
+                            hidden=true checked=true>
+                        <label class="form-check-label" for="bowelRadio3"></label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-6  pt-1">Rigors</div>
+            <div class="col-4 ">
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[ruq_rigors]" id="rigorsRadio1"
+                            value="Yes">
+                        <label class="form-check-label h4 pb-1" for="rigorsRadio1">+</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[ruq_rigors]" id="rigorsRadio2"
+                            value="No">
+                        <label class="form-check-label h4 pb-1" for="rigorsRadio2">-</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sho[ruq_rigors]" id="rigorsRadio3" value="ND"
+                            hidden=true checked=true>
+                        <label class="form-check-label" for="rigorsRadio3"></label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>

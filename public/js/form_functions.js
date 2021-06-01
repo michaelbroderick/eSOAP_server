@@ -5,6 +5,8 @@
 //     const DT = document.querySelector(datetime);
 
 
+
+
 //     const toggleDT = () => {
 //         if (radY.checked) {
 //             DT.classList.remove('input_visibility')
@@ -49,6 +51,70 @@ function toggleYesNo(radio1, radio2, datetime) {
     radN.addEventListener('click', toggleDT);
 
 };
+
+// Several radio buttons
+function radioSelect(radioClass) {
+    const opts = document.querySelectorAll(radioClass);
+    let currOpt = opts[0]
+
+    const radioSelect = (rad, truthState) => {
+        let boxes = document.querySelectorAll(`#${rad.value.replace(' ', '')}`)
+        for (box of boxes) {
+            box.hidden = truthState
+        }
+    }
+
+    for (x of opts) {
+
+        radioSelect(x, ~x.checked)
+
+
+
+        x.addEventListener('click', () => {
+            radioSelect(currOpt, true)
+            if (opts[0].checked) {
+                currOpt = opts[0]
+                let boxes = document.querySelectorAll(`#${opts[0].value.replace(' ', '')}`)
+                for (box of boxes) {
+                    box.hidden = false
+                }
+            } else
+                if (opts[1].checked) {
+                    currOpt = opts[1]
+                    let boxes = document.querySelectorAll(`#${opts[1].value.replace(' ', '')}`)
+                    for (box of boxes) {
+                        box.hidden = false
+                    }
+                } else
+                    if (opts[2].checked) {
+                        currOpt = opts[2]
+                        let boxes = document.querySelectorAll(`#${opts[2].value.replace(' ', '')}`)
+                        for (box of boxes) {
+                            box.hidden = false
+                        }
+                    } else
+                        if (opts[3].checked) {
+                            currOpt = opts[3]
+                            let boxes = document.querySelectorAll(`#${opts[3].value.replace(' ', '')}`)
+                            for (box of boxes) {
+                                box.hidden = false
+                            }
+                        } else
+                            if (opts[4].checked) {
+                                currOpt = opts[4]
+                                let boxes = document.querySelectorAll(`#${opts[4].value.replace(' ', '')}`)
+                                for (box of boxes) {
+                                    box.hidden = false
+                                }
+                            }
+
+        })
+
+
+
+    }
+}
+
 
 function toggleYesNoND(radio1, radio2, radio3, datetime) {
     const radY = document.querySelector(radio1);
@@ -238,7 +304,7 @@ function populateFields(input_class) {
     for (let field of fields) {
         if (data[field.name]) {
             if (field.type === 'radio' | field.type === 'checkbox') {
-                
+
                 let checkArray = data[field.name].toLowerCase().split('&');
                 // console.log(checkArray)
 

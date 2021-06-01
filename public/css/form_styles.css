@@ -3,6 +3,33 @@ label{
     font-size: 1.2rem;
 }
 
+.proforma{
+font-weight:300;
+font-size:1rem;
+}
+
+.clinicalpicture{
+    font-size: 0.8rem;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.clincPicDiv{
+    border: 2px solid #e9c46a; 
+    border-radius: 4px;
+}
+
+.diagnosisbox{
+    background-color: #e9c46a;
+    border: 2px solid #111;  
+    border-radius: 4px;
+    font-weight: 700 !important;
+}
+
+.table-sm td{
+    padding: .0rem;
+}
+
 .form-check-label{
 
     font-weight:400;

@@ -1,0 +1,636 @@
+<!-- Mini form with relevent data -->
+<div class="container border rounded mt-3">
+    <form action="">
+        <h4 class="display-5">Enter Patient Details</h4>
+        <div class="row mt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
+
+                <div class="form-group col-sm-12">
+                    <label for="genderid" class="proforma">Gender</label>
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genderid" id="genderidRadio1" value="Male">
+                        <label class="form-check-label proforma" for="genderidRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genderid" id="genderidRadio2" value="Female">
+                        <label class="form-check-label proforma" for="genderidRadio2">Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-8">
+                    <label for="age" class="proforma">Age</label>
+                    <input type="number" name="age" class="form-control form-control-sm" id="age">
+                </div>
+
+
+                <div class="form-group col-sm-8">
+                    <label for="symptomduration" class="proforma">Duration of symptoms (hours)</label>
+                    <input type="number" name="symptomduration" class="form-control form-control-sm"
+                        id="symptomduration">
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
+                <div class="row">
+                    <div class="col-6  pt-1">Tenderness</div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tenderid" id="tenderRadio1"
+                                    value="Yes">
+                                <label class="form-check-label h4 pb-1" for="tenderRadio1">+</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tenderid" id="tenderRadio2"
+                                    value="No">
+                                <label class="form-check-label h4 pb-1" for="tenderRadio2">-</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tenderid" id="tenderRadio3"
+                                    value="ND" hidden=true checked=true>
+                                <label class="form-check-label" for="tenderRadio3"></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-6  pt-1">Guarding</div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guardingid" id="guardingRadio1"
+                                    value="Yes">
+                                <label class="form-check-label h4 pb-1" for="guardingRadio1">+</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guardingid" id="guardingRadio2"
+                                    value="No">
+                                <label class="form-check-label h4 pb-1" for="guardingRadio2">-</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guardingid" id="guardingRadio3"
+                                    value="ND" hidden=true checked=true>
+                                <label class="form-check-label" for="guardingRadio3"></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-6  pt-1">Rebound RIF</div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="reboundtendernessid"
+                                    id="reboundRadio1" value="Yes">
+                                <label class="form-check-label h4 pb-1" for="reboundRadio1">+</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="reboundtendernessid"
+                                    id="reboundRadio2" value="No">
+                                <label class="form-check-label h4 pb-1" for="reboundRadio2">-</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="reboundtendernessid"
+                                    id="reboundRadio3" value="ND" hidden=true checked=true>
+                                <label class="form-check-label" for="reboundRadio3"></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-6  pt-1">RIF Pain</div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rifpainid" id="rifpainidRadio1"
+                                    value="Yes">
+                                <label class="form-check-label h4 pb-1" for="rifpainidRadio1">+</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rifpainid" id="rifpainidRadio2"
+                                    value="No">
+                                <label class="form-check-label h4 pb-1" for="rifpainidRadio2">-</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rifpainid" id="rifpainidRadio3"
+                                    value="ND" hidden=true checked=true>
+                                <label class="form-check-label" for="rifpainidRadio3"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6  pt-1">Rigidity</div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rigidityid" id="rigidityidRadio1"
+                                    value="Yes">
+                                <label class="form-check-label h4 pb-1" for="rigidityidRadio1">+</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rigidityid" id="rigidityidRadio2"
+                                    value="No">
+                                <label class="form-check-label h4 pb-1" for="rigidityidRadio2">-</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rigidityid" id="rigidityidRadio3"
+                                    value="ND" hidden=true checked=true>
+                                <label class="form-check-label" for="rigidityidRadio3"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6  pt-1">Palpable Mass RIF</div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="palpablemassid"
+                                    id="palpablemassidRadio1" value="Yes">
+                                <label class="form-check-label h4 pb-1" for="palpablemassidRadio1">+</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="palpablemassid"
+                                    id="palpablemassidRadio2" value="No">
+                                <label class="form-check-label h4 pb-1" for="palpablemassidRadio2">-</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="palpablemassid"
+                                    id="palpablemassidRadio3" value="ND" hidden=true checked=true>
+                                <label class="form-check-label" for="palpablemassidRadio3"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6  pt-1">Rigidity Entire Abdomen</div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rigidityentire"
+                                    id="rigidityentireRadio1" value="Yes">
+                                <label class="form-check-label h4 pb-1" for="rigidityentireRadio1">+</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rigidityentire"
+                                    id="rigidityentireRadio2" value="No">
+                                <label class="form-check-label h4 pb-1" for="rigidityentireRadio2">-</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rigidityentire"
+                                    id="rigidityentireRadio3" value="ND" hidden=true checked=true>
+                                <label class="form-check-label" for="rigidityentireRadio3"></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
+
+                <label for="wcc" class='proforma'>WCC</label>
+                <input type="number" name="wcc" step=0.01 class="form-control form-control-sm" id="wcc">
+
+                <label for="crp" class='proforma'>CRP</label>
+                <input type="number" name="crp" step=0.01 class="form-control form-control-sm" id="crp">
+
+
+                <label for="airscore" class='proforma'>AIR Score</label>
+                <input type="number" name="airscore" class="form-control form-control-sm" id="airscore">
+
+
+                <label for="aasscore" class='proforma'>AAS Score</label>
+                <input type="number" name="aasscore" class="form-control form-control-sm" id="aasscore">
+
+
+                <label for="sherascore" class='proforma'>SHERA Score</label>
+                <input type="number" name="sherascore" class="form-control form-control-sm" id="sherascore">
+
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg my-3 mx-1 next" id="nxt">Clinical Picture</button>
+    </form>
+</div>
+
+<!-- Flow chart -->
+
+<div class="container border mt-5">
+    <div class="row my-2">
+        <div class="col-3 ml-2">
+            <h5 class='text-center'>Clinical Picture</h5>
+        </div>
+
+        <div class="col-2 offset-1">
+            <h5 class='text-center'>Likely Diagnosis</h5>
+        </div>
+
+        <div class="col-3 offset-1">
+            <h5 class='text-center'>Investigation/Management</h5>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-3 ml-2 clincPicDiv">
+            <table class='table table-sm mt-1 clinicalpicture text-center'>
+
+                <tbody>
+                    <tr>
+                        <td>Pain RIF</td>
+                    </tr>
+                    <tr>
+                        <td>Normal Bloods</td>
+                    </tr>
+                    <tr>
+                        <td>AIR &#60 5</td>
+                    </tr>
+                    <tr>
+                        <td>AAS &#8804 10</td>
+                    </tr>
+                    <tr>
+                        <td>SHERA F(5-15yrs) &#8804 3</td>
+                    </tr>
+                    <tr>
+                        <td>SHERA M(5-10yrs) &#8804 3</td>
+                    </tr>
+                    <tr>
+                        <td>SHERA M(11-15yrs) &#8804 2</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+            <div class='diagnosisbox text-center p-2'>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="clinicaldiagnosis" id="Radio1"
+                        value="Possible Appendicitis">
+                    <label class="form-check-label" for="Radio1">Possible Appendicitis</label>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <div hidden=true id="PossibleAppendicitis"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg></div>
+        </div>
+        <div class="col-3 d-flex align-items-center justify-content-center">
+            <table class='table table-sm border mt-1 text-center' id="PossibleAppendicitis" hidden=true>
+
+                <tbody>
+                    <tr>
+                        <td>Observer Reassess after 6-8 hours</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+    <div class="row mt-2">
+        <div class="col-3 ml-2 clincPicDiv">
+            <table class='table table-sm mt-1 clinicalpicture text-center'>
+
+                <tbody>
+                    <tr>
+                        <td>Pain RIF</td>
+                    </tr>
+                    <tr>
+                        <td>Tender</td>
+                    </tr>
+                    <tr>
+                        <td>Guarding</td>
+                    </tr>
+                    <tr>
+                        <td>Rigidity</td>
+                    </tr>
+                    <tr>
+                        <td>Rebound RIF</td>
+                    </tr>
+                    <tr>
+                        <td>WCC &#62 13000</td>
+                    </tr>
+                    <tr>
+                        <td>CRP &#62 10</td>
+                    </tr>
+                    <tr>
+                        <td>AIR: 5-8</td>
+                    </tr>
+                    <tr>
+                        <td>AAS 11-15</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+            <div class='diagnosisbox text-center p-2'>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="clinicaldiagnosis" id="Radio2"
+                        value="Probable Appendicitis">
+                    <label class="form-check-label" for="Radio2">Probable Appendicitis</label>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <div id='ProbableAppendicitis' hidden=true>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </div>
+        </div>
+        <div class="col-3 d-flex align-items-center justify-content-center">
+            <table class='table table-sm border mt-1 text-center' id="ProbableAppendicitis" hidden=true>
+
+                <tbody>
+                    <tr>
+                        <td>Observer Reassess after 6-8 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Consider US (especially in females)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+    <div class="row mt-2">
+        <div class="col-3 ml-2 clincPicDiv">
+            <table class='table table-sm mt-1 clinicalpicture text-center'>
+
+                <tbody>
+                    <tr>
+                        <td>Pain RIF</td>
+                    </tr>
+                    <tr>
+                        <td>Tender</td>
+                    </tr>
+                    <tr>
+                        <td>Guarding</td>
+                    </tr>
+                    <tr>
+                        <td>Rigidity</td>
+                    </tr>
+                    <tr>
+                        <td>Rebound RIF</td>
+                    </tr>
+                    <tr>
+                        <td>WCC &#62 15000</td>
+                    </tr>
+                    <tr>
+                        <td>CRP &#62 20</td>
+                    </tr>
+                    <tr>
+                        <td>AIR &#62 8</td>
+                    </tr>
+                    <tr>
+                        <td>AIR &#8805 16</td>
+                    </tr>
+                    <tr>
+                        <td>SHERA &#62 3</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+            <div class='diagnosisbox text-center p-2'>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="clinicaldiagnosis" id="Radio3"
+                        value="Definite Appendicitis">
+                    <label class="form-check-label" for="Radio3">Definite Appendicitis</label>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <div id="DefiniteAppendicitis" hidden=true><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg></div>
+        </div>
+        <div class="col-3 d-flex align-items-center justify-content-center">
+            <table class='table table-sm  border mt-1 text-center' id="DefiniteAppendicitis" hidden=true>
+
+                <tbody>
+                    <tr>
+                        <td>Consider US/CT</td>
+                    </tr>
+                    <tr>
+                        <td>US/CT - Appendicitis Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>Laparoscopic Appendectomy</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+    <div class="row mt-2">
+        <div class="col-3 ml-2 clincPicDiv">
+            <table class='table table-sm mt-1 clinicalpicture text-center'>
+
+                <tbody>
+                    <tr>
+                        <td>Pain RIF</td>
+                    </tr>
+                    <tr>
+                        <td>Tender</td>
+                    </tr>
+                    <tr>
+                        <td>Guarding</td>
+                    </tr>
+                    <tr>
+                        <td>Rigidity</td>
+                    </tr>
+                    <tr>
+                        <td>Rebound RIF</td>
+                    </tr>
+                    <tr>
+                        <td>Palpable Mass</td>
+                    </tr>
+                    <tr>
+                        <td>High WCC, CRP</td>
+                    </tr>
+
+                    <tr>
+                        <td>Duration of symptoms > 48hrs</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1 d-flex align-items-center justify-content-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+            <div class='diagnosisbox text-center p-2'>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="clinicaldiagnosis" id="Radio4"
+                        value="Appendicular Mass">
+                    <label class="form-check-label" for="Radio4">Appendicular Mass</label>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <div id="AppendicularMass" hidden=true>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </div>
+        </div>
+        <div class="col-3 d-flex align-items-center justify-content-center">
+            <table class='table table-sm mt-1 text-center border' hidden=true id="AppendicularMass">
+
+                <tbody>
+                    <tr>
+                        <td>Consider US/CT</td>
+                    </tr>
+                    <tr>
+                        <td>US/CT - Appendicitis Mass confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>+/- Laparoscopic Appendectomy</td>
+                    </tr>
+                    <tr>
+                        <td>+/- Interventional Radiological Drainage and Interval Appendectomy</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <div class="row mt-2">
+        <div class="col-3 ml-2 clincPicDiv">
+            <table class='table table-sm mt-1 clinicalpicture text-center'>
+
+                <tbody>
+                    <tr>
+                        <td>Pain RIF</td>
+                    </tr>
+                    <tr>
+                        <td>Tender</td>
+                    </tr>
+                    <tr>
+                        <td>Guarding</td>
+                    </tr>
+                    <tr>
+                        <td>Rigidity Entire Abdomen</td>
+                    </tr>
+
+                    <tr>
+                        <td>High WCC, CRP</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+            <div class='diagnosisbox text-center p-2'>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="clinicaldiagnosis" id="Radio5"
+                        value="Peritonitic Patient">
+                    <label class="form-check-label" for="Radio5">Peritonitic Patient</label>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <div id="PeritoniticPatient" hidden=true>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </div>
+        </div>
+        <div class="col-3 d-flex align-items-center justify-content-center">
+            <table class='table table-sm border mt-1 text-center' id="PeritoniticPatient" hidden=true>
+
+                <tbody>
+                    <tr>
+                        <td>Expedient Laparoscopic Appendectomy</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/form_functions.js"></script>
+<script>
+    radioSelect('input[name=clinicaldiagnosis]')
+</script>

@@ -8,6 +8,19 @@ const { returnKOIs } = require('../helpers/decisionTools')
 const stringify = require('csv-stringify');
 
 
+router.get('/testing', (req, res) => {
+    res.render('masterProforma')
+})
+
+router.get('/flowchart_testing', (req, res) => {
+    res.render('flowchart_test')
+})
+
+router.post('/testing', (req, res) => {
+    console.log(req.body.sho)
+    res.render('signin', { messages: req.flash('error') })
+})
+
 router.get('/', (req, res) => {
     res.render('signin', { messages: req.flash('error') })
 })
