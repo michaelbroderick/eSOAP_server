@@ -21,6 +21,30 @@ module.exports.selectById = (connection, table, id) => {
 };
 
 
+module.exports.selectByAny = (connection, table, col_name, id) => {
+    return new Promise((resolve, reject) => {
+        connection.query('SELECT * FROM ?? WHERE ??=?', [table, col_name, id], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+    });
+};
+
+
+module.exports.generalQuery = (connection, query, vars) => {
+    return new Promise((resolve, reject) => {
+        connection.query(query, vars, (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+    });
+};
+
+
 module.exports.insertIntoDemographics = (connection, pcn, userid) => {
     return new Promise((resolve, reject) => {
         connection.query('INSERT INTO demographics(pcn, userid) VALUES (?, ?)', [pcn, userid], (error, elements) => {
@@ -49,9 +73,36 @@ module.exports.init_table = (connection, table, patientid) => {
 
 };
 
+
+module.exports.insert_data = (connection, table, data) => {
+    return new Promise((resolve, reject) => {
+        connection.query('INSERT INTO ?? SET ?', [table, data], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+
+    })
+
+};
+
 module.exports.updateModules = (connection, module, data, id) => {
     return new Promise((resolve, reject) => {
         connection.query('UPDATE ?? SET ? WHERE patientid=?', [module, data, id], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+
+    })
+};
+
+
+module.exports.updateAny = (connection, module, data, col_name, id) => {
+    return new Promise((resolve, reject) => {
+        connection.query('UPDATE ?? SET ? WHERE ??=?', [module, data, col_name, id], (error, elements) => {
             if (error) {
                 return reject(error);
             }
@@ -196,6 +247,21 @@ module.exports.getKOIs = (connection, moduleid) => {
     return new Promise((resolve, reject) => {
         let q = 'SELECT koi,koitarget FROM kois WHERE module=?';
         connection.query(q, [moduleid], (error, elements) => {
+
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+
+    })
+};
+
+
+module.exports.getCriteria = (connection, moduleid, groupnum) => {
+    return new Promise((resolve, reject) => {
+        let q = 'SELECT * FROM criteria WHERE module=? AND groupnum=?';
+        connection.query(q, [moduleid, groupnum], (error, elements) => {
 
             if (error) {
                 return reject(error);

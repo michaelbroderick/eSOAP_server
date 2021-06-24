@@ -7,6 +7,7 @@
 
 
 
+
 //     const toggleDT = () => {
 //         if (radY.checked) {
 //             DT.classList.remove('input_visibility')
@@ -57,23 +58,42 @@ function radioSelect(radioClass) {
     const opts = document.querySelectorAll(radioClass);
     let currOpt = opts[0]
 
-    const radioSelect = (rad, truthState) => {
+    const radioSelector = (rad, truthState) => {
         let boxes = document.querySelectorAll(`#${rad.value.replace(' ', '')}`)
         for (box of boxes) {
             box.hidden = truthState
         }
     }
 
+    const sendChoice = (val) => {
+        axios.post('/decision/flowchartAJAX/', {
+            clinicaldiagnosis: val,
+            flowid: document.querySelector('#id').value
+        })
+            .then(function (response) {
+                // handle success
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+    }
+
     for (x of opts) {
 
-        radioSelect(x, ~x.checked)
+        radioSelector(x, !x.checked)
 
+        if (x.checked) {
+            currOpt = x
+        }
 
 
         x.addEventListener('click', () => {
-            radioSelect(currOpt, true)
+            radioSelector(currOpt, true)
             if (opts[0].checked) {
                 currOpt = opts[0]
+                sendChoice(opts[0].value)
                 let boxes = document.querySelectorAll(`#${opts[0].value.replace(' ', '')}`)
                 for (box of boxes) {
                     box.hidden = false
@@ -81,6 +101,7 @@ function radioSelect(radioClass) {
             } else
                 if (opts[1].checked) {
                     currOpt = opts[1]
+                    sendChoice(opts[1].value)
                     let boxes = document.querySelectorAll(`#${opts[1].value.replace(' ', '')}`)
                     for (box of boxes) {
                         box.hidden = false
@@ -88,6 +109,7 @@ function radioSelect(radioClass) {
                 } else
                     if (opts[2].checked) {
                         currOpt = opts[2]
+                        sendChoice(opts[2].value)
                         let boxes = document.querySelectorAll(`#${opts[2].value.replace(' ', '')}`)
                         for (box of boxes) {
                             box.hidden = false
@@ -95,6 +117,7 @@ function radioSelect(radioClass) {
                     } else
                         if (opts[3].checked) {
                             currOpt = opts[3]
+                            sendChoice(opts[3].value)
                             let boxes = document.querySelectorAll(`#${opts[3].value.replace(' ', '')}`)
                             for (box of boxes) {
                                 box.hidden = false
@@ -102,6 +125,7 @@ function radioSelect(radioClass) {
                         } else
                             if (opts[4].checked) {
                                 currOpt = opts[4]
+                                sendChoice(opts[4].value)
                                 let boxes = document.querySelectorAll(`#${opts[4].value.replace(' ', '')}`)
                                 for (box of boxes) {
                                     box.hidden = false

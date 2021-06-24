@@ -1,11 +1,37 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
 <%- include('./partials/min_dataset_head') %>
+    <%- include('./partials/nav_bar') %>
 
 
-    <body>
+        <body>
+            <span id="hiddenspan" hidden="true">
+                <%=jsonData%>
+            </span>
 
-        <%- include('./partials/flowchart/appendicitis') %>
 
 
-    </body>
+            <%- include('./partials/flowchart/appendicitis') %>
 
-    </html>
+
+
+                <%- include('partials/footer') %>
+
+                    <script src="/js/form_functions.js"></script>
+                    <script>
+                        populateFields("input, select, textarea");
+                        radioSelect('input[name=clinicaldiagnosis]')
+                    </script>
+
+                    <% if (scroller=='Submitted' ) {%>
+                        <script>
+                            window.scrollTo(0, document.querySelector('#flowchart_begin').offsetTop)
+                        </script>
+
+                        <% } %>
+
+
+        </body>
+
+        </html>

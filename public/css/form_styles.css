@@ -24,7 +24,50 @@ font-size:1rem;
     border: 2px solid #111;  
     border-radius: 4px;
     font-weight: 700 !important;
+transition: all 100ms ease-in-out;
 }
+
+.diagnosisbox:hover{
+    box-shadow: -2.5px 2.5px 5px #8a8;
+    transform: translate(2px,-2px)
+}
+
+.diagnosis-opts{
+    font-size:  1rem;
+}
+
+.management{
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 400px){
+    .diagnosis-opts{
+        font-size:  0.65rem;
+    } 
+
+    .clinicalpicture{
+        font-size: 0.65rem;
+
+    }
+
+    .management{
+        font-size: 0.65rem;
+    }
+
+}
+
+.mgmt-box{
+    border: 2px solid #e9c46a; 
+    border-radius: 4px;
+    transition: all 1s;
+
+}
+
+
+
+
+
 
 .table-sm td{
     padding: .0rem;
@@ -43,7 +86,10 @@ nav{
 
 }
 
-
+#page_footer{
+    background-color: #cddfd8;
+    /* color:white !important; */
+}
 
 #tabs .nav-link{
     color:#006857;

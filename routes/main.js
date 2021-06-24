@@ -12,9 +12,7 @@ router.get('/testing', (req, res) => {
     res.render('masterProforma')
 })
 
-router.get('/flowchart_testing', (req, res) => {
-    res.render('flowchart_test')
-})
+
 
 router.post('/testing', (req, res) => {
     console.log(req.body.sho)

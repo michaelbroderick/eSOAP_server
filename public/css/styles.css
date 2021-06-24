@@ -101,7 +101,7 @@ button{
     padding: .4em .7em;
     border-style: unset;
     border:1px solid #006857;
-    transition: all 200ms ease-in-out;
+    transition: all 800ms ease-in-out;
     font-family: 'Open Sans', sans-serif;
 }
 

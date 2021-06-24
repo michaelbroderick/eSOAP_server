@@ -34,7 +34,6 @@ router.get('/:id/edit', requireLogin, async (req, res) => {
     // console.log(data)
     for (let dt in data) {
         if (!data[dt]) {
-            //console.log('hello')
             delete data[dt];
         }
     }

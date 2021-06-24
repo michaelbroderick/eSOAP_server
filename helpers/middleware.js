@@ -1,6 +1,6 @@
 const Joi = require('joi');
 const ExpressError = require('../utils/ExpressError');
-const { Schema, RegisterSchema, PreRegisterSchema, LoginSchema, PasswordSchema } = require('../models/schemas.js')
+const { Schema, RegisterSchema, PreRegisterSchema, LoginSchema, PasswordSchema, flowchartSchema } = require('../models/schemas.js')
 
 
 module.exports.requireLogin = (req, res, next) => {
@@ -37,6 +37,20 @@ module.exports.validateForms = (req, res, next) => {
 module.exports.validateRegisterForms = (req, res, next) => {
 
     const { error } = RegisterSchema.validate(req.body, { allowUnknown: true });
+    if (error) {
+        const msg = error.details.map(el => el.message).join(',')
+        console.log(msg)
+
+        throw new ExpressError(msg, 400)
+    } else {
+        next();
+    }
+}
+
+
+module.exports.validateFlowForms = (req, res, next) => {
+
+    const { error } = flowchartSchema.validate(req.body, { allowUnknown: true });
     if (error) {
         const msg = error.details.map(el => el.message).join(',')
         console.log(msg)

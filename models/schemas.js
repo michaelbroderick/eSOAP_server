@@ -113,3 +113,10 @@ module.exports.LoginSchema = Joi.object({
     password: Joi.string().required().escapeHTML(),
 
 })
+
+module.exports.flowchartSchema = Joi.object({
+    age: Joi.number().min(0).allow(''),
+    symptomduration: Joi.number().min(0).allow(''),
+    wcc: Joi.number().min(0).allow(''),
+    crp: Joi.number().min(0).allow(''),
+})

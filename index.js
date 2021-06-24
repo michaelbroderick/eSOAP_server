@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const session = require('express-session');
 const app = express();
@@ -8,6 +9,7 @@ const flash = require('connect-flash');
 const userRoutes = require('./routes/user')
 const moduleRoutes = require('./routes/modules')
 const mainRoutes = require('./routes/main')
+const decisionRoutes = require('./routes/decision')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -37,6 +39,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 app.use('/user', userRoutes);
 app.use('/modules', moduleRoutes);
+app.use('/decision', decisionRoutes);
 app.use('/', mainRoutes);
 
 
