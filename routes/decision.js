@@ -17,9 +17,12 @@ router.get('/:id/flowchart', requireLogin, async (req, res) => {
 
     const result1 = await sql.selectById(connection, 'flowchart_vars', id)
     const data1 = result1[result1.length - 1];
-    console.log(data1.id)
-    const result2 = await sql.selectByAny(connection, 'clinical_decision', 'flowid', data1.id)
-    const data2 = result2[0]
+    let result2 = []
+    let data2 = {}
+    if (data1) {
+        result2 = await sql.selectByAny(connection, 'clinical_decision', 'flowid', data1.id)
+        data2 = result2[0]
+    }
     const dataMerged = { ...data2, ...data1, ...data }
     if (data1) dataMerged.flowID = data1.id;
     let jsonData = JSON.stringify(dataMerged)
