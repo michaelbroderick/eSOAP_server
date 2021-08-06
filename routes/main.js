@@ -31,6 +31,10 @@ router.get('/landing/:id', requireLogin, async (req, res) => {
     console.log(req.session)
     const result = await sql.getjoinedData(connection, req.params.id)
     const data = result[0]
+    console.log(data)
+    let moduleCode = ''
+    try { moduleCode = data.moduleid.slice(0, 3).toLowerCase() }
+    catch { };
 
     let kois = [];
 
@@ -41,10 +45,13 @@ router.get('/landing/:id', requireLogin, async (req, res) => {
     if (data.moduleid) kois = await sql.getKOIs(connection, data.moduleid)
     // console.log(data.readmittedwithin30daysid)
 
+    const regResult = await sql.selectById(Registry, 'demographics', req.params.id)
+    let inRegistry = Boolean(regResult.length);
+
     const lastViewed = { lastviewed: new Date() }
     // await sql.updateModules(connection, 'demographics', lastViewed, req.params.id)
     await sql.logHistory(connection, req.session.userid, req.params.id)
-    res.render('landing', { req, data, history, kois, KOItargets, messages: req.flash('success') })
+    res.render('landing', { req, data, history, kois, KOItargets, inRegistry,  moduleCode: moduleCode, messages: req.flash('success') })
 })
 
 router.post('/landing', requireLogin, validateForms, async (req, res) => {

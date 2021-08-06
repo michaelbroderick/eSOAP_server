@@ -92,7 +92,7 @@ router.post('/:id', requireLogin, validateForms, async (req, res) => {
         await sql.updateModules(connection, moduleCode, filtered, id)
     }
     console.log('Back to modules')
-    res.redirect(`/modules/${id}/show`)
+    res.redirect(`/landing/${id}`)
 
 })
 
@@ -105,7 +105,7 @@ router.get('/:id/submitToRegistry', requireLogin, async (req, res) => {
         req.flash('success', 'Patient Submitted to registry')
         res.redirect(`/landing/${req.params.id}`)
     } else {
-        res.redirect(`/modules/${req.params.id}/show`)
+        res.redirect(`/landing/${req.params.id}`)
     }
 })
 

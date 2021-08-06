@@ -68,14 +68,20 @@ background-color: white;
     flex-grow:2;
 }
 
+.content:nth-child(3){
+    max-height:150px;
+}
+
 .content:nth-child(2){
     flex-grow:1;
     overflow-y:scroll;
-    max-height:400px;
+    max-height:360px;
 
 }
 
-
+#timeline{
+    height:250px;
+}
 
 
 

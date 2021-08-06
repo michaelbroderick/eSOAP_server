@@ -10,6 +10,7 @@ const userRoutes = require('./routes/user')
 const moduleRoutes = require('./routes/modules')
 const mainRoutes = require('./routes/main')
 const decisionRoutes = require('./routes/decision')
+const reportingRoutes = require('./routes/reporting')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -40,6 +41,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.use('/user', userRoutes);
 app.use('/modules', moduleRoutes);
 app.use('/decision', decisionRoutes);
+app.use('/reporting', reportingRoutes);
 app.use('/', mainRoutes);
 
 

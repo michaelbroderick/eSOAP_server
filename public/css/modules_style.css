@@ -33,12 +33,28 @@ nav{
 }
 
 .form_div_enabled img{
-    width:100%;
+    width:75%;
     margin: auto;
     margin-bottom: 10px;
+    /* max-height: 150px; */
 }
 
+
+
+#report_img{
+    margin-left: 15px;
+    width:74%
+}
+
+
+
 h3{
+    text-align: center;
+    color:#006857;
+    text-decoration: none;
+}
+
+h4{
     text-align: center;
     color:#006857;
     text-decoration: none;
@@ -52,6 +68,8 @@ h3.module_headings{
 .hse_green{
     filter: invert(31%) sepia(24%) saturate(1924%) hue-rotate(125deg) brightness(93%) contrast(101%);
 }
+
+
 
 .hse_red{
     filter: invert(11%) sepia(87%) saturate(4630%) hue-rotate(334deg) brightness(95%) contrast(101%);

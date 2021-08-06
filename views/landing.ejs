@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="/css/sidebarStyle.css">
     <link rel="stylesheet" href="/css/navbarStyles.css">
     <link rel="stylesheet" href="/css/landing_style.css">
+    <link rel="stylesheet" href="/css/modules_style.css">
+
     <script src='/js/jquery.js'></script>
+    <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -26,106 +29,157 @@
                 <main class="dashboard container px-0 pl-lg-5 d-flex flex-column mx-0 justify-content-center bg-light">
 
                     <%- include('partials/flash') %>
+
                         <div class="row mx-0 mt-4 mb-2">
-                            <div class="content col-lg-4 p-2 m-1">
-                                <h5>
-                                    Patient Information
-                                </h5>
 
-                                <table class="info_table">
+                            <div class="content col-lg-11 p-2 m-1">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-8">
+                                        <div class="table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col">PCN</th>
+                                                        <th scope="col">Age</th>
+                                                        <th scope="col">Sex</th>
+                                                        <th scope="col">Admitted</th>
+                                                        <th scope="col">EGS Module</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <%= data.pcn %>
+                                                            </td>
+                                                            <td>
+                                                                <%= data.age %>
+                                                            </td>
+                                                            <td>
+                                                                <%= data.genderid %>
+                                                            </td>
+                                                            <td>
+                                                                <%= new Date(data.admissiondate).toString().slice(0,15) %>
+                                                            </td>
+                                                            <td>
+                                                                <%= data.moduleid %>
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td>PCN:</td>
-                                        <td>
-                                            <%= data.pcn %>
-                                        </td>
-                                    </tr>
+                                    <div class="row justify-content-center mb-3">
+                                        <div class=" col-sm-6 col-lg-3 mt-4 form_div_enabled text-center">
+                                            <a href="/modules/<%=req.params.id%>/edit">
+                                                <img src="/imgs/eForm.png" alt="eForm" class="hse_green">
+                                                <span>
+                                                    <h4>Enter Patient Data</h4>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        
+                                        <div class=" col-sm-6 col-lg-3 mt-4 form_div_enabled text-center">
+                                            <a href="">
+                                                <img src="/imgs/report.png" alt="Report" class="hse_green" id="report_img">
+                                
+                                                <span>
+                                                    <h4>Reports</h4>
+                                                </span>
+                                            </a>
+                                        </div>
 
-                                    <tr>
-                                        <td>Age:</td>
-                                        <td>
-                                            <%= data.age %>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Admitted:</td>
-                                        <td>
-                                            <%= new Date(data.admissiondate).toString().slice(0,15)%>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Module:</td>
-                                        <td>
-                                            <%= data.moduleid%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Provisional Diagnosis:</td>
-                                        <td>
-                                            <%= data.provisionaldiagnosisid%>
-                                        </td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td>Final Diagnosis:</td>
-                                        <td>
-                                            <%= data.finaldiagnosisid%>
-                                        </td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td>Length of Stay:</td>
-                                        <td>
-                                            <%= data.lengthoftotalstay%>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="content col-lg-7 text-center p-2 m-1">
-                                <h5>Patient Related Key Outcome Indicators</h5>
-                                <div class="table-responsive">
-                                    <table class="table table-sm">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th scope="col"></th>
-                                                <th class="text-left" scope="col">KOI</th>
-                                                <th scope="col">Patient</th>
-                                                <th scope="col">Target</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <% for (let i=0; i<kois.length; i++){%>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <%=i+1%>
-                                                    </th>
-                                                    <td class="text-left">
-                                                        <%= kois[i].koi %>
-                                                    </td>
-                                                    <td>
-                                                        <%- KOItargets[String(i+1)] %>
-                                                    </td>
-                                                    <td>
-                                                        <%= kois[i].koitarget %>%
-                                                    </td>
-                                                </tr>
-                                                <% } %>
-                                        </tbody>
-                                    </table>
+                                        <div class=" col-sm-6 col-lg-3 mt-4 form_div_enabled text-center">
+                                            <a href="/decision/<%=req.params.id%>/flowchart">
+                                                <img src="/imgs/decision.png" alt="Decision" class="hse_green">
+                                                <span>
+                                                    <h4>Decision Support</h4>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
 
                                 </div>
+
                             </div>
                         </div>
 
+
+                                
+
+                        
+
                         <div class="row mx-0 mb-2">
-                            <div class="content col-3 col-sm-5 m-1">
-                                <section class="pt_links">
-                                    <div><a href="/modules/<%=req.params.id%>/show">Add registry data</a></div>
-                                    <div><a href="#">View Patient Proforma</a></div>
-                                    <div><a href="/exportCSV/">Export Patient Data</a></div>
-                                    <!-- <div><a href="">Patient population report</a></div> -->
-                                </section>
+                            <div class="content col-3 col-sm-5 m-1 p-2">
+                                <h5 class="text-center">Submit Patient to Registry</h5>
+                                <div class="card mt-3 mx-4 bg-info">
+                                    <div class="card-header text-center">
+                                        <b> Review and Submit
+                                        </b>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+    
+                                        <% if(!inRegistry) { %>
+    
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                        Patient Data
+                                                    </div>
+                                                    <div class="col-5 ms-auto">
+    
+                                                        <% if (data.percentComplete<100){ %>
+                                                            <a href="/modules/<%=req.params.id%>/edit?val=pass"><button
+                                                                    type="button" class="btn btn-danger">Review
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                                                        height="1em" fill="white"
+                                                                        class="bi bi-exclamation-circle"
+                                                                        viewBox="0 0 16 16">
+                                                                        <path
+                                                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                                        <path
+                                                                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                                                                    </svg>
+                                                                </button></a>
+                                                            <% } else{%>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="2em"
+                                                                    height="2em" fill="green" class="bi bi-check2-circle"
+                                                                    viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+                                                                    <path
+                                                                        d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+                                                                </svg>
+                                                                <% } %>
+                                                    </div>
+                                                </div>
+                                            </li>
+    
+    
+                                            <li class="list-group-item text-center">
+                                                <a
+                                                    href="/modules/<%=req.params.id%>/submitToRegistry?module=<%=moduleCode%>&validated=true">
+                                                    <button <% if(data.percentComplete<100){%>
+                                                        disabled
+                                                        <%} %>
+                                                            class="btn btn-success mx-1">Submit
+                                                    </button>
+                                                </a>
+                                                <a href="/modules/<%=req.params.id%>/submitToRegistry?module=<%=moduleCode%>"
+                                                    id="submitCheck">
+                                                    <button class="btn btn-danger mx-1" id="submitCheckButton">Submit
+                                                        Incomplete</button>
+                                                </a>
+    
+                                            </li>
+                                            <% } else{ %>
+                                                <li class="list-group-item text-center">
+                                                    Patient has been registered
+                                                </li>
+                                                <% } %>
+    
+                                    </ul>
+                                </div>
                             </div>
                             <div class="content col-4 col-sm-6 text-center p-2 m-1">
                                 <h5>Your viewing history</h5>

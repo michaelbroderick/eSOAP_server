@@ -70,7 +70,7 @@ const riskScoreDocumented = (data) => {
 
 const laparoscopicApproach = (data) => {
 
-    if (!data.dispositionsurgrecordedid | data.dispositionsurgrecordedid == 'ND') return 'N.D.'
+    if (!data.dispositionsurgrecordedid | data.dispositionsurgrecordedid == 'ND' | !data.procedureid) return 'N.D.'
 
     if (data.dispositionsurgrecordedid == 'Yes') {
         return data.procedureid.includes('Laparoscopic')

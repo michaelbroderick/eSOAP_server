@@ -8,18 +8,18 @@
         </li>
         <li>
 
-            <a href="/modules/<%=req.params.id%>/show">
+            <a href="/modules/<%=req.params.id%>/edit">
                 Registry
             </a>
-            <a href="#">
+            <!-- <a href="#">
                 Proforma
-            </a>
+            </a> -->
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                 Reporting
             </a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="#">View Patient Data</a>
+                    <a href="/reporting/<%=req.params.id%>/show">View Patient Data</a>
                 </li>
                 <li>
                     <a href="#">Population Report</a>
