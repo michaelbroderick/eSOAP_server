@@ -191,7 +191,7 @@ const missingChecker = (elements, conditional) => {
 module.exports.makeRifObj = (data) => {
     const rifObj = [
         {
-            'Normal Bloods': missingChecker([data.wcc, data.crp], (data.wcc < 13000 & data.crp < 10)),
+            'Normal Bloods': missingChecker([data.wcc, data.crp], (data.wcc < 13 & data.crp < 10)),
             'AIR &#60 5': missingChecker([data.riskscore], data.riskscore < 5),
             'AAS &#8804 10': missingChecker([data.riskscore], data.riskscore <= 10),
             'SHERA F(5-15yrs) &#8804 3': missingChecker([data.riskscore], data.riskscore <= 3),
@@ -205,7 +205,7 @@ module.exports.makeRifObj = (data) => {
             'Guarding': missingChecker([data.guardingid], data.guardingid === 'Yes'),
             'Rigidity': missingChecker([data.rigidityid], data.rigidityid === 'Yes'),
             'Rebound RIF': missingChecker([data.reboundtendernessid], data.reboundtendernessid === 'Yes'),
-            'WCC &#62 13000': missingChecker([data.wcc], data.wcc > 13000),
+            'WCC &#62 13000': missingChecker([data.wcc], data.wcc > 13),
             'CRP &#62 10': missingChecker([data.crp], data.crp > 10),
             'AIR: 5-8': missingChecker([data.riskscore], (data.riskscore >= 5 & data.riskscore <= 8)),
             'AAS 11-15': missingChecker([data.riskscore], (data.riskscore >= 11 & data.riskscore <= 15)),
@@ -216,7 +216,7 @@ module.exports.makeRifObj = (data) => {
             'Guarding': missingChecker([data.guardingid], data.guardingid === 'Yes'),
             'Rigidity': missingChecker([data.rigidityid], data.rigidityid === 'Yes'),
             'Rebound RIF': missingChecker([data.reboundtendernessid], data.reboundtendernessid === 'Yes'),
-            'WCC &#62 15000': missingChecker([data.wcc], data.wcc > 15000),
+            'WCC &#62 15000': missingChecker([data.wcc], data.wcc > 15),
             'CRP &#62 20': missingChecker([data.crp], data.crp > 20),
             'AIR &#62 8': missingChecker([data.riskscore], data.riskscore > 8),
             'AAS &#8805 16': missingChecker([data.riskscore], data.riskscore >= 16),
@@ -229,7 +229,7 @@ module.exports.makeRifObj = (data) => {
             'Rigidity': missingChecker([data.rigidityid], data.rigidityid === 'Yes'),
             'Rebound RIF': missingChecker([data.reboundtendernessid], data.reboundtendernessid === 'Yes'),
             'Palpable Mass': missingChecker([data.palpablemassid], data.palpablemassid === 'Yes'),
-            'High WCC, CRP': missingChecker([data.wcc, data.crp], (data.wcc > 15000 & data.crp > 20)),
+            'High WCC, CRP': missingChecker([data.wcc, data.crp], (data.wcc > 15 & data.crp > 20)),
             'Duration of sympotms &#62 48hrs': missingChecker([data.symptomduration], data.symptomduration > 48),
         },
 
@@ -237,7 +237,7 @@ module.exports.makeRifObj = (data) => {
             'Tender': missingChecker([data.tenderid], data.tenderid === 'Yes'),
             'Guarding': missingChecker([data.guardingid], data.guardingid === 'Yes'),
             'Rigidity Entire Abdomen': missingChecker([data.rigidityentire], data.rigidityentire === 'Yes'),
-            'High WCC, CRP': missingChecker([data.wcc, data.crp], (data.wcc > 15000 & data.crp > 20)),
+            'High WCC, CRP': missingChecker([data.wcc, data.crp], (data.wcc > 15 & data.crp > 20)),
         }
 
     ]
