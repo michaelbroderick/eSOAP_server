@@ -11,10 +11,9 @@
             </span>
 
 
+            <% if (dataMerged.moduleid=='RIF Pain & Appendicitis') { %>
 
             <%- include('./partials/flowchart/appendicitis') %>
-
-
 
                 <%- include('partials/footer') %>
 
@@ -28,6 +27,8 @@
                         <script>
                             window.scrollTo(0, document.querySelector('#flowchart_begin').offsetTop)
                         </script>
+
+                        <% } %>
 
                         <% } %>
 
