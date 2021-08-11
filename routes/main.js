@@ -39,7 +39,7 @@ router.get('/landing/:id', requireLogin, async (req, res) => {
     let kois = [];
 
     const history = await sql.getHistory(connection, req.session.userid)
-    console.log(data.moduleid)
+    // console.log(data.moduleid)
     const KOItargets = await returnKOIs(data);
     // console.log(KOItargets)
     if (data.moduleid) kois = await sql.getKOIs(connection, data.moduleid)

@@ -15,7 +15,7 @@
 
             <%- include('./partials/flowchart/appendicitis') %>
 
-                <%- include('partials/footer') %>
+                
 
                     <script src="/js/form_functions.js"></script>
                     <script>
@@ -29,6 +29,11 @@
                         </script>
 
                         <% } %>
+
+                        <% } else if(dataMerged.moduleid=='None of the Above' | !dataMerged.moduleid) {%>
+
+                            <h2 class='text-center mt-4'>No module selected</h2>
+                            <h3 class='text-center mt-1'>Please add module via the registry <a href="/modules/<%=req.params.id%>/edit"><button type="button" id='nxt' class="btn btn-primary btn-lg my-3 mx-1 next">Go</button></a></h3>
 
                         <% } %>
 

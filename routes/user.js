@@ -93,6 +93,7 @@ router.post('/login', validateLoginForms, async (req, res) => {
         req.session.loggedin = true;
         req.session.username = username;
         req.session.userid = result[0].id;
+        
         res.redirect('/patient_number');
     } else {
 

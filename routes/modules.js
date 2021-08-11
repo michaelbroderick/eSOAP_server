@@ -80,14 +80,15 @@ router.post('/:id', requireLogin, validateForms, async (req, res) => {
     console.log('Update module')
 
     if (data.moduleid) {
+        // A module has been selected for the patient
         const moduleCode = data.moduleid.slice(0, 3).toLowerCase();
-        console.log('Module exists', moduleCode)
+        // Retrieve data from the module table
         let result = await sql.selectById(connection, moduleCode, id)
         if (!(result.length)) {
+            //If the module table has no instance for that patient, create a new one. 
             console.log('Data does not exists. Initializing')
             await sql.init_table(connection, moduleCode, id)
         }
-        console.log('Data exists, filtering')
         let filtered = tableNames.filterObj(data, tableNames.modules[moduleCode]);
         await sql.updateModules(connection, moduleCode, filtered, id)
     }

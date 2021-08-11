@@ -54,7 +54,7 @@ router.post('/:id/flowchartIP', requireLogin, validateFlowForms, async (req, res
         }
     }
 
-    data.userid = req.session.emailID
+    data.userid = req.session.userid;
     data.patientid = id
     // Check
     // results = await sql.selectById(connection, flowchart_vars, id)
