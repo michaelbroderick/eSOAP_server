@@ -112,4 +112,9 @@ router.get('/signout', (req, res) => {
 });
 
 
+router.get('/accounts/show',(req, res) =>{
+    
+})
+
+
 module.exports = router;

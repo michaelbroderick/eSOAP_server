@@ -82,7 +82,8 @@ transition: all 100ms ease-in-out;
 nav{
     background-color: #cddfd8;
     font-size: 1.2rem;
-    color:#b4083a;
+    color:#cddfd8;
+
 
 }
 
@@ -119,6 +120,25 @@ form{
     margin-top:0px;
 }
 
+
+#dropdown_link{
+    
+    font-size: 1.4rem;
+    color:#b4083a;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* display:  */
+    /* position: unset; */
+
+}
+
+#dropdown_link[aria-expanded="true"] {
+    color:#b4083a;
+    background: #cddfd8;
+}
+
+
 #sepHead{
     font-size: 1.4rem;
     /* padding-bottom: 0.5em;
@@ -143,9 +163,10 @@ margin: .75em 0em;
 
 #signout_btn{
     background: none;
-	color: inherit;
+	color: #b4083a;
 	border: none;
-	padding-top: 8px;
+	padding-top: 0px;
+    padding-left: 25px !important;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
