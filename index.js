@@ -26,7 +26,7 @@ app.use(helmet(
 
 app.use(session({
     name: 'esoap_session',
-    secret: 'emergencysurgery',
+    secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true,
     cookie: {
@@ -59,7 +59,8 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err });
 })
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000');
+const port = process.env.PORT
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
 })
 
