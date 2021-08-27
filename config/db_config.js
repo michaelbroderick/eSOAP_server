@@ -14,6 +14,6 @@ module.exports.Registry = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.DBPASSWORD,
-    database: 'esoap_global',
+    database: process.env.DATABASE || 'esoap_global',
     timezone: 'gmt'
 })
