@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "fast-csv": "^4.3.6",
+    "helmet": "^4.6.0",
     "joi": "^17.4.0",
     "joi-password": "^1.4.5",
     "joi-password-complexity": "^5.1.0",

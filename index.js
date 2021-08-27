@@ -5,6 +5,7 @@ const app = express();
 const path = require('path');
 const ExpressError = require('./utils/ExpressError');
 const flash = require('connect-flash');
+const helmet = require('helmet');
 
 const userRoutes = require('./routes/user')
 const moduleRoutes = require('./routes/modules')
@@ -16,7 +17,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(flash());
-
+app.use(helmet(
+    { contentSecurityPolicy: false }
+));
 
 
 
