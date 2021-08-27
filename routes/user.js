@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const sql = require('../models/sqlCommands.js')
 const { connection } = require('../config/db_config')
 const { validateRegisterForms, validateLoginForms, validatePassword, requireVerification, validatePreRegisterForms } = require('../helpers/middleware')
@@ -93,7 +93,7 @@ router.post('/login', validateLoginForms, async (req, res) => {
         req.session.loggedin = true;
         req.session.username = username;
         req.session.userid = result[0].id;
-        
+
         res.redirect('/patient_number');
     } else {
 
@@ -112,8 +112,8 @@ router.get('/signout', (req, res) => {
 });
 
 
-router.get('/accounts/show',(req, res) =>{
-    
+router.get('/accounts/show', (req, res) => {
+
 })
 
 
