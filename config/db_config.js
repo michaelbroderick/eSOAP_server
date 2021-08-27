@@ -2,18 +2,18 @@ const mysql = require("mysql");
 
 
 module.exports.connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'esoap_local',
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.DBPASSWORD,
+    database: process.env.DATABASE || 'esoap_local',
     timezone: 'gmt'
 })
 
 
 module.exports.Registry = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.DBPASSWORD,
     database: 'esoap_global',
     timezone: 'gmt'
 })
