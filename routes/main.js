@@ -28,10 +28,10 @@ router.get('/patient_number', requireLogin, (req, res) => {
 })
 
 router.get('/landing/:id', requireLogin, async (req, res) => {
-    console.log(req.session)
+    // console.log(req.session)
     const result = await sql.getjoinedData(connection, req.params.id)
     const data = result[0]
-    console.log(data)
+    // console.log(data)
     let moduleCode = ''
     try { moduleCode = data.moduleid.slice(0, 3).toLowerCase() }
     catch { };
@@ -51,7 +51,7 @@ router.get('/landing/:id', requireLogin, async (req, res) => {
     const lastViewed = { lastviewed: new Date() }
     // await sql.updateModules(connection, 'demographics', lastViewed, req.params.id)
     await sql.logHistory(connection, req.session.userid, req.params.id)
-    res.render('landing', { req, data, history, kois, KOItargets, inRegistry,  moduleCode: moduleCode, messages: req.flash('success') })
+    res.render('landing', { req, data, history, kois, KOItargets, inRegistry, moduleCode: moduleCode, messages: req.flash('success') })
 })
 
 router.post('/landing', requireLogin, validateForms, async (req, res) => {
