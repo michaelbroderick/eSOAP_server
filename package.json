@@ -1,6 +1,6 @@
 {
   "name": "esoap",
-  "version": "^14.15.4",
+  "version": "14.15.4",
   "description": "",
   "main": "index.js",
   "scripts": {
