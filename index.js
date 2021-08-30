@@ -12,9 +12,12 @@ const moduleRoutes = require('./routes/modules')
 const mainRoutes = require('./routes/main')
 const decisionRoutes = require('./routes/decision')
 const reportingRoutes = require('./routes/reporting')
+const compression = require('compression');
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(flash());
 app.use(helmet(
