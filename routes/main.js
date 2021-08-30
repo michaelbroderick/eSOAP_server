@@ -15,7 +15,7 @@ router.get('/testing', (req, res) => {
 
 
 router.post('/testing', (req, res) => {
-    console.log(req.body.sho)
+    // console.log(req.body.sho)
     res.render('signin', { messages: req.flash('error') })
 })
 
@@ -69,12 +69,12 @@ router.post('/landing', requireLogin, validateForms, async (req, res) => {
             for (let table of Object.keys(tableNames.tables).slice(1)) {
                 await sql.init_table(connection, table, req.session.patientid)
             }
-            console.log('Created a row for patient', req.session.patientid, 'PCN =', req.session.pcn)
+            // console.log('Created a row for patient', req.session.patientid, 'PCN =', req.session.pcn)
 
         }
         // else you need to populate the form with values in the database. (This might take a bit of thinking!!)
         else {
-            console.log('Found patient pcn', req.session.pcn)
+            // console.log('Found patient pcn', req.session.pcn)
             req.session.patientid = result[0].patientid
         }
         res.redirect(`/landing/${req.session.patientid}`)

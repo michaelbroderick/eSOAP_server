@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 
 
-module.exports.connection = mysql.createConnection({
+module.exports.connection = mysql.createPool({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.DBPASSWORD,
@@ -10,7 +10,7 @@ module.exports.connection = mysql.createConnection({
 })
 
 
-module.exports.Registry = mysql.createConnection({
+module.exports.Registry = mysql.createPool({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.DBPASSWORD,
