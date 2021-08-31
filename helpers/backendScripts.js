@@ -5,8 +5,8 @@ const sql = require('../models/sqlCommands.js')
 module.exports.sendEmail = (emailAddress, vCode) => {
 
     const msg = {
-        to: 'brodermi@tcd.ie', // Change to your recipient
-        from: emailAddress, // Change to your verified sender
+        to: emailAddress, // Change to your recipient
+        from: 'brodermi@tcd.ie', // Change to your verified sender
         subject: 'Your eSOAP Platform Verification Code',
         text: `Hi, \n \nYour verification code is ${vCode}. Please use this code register for your account`,
         // html: '<strong>Hi, your verification code is . Please use this register for your account</strong>',
