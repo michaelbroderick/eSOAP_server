@@ -112,8 +112,11 @@ router.get('/signout', (req, res) => {
 });
 
 
-router.get('/accounts/show', (req, res) => {
-
+router.get('/accounts/show', async (req, res) => {
+    // const users = await sql.selectTable(connection, 'accounts')
+    const users = await sql.selectJoinedTable(connection, 'accounts', 'authorisedEmails', 'emailID', 'id')
+    console.log(users)
+    res.render('userAccounts', {})
 })
 
 

@@ -21,6 +21,29 @@ module.exports.selectById = (connection, table, id) => {
 };
 
 
+module.exports.selectTable = (connection, table) => {
+    return new Promise((resolve, reject) => {
+        connection.query('SELECT * FROM ??', [table], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+    });
+}
+
+module.exports.selectJoinedTable = (connection, table1, table2, col1, col2) => {
+    return new Promise((resolve, reject) => {
+        connection.query('SELECT * FROM ?? LEFT JOIN ?? ON ?=?', [table2, table1, col1, col2], (error, elements) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(elements);
+        });
+    });
+}
+
+
 module.exports.selectByAny = (connection, table, col_name, id) => {
     return new Promise((resolve, reject) => {
         connection.query('SELECT * FROM ?? WHERE ??=?', [table, col_name, id], (error, elements) => {
